@@ -3,8 +3,6 @@ title: About
 layout: page
 ---
 
-Hey! This is the "Leaf" Jekyll theme created by <a rel="me" target="_blank" href="https://twitter.com/_SupunKavinda">Supun Kavinda</a>.
+<a rel="me" target="_blank" href="https://philgineer.com">[Blog] 국문과 공대생</a>.
 
-You can find the source code of this theme at <a href="https://github.com/SupunKavinda/jekyll-theme-leaf">Github</a>
-
-(Change this by editing `about.md` file)
+<a href="https://github.com/philgineer">Github</a>
