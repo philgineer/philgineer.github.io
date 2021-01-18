@@ -3,6 +3,8 @@ title: About
 layout: page
 ---
 
-<a rel="me" target="_blank" href="https://philgineer.com">[Blog] 국문과 공대생</a>
+[![Tech Blog Badge](http://img.shields.io/badge/blog-국문과%20공대생-51a9fe?style=flat-square&link=https://philgineer.com/)](https://philgineer.com/)
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/philgineer/)](https://www.linkedin.com/in/philgineer/)
+[![Github Badge](https://img.shields.io/badge/-Github-black?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/philgineer/)
 
 <a href="https://github.com/philgineer">Github</a>
