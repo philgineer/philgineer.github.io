@@ -6,7 +6,7 @@ theme: jekyll-theme-leaf
 permalink: :slug
 
 social:
-	blog: 국문과 공대생
+  blog: 국문과 공대생
   github: philgineer
 
 plugins:
