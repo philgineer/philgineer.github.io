@@ -4,10 +4,6 @@
 
 ## Daily reports
 * 1주차: Python
-    * [Day1](https://philgineer.github.io/boostcamp-001)
-    * [Day2](https://philgineer.github.io/boostcamp-002)
-    * [Day3](https://philgineer.github.io/boostcamp-003)
-    * [Day4](https://philgineer.github.io/boostcamp-004)
-    * [Day5](https://philgineer.github.io/boostcamp-005)
+    * [Day1](https://philgineer.github.io/boostcamp-001) [Day2](https://philgineer.github.io/boostcamp-002) [Day3](https://philgineer.github.io/boostcamp-003) [Day4](https://philgineer.github.io/boostcamp-004) [Day5](https://philgineer.github.io/boostcamp-005)
 * 2주차: AI mathematics
     * [Day6](https://philgineer.github.io/boostcamp-006)
