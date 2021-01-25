@@ -15,8 +15,10 @@ plugins:
 
 #math latex
 markdown: kramdown
-kramdown:
-    math_engine: katex
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 ### comments & analytics
 google_analytics: UA-NNNNNNNN-N
