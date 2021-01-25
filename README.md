@@ -4,6 +4,11 @@
 
 ## Daily reports
 * 1주차: Python
-    * [![day](https://img.shields.io/badge/Day1-darkblue)](https://philgineer.github.io/boostcamp-001) [Day2](https://philgineer.github.io/boostcamp-002) [Day3](https://philgineer.github.io/boostcamp-003) [Day4](https://philgineer.github.io/boostcamp-004) [Day5](https://philgineer.github.io/boostcamp-005)
+    * [![Daily Report](https://img.shields.io/badge/Day1-red?style=flat)](https://philgineer.github.io/boostcamp-001)
+    [![Daily Report](https://img.shields.io/badge/Day2-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
+    [![Daily Report](https://img.shields.io/badge/Day3-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
+    [![Daily Report](https://img.shields.io/badge/Day4-green?style=flat)](https://philgineer.github.io/boostcamp-004)
+    [![Daily Report](https://img.shields.io/badge/Day5-blue?style=flat)](https://philgineer.github.io/boostcamp-005)
+
 * 2주차: AI mathematics
-    * [Day6](https://philgineer.github.io/boostcamp-006)
+    * [![Daily Report](https://img.shields.io/badge/Day6-red?style=flat)](https://philgineer.github.io/boostcamp-006)
