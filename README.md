@@ -2,7 +2,7 @@
 
 [![Boostcamp Badge](https://img.shields.io/badge/AI-Boostcamp-02c73?style=flat&link=https://philgineer.github.io/)](https://philgineer.github.io/)
 
-## Daily reports
+### Daily reports
 * 1주차: Python
     * [![Daily Report](https://img.shields.io/badge/Day1-red?style=flat)](https://philgineer.github.io/boostcamp-001)
     [![Daily Report](https://img.shields.io/badge/Day2-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
