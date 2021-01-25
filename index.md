@@ -3,8 +3,6 @@ layout: home
 author_profile: true
 ---
 
-## 네이버 부스트캠프 AI Tech (2020.01.18~)
-
 [![Boostcamp Badge](https://img.shields.io/badge/info-Boostcamp-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html)
 
 ### Daily reports
@@ -17,3 +15,6 @@ author_profile: true
 
 * Week2: AI mathematics
     * [![Daily Report](https://img.shields.io/badge/Day6-red?style=flat)](https://philgineer.github.io/boostcamp-006)
+
+
+<br><br>
