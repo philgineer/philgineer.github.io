@@ -3,9 +3,12 @@ layout: home
 author_profile: true
 ---
 
-[![Boostcamp Badge](https://img.shields.io/badge/info-Boostcamp-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html)
+[![Boostcamp Badge](https://img.shields.io/badge/info-Boostcamp-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html) #**AI Tech** by NAVER
 
-### Daily reports
+## **Daily reports**
+
+> 2021.01.18 ~
+
 * Week1: Python
     * [![Daily Report](https://img.shields.io/badge/Day1-red?style=flat)](https://philgineer.github.io/boostcamp-001)
     [![Daily Report](https://img.shields.io/badge/Day2-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
