@@ -19,5 +19,6 @@ author_profile: true
 * Week2: AI mathematics
     * [![Daily Report](https://img.shields.io/badge/Day6-red?style=flat)](https://philgineer.github.io/boostcamp-006)
     [![Daily Report](https://img.shields.io/badge/Day7-orange?style=flat)](https://philgineer.github.io/boostcamp-007)
+    [![Daily Report](https://img.shields.io/badge/Day8-yellow?style=flat)](https://philgineer.github.io/boostcamp-008)
 
 <br><br>
