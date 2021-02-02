@@ -1,0 +1,152 @@
+---
+title: "Boostcamp AI Tech (Day 012)"
+date: 2021-02-02
+layout: post
+tags: [Naver Boostcamp, daily report]
+use_math: true
+---
+
+* ### My post: [합성곱 신경망(CNN) 역전파까지 5분만에 이해하기](https://www.philgineer.com/2021/02/cnn-5.html)
+<br>
+
+## 1. Optimization
+
+* ### Gradient descent
+    * First-order (일차미분값만 사용) iterative optimization algorithm for finding a **local minimum** of a differentiable function.
+* ### Important concepts
+    * Generalization
+        * how well the learned model will behave on unseen data
+        * (test error $\approx$ training error): well generalized
+    * underfitting $\leftrightarrow$ overfitting
+    * Cross-validation
+        * a model validation for assessing how the model will generalize to an idependent dataset
+        * hyperparameters를 최적으로 tune하기 위한 validation data를 뗴어놓지 않고, train data를 k개로 나누고 하나씩 번갈아서 validation fold로 활용
+    * bias $\leftrightarrows$ variance
+        * bias: 평균적으로 타겟값에서 얼마나 벗어났는지
+        * variance: 비슷한 입력에 대한 일관적 출력 (분산)
+        * tradeoff: cost = bias^2 + variance + noise
+
+        $\mathbb E[(t - \hat f)^2] = \mathbb E[(f - \mathbb E[\hat f]^2)^2] + \mathbb E[(\mathbb E[\hat f] - \hat f)^2] + \mathbb E[\epsilon]$
+
+    * Bootstrapping
+        * any test or metric that uses random sampling with replacement
+        * training data를 subsampling해서 여러 세트를 만들고, 그걸로 여러 모델을 만들어서 학습
+    * Bagging
+        * Bootstrapping AGGregatING
+        * predictions are aggregated (voting or averaging)
+        * $\approx$ ensemble
+    * Boosting
+        * sequential 모델들로 구성 $\rightarrow$ 이전 모델이 잘 예측하지 못한 데이터들에 집중해서 학습 $\rightarrow$ 이 모델들(weak learners)을 합쳐 하나의 strong learner를 만듦
+* ### Gradient descent methods (size)
+    * Stochastic GD
+        * update with the gradient computed from a single sample
+    * Mini-batch GD
+        * from a subset of data
+    * Batch GD
+        * from the whole data
+* ### Batch-size
+    * (On large-batch training for deep learning, 2017)
+
+        |batch|minimizers|
+        |---|---|
+        |large|sharp|
+        |small|flat|
+        |||
+
+    * 따라서 작은 배치사이즈가 더 학습이 잘 됨 (generalization performance가 더 높음)
+* ### Gradient descent methods
+    * Gradient descent
+        * $W_{t+1} \leftarrow W_t - \eta g_t$
+        * ($\eta$: learning rate, $g_t$: gradient)
+    * Momentum
+        * $a_{t+1} \leftarrow \beta a_t + g_t$
+        * $W_{t+1} \leftarrow W_t - \eta a_{t+1}$
+        * ($a_{t+1}$: accumulation, $\beta$: momentum(관성))
+        * 관성이 있기 때문에, gradient가 요동쳐도 어느정도 꾸준히 학습됨
+    * Nesterov Accelerated Gradient
+        * $a_{t+1} \leftarrow \beta a_t + \nabla \mathcal L (W_t - \eta \beta a_t)$
+        * $W_{t+1} \leftarrow W_t - \eta a_{t+1}$
+        * ($\nabla \mathcal L (W_t - \eta \beta a_t)$: lookahead gradient)
+        * $\nabla \mathcal L (W_t) = g_t$
+        * $- \eta \beta a_t$: momentum에 대한 피드백 (그라디언트 값이 음수나 양수로 바뀔 때 덜 급격하게 바뀌도록)
+        * momentum이 local minimum에 converge하지 못하는 (느린) 경우 예방
+    * Adagrad
+        * $W_{t+1} \leftarrow W_t - \frac{\eta}{\sqrt{G_t + \epsilon}} g_t$
+        * ($G_t$: sum of gradient squares(^2) 변화량 제곱합을 역수로 넣어줌, $\epsilon$: zero division 예방)
+        * 여태 많이 변하지 않은 파라미터를 많이 변하게끔 adapts
+    * Adadelta
+        * EMA(Exponential Moving Average)를 이용해 $G_t$값이 폭발하지 않도록 계산
+        * monotonically decreasing property 예방
+    * RMSprop
+        * $G_t = \gamma G_{t-1} + (1 - \gamma) g^2_t)$
+        * $W_{t+1} \leftarrow W_t - \frac{\eta}{\sqrt{G_t + \epsilon}} g_t$
+        * ($G_t$: EMA of gradient squares, $\eta$: stepsize)
+    * Adam
+        * $m_t = \beta_1 m_{t=1} + (1 - \beta_1) g_t$
+        * $v_t = \beta_2 v_{t-1} + (1 - \beta_2) g_t^2$
+        * $W_{t+1} \leftarrow W_t - \frac{\eta}{\sqrt{v_t + \epsilon}} \frac{\sqrt{1 - \beta_2^t}}{1 - \beta_1^t} m_t$
+        * ($m_t$: momentum, $v_t$: EMA of gradient squares)
+        * ADAptive Moment estimation (adaptive + momentum)
+* ### Regularization
+    * Early stopping
+        * training 중 validation error가 증가하는 부분에서 early stop
+    * Parameter norm penalty
+        * weight 숫자들을 작게 규제 (adds sommthness to the function space)
+        * total cost = $loss(\mathcal D ; W) + \frac{\alpha}{2} \Vert W \Vert _2^2$
+        * ($\frac{\alpha}{2} \Vert W \Vert _2^2$: param norm penalty, weight decay)
+    * Data augmentation
+        * label preserving augmentation 등
+    * Noise robustness
+        * add random noises to inputs or weights
+    * Label smoothing
+        * Mix-up(Dog 0.5, Cat 0.5), Cutout(Dog 1.0), CutMix(Dog 0.7 Cat 0.3)
+        * 사진 합성 + 그에 맞는 레이블링 $\rightarrow$ 성능 향상
+    * Dropout
+        * randomly set some neurons to zero
+    * Batch normalization
+        * paper 2015: internal covariate(feature) shift가 줄어들기 때문에 성능 향상 $\rightarrow$ 이후 논문들은 이에 동의하지 않지만, 성능 향상은 실재함
+        * 각 layer의 parameters를 normalize (-mean / std)
+<br><br>
+
+## 2. Convolution of CNN
+
+* ### Convolution  연산
+    * $[f * g](i) = \sum_{a \in \mathbb Z^d} f(i - a)g(a) = [g * f](i)$
+        * 수학적 의미: 신호(signal)를 커널을 이용해 국소적으로 증폭/감소시켜 정보를 추출/필터링하는 것
+        * CNN에 사용되는 수식은 엄밀하게 말하면 cross-correlation 연산
+        * $\sum_{a \in \mathbb Z^d} f(i + a)g(a)$
+    * Kernel
+        * 정의역 내에서 움직여도 변하지 않음 (translation invariant)
+        * 주어진 신호에 국소적(local)으로 적용
+* ### Fully Connected와 Convolution
+    * MLP의 fully connected 구조
+        * $h_i = \sigma \Big( \sum_{j=1}^p W_{ij}x_j \Big)$
+        * i가 바뀌면 곱해지는 가중치 W도 바뀜
+    * Convolution
+        * $h_i = \sigma \Big( \sum_{j=1}^k V_j x_{i+j-1} \Big)$
+        * $V_j$: 가중치 행렬
+        * 모든 i에 대해 적용되는 커널 $V$가, 커널 사이즈(k)만큼 X 상에서 이동하면서 적용
+    * 활성화 함수를 제외한 convolution 연산역시 선형변환에 속함
+* ### 다양한 차원에서 Convolution
+    * 1차원: $[f * g](i) = \sum_{p=1}^d f(p)g(i + p)$
+    * 2차원: $[f * g](i, j) = \sum_{p,q} f(p,q)g(i + p, j + q)$
+    * 3차원: $[f * g](i, j, k) = \sum_{p,q,r} f(p,q,r)g(i + p, j + q, k + r)$
+* ### 2D-Conv size
+    * 입력 크기 $(H, W)$, 커널 크기 $(K_H, K_W)$ $\rightarrow$ 출력 크기 $(O_H, O_W)$
+        * $O_H = H - K_H + 1$
+        * $O_W = W - K_W + 1$
+    * 채널 개수만큼 kernel을 각각 적용 후 더함
+        * 커널1 * 2d입력 + 커널2 * 2d입력 + ...
+    * 커널 $(K_H,K_W,C)$ * 3d입력 $(H,W,C)$
+        * $\rightarrow$ 출력 $(O_H,O_W,1)$
+    * $\Big($커널 $(K_H,K_W,C) \times O_C 개 \Big)$ * 3d입력 $(H,W,C)$
+        * $\rightarrow$ 출력 $(O_H,O_W,O_C)$
+* ### Convolution 연산의 역전파
+    * $\frac{\partial}{\partial x} [f * g] (x) = \frac{\partial}{\partial x} \int_{\mathbb R^d} f(y) g(x-y) dy$
+    
+        $= \int_{\mathbb R^d} f(y) \frac{\partial}{\partial x} g(x-y) dy$
+
+        $= [f * g'] (x)$
+
+    * 자세한 내용은 [블로그 포스팅](https://www.philgineer.com/2021/02/cnn-5.html) 참조
+<br><br>
