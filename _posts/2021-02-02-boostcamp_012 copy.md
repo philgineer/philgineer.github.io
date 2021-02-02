@@ -6,7 +6,7 @@ tags: [Naver Boostcamp, daily report]
 use_math: true
 ---
 
-* ### My post: [합성곱 신경망(CNN) 역전파까지 5분만에 이해하기](https://www.philgineer.com/2021/02/cnn-5.html)
+My post: [합성곱 신경망(CNN) 역전파까지 5분만에 이해하기](https://www.philgineer.com/2021/02/cnn-5.html)
 <br>
 
 ## 1. Optimization
@@ -26,7 +26,7 @@ use_math: true
         * variance: 비슷한 입력에 대한 일관적 출력 (분산)
         * tradeoff: cost = bias^2 + variance + noise
 
-        $\mathbb E[(t - \hat f)^2] = \mathbb E[(f - \mathbb E[\hat f]^2)^2] + \mathbb E[(\mathbb E[\hat f] - \hat f)^2] + \mathbb E[\epsilon]$
+        $\mathbb E \lbrack (t - \hat f)^2 \rbrack = \mathbb E\lbrack (f - \mathbb E\lbrack \hat f]^2)^2] + \mathbb E\lbrack (\mathbb E\lbrack \hat f] - \hat f)^2] + \mathbb E\lbrack \epsilon]$
 
     * Bootstrapping
         * any test or metric that uses random sampling with replacement
@@ -111,7 +111,7 @@ use_math: true
 ## 2. Convolution of CNN
 
 * ### Convolution  연산
-    * $[f * g](i) = \sum_{a \in \mathbb Z^d} f(i - a)g(a) = [g * f](i)$
+    * $\lbrack f * g \rbrack(i) = \sum_{a \in \mathbb Z^d} f(i - a)g(a) = \lbrack g * f \rbrack(i)$
         * 수학적 의미: 신호(signal)를 커널을 이용해 국소적으로 증폭/감소시켜 정보를 추출/필터링하는 것
         * CNN에 사용되는 수식은 엄밀하게 말하면 cross-correlation 연산
         * $\sum_{a \in \mathbb Z^d} f(i + a)g(a)$
@@ -128,9 +128,9 @@ use_math: true
         * 모든 i에 대해 적용되는 커널 $V$가, 커널 사이즈(k)만큼 X 상에서 이동하면서 적용
     * 활성화 함수를 제외한 convolution 연산역시 선형변환에 속함
 * ### 다양한 차원에서 Convolution
-    * 1차원: $[f * g](i) = \sum_{p=1}^d f(p)g(i + p)$
-    * 2차원: $[f * g](i, j) = \sum_{p,q} f(p,q)g(i + p, j + q)$
-    * 3차원: $[f * g](i, j, k) = \sum_{p,q,r} f(p,q,r)g(i + p, j + q, k + r)$
+    * 1차원: $\lbrack f * g \rbrack(i) = \sum_{p=1}^d f(p)g(i + p)$
+    * 2차원: $\lbrack f * g \rbrack(i, j) = \sum_{p,q} f(p,q)g(i + p, j + q)$
+    * 3차원: $\lbrack f * g \rbrack(i, j, k) = \sum_{p,q,r} f(p,q,r)g(i + p, j + q, k + r)$
 * ### 2D-Conv size
     * 입력 크기 $(H, W)$, 커널 크기 $(K_H, K_W)$ $\rightarrow$ 출력 크기 $(O_H, O_W)$
         * $O_H = H - K_H + 1$
@@ -142,11 +142,11 @@ use_math: true
     * $\Big($커널 $(K_H,K_W,C) \times O_C 개 \Big)$ * 3d입력 $(H,W,C)$
         * $\rightarrow$ 출력 $(O_H,O_W,O_C)$
 * ### Convolution 연산의 역전파
-    * $\frac{\partial}{\partial x} [f * g] (x) = \frac{\partial}{\partial x} \int_{\mathbb R^d} f(y) g(x-y) dy$
+    * $\frac{\partial}{\partial x} \lbrack f * g \rbrack (x) = \frac{\partial}{\partial x} \int_{\mathbb R^d} f(y) g(x-y) dy$
     
         $= \int_{\mathbb R^d} f(y) \frac{\partial}{\partial x} g(x-y) dy$
 
-        $= [f * g'] (x)$
+        $= \lbrack f * g' \rbrack (x)$
 
     * 자세한 내용은 [블로그 포스팅](https://www.philgineer.com/2021/02/cnn-5.html) 참조
 <br><br>
