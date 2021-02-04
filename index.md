@@ -26,5 +26,7 @@ author_profile: true
 * Week3: Deep learning basics
     * [![Daily Report](https://img.shields.io/badge/Day11-red?style=flat)](https://philgineer.github.io/boostcamp-011)
     [![Daily Report](https://img.shields.io/badge/Day12-orange?style=flat)](https://philgineer.github.io/boostcamp-012)
+    [![Daily Report](https://img.shields.io/badge/Day13-yellow?style=flat)](https://philgineer.github.io/boostcamp-013)
+    [![Daily Report](https://img.shields.io/badge/Day14-green?style=flat)](https://philgineer.github.io/boostcamp-014)
 
 <br><br>
