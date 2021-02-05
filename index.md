@@ -9,7 +9,7 @@ author_profile: true
 
 2021.01.18 ~
 
-* Week1: Python
+* Week1: Python and data handling
     * [![Daily Report](https://img.shields.io/badge/Day1-red?style=flat)](https://philgineer.github.io/boostcamp-001)
     [![Daily Report](https://img.shields.io/badge/Day2-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
     [![Daily Report](https://img.shields.io/badge/Day3-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
@@ -23,10 +23,11 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day9-green?style=flat)](https://philgineer.github.io/boostcamp-009)
     [![Daily Report](https://img.shields.io/badge/Day10-blue?style=flat)](https://philgineer.github.io/boostcamp-010)
 
-* Week3: Deep learning basics
+* Week3: Deep learning basics (neural net to GAN)
     * [![Daily Report](https://img.shields.io/badge/Day11-red?style=flat)](https://philgineer.github.io/boostcamp-011)
     [![Daily Report](https://img.shields.io/badge/Day12-orange?style=flat)](https://philgineer.github.io/boostcamp-012)
     [![Daily Report](https://img.shields.io/badge/Day13-yellow?style=flat)](https://philgineer.github.io/boostcamp-013)
     [![Daily Report](https://img.shields.io/badge/Day14-green?style=flat)](https://philgineer.github.io/boostcamp-014)
+    [![Daily Report](https://img.shields.io/badge/Day15-blue?style=flat)](https://philgineer.github.io/boostcamp-015)
 
 <br><br>
