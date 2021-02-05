@@ -23,7 +23,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day9-green?style=flat)](https://philgineer.github.io/boostcamp-009)
     [![Daily Report](https://img.shields.io/badge/Day10-blue?style=flat)](https://philgineer.github.io/boostcamp-010)
 
-* Week3: Deep learning basics (neural net to GAN)
+* Week3: Deep learning basics (MLP to GAN)
     * [![Daily Report](https://img.shields.io/badge/Day11-red?style=flat)](https://philgineer.github.io/boostcamp-011)
     [![Daily Report](https://img.shields.io/badge/Day12-orange?style=flat)](https://philgineer.github.io/boostcamp-012)
     [![Daily Report](https://img.shields.io/badge/Day13-yellow?style=flat)](https://philgineer.github.io/boostcamp-013)
