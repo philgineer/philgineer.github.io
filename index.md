@@ -33,6 +33,7 @@ author_profile: true
 * Week4: Natural Language Processing (NLP)
     * [![Daily Report](https://img.shields.io/badge/Day16-red?style=flat)](https://philgineer.github.io/boostcamp-016)
     [![Daily Report](https://img.shields.io/badge/Day17-orange?style=flat)](https://philgineer.github.io/boostcamp-017)
+    [![Daily Report](https://img.shields.io/badge/Day18-yellow?style=flat)](https://philgineer.github.io/boostcamp-018)
 
 <br><br>
 
