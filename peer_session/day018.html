@@ -1,0 +1,28 @@
+<h1 id="-4-02-17-">피어세션기록(4주차, 02.17 수)</h1>
+<h2 id="-">어제 수업/실습/과제</h2>
+<ul>
+<li>어제 과제 관련 질문<ul>
+<li><code>min(sentence_length, key=len)</code>이 테스트는 돌아가는데 정답이 아닌이유는?<ul>
+<li>key가 len이 되면서 기준이 되는게 없이 단순히 앞의 요소를 기준을 최소값을 찾아낸다.<ul>
+<li>key가 없는것과 마찬가지의 효과</li>
+</ul>
+</li>
+<li>운이좋게 해당 최소를 가지는 tuple이 src도 최소, tgt도 최소를 가졌다.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code><span class="hljs-comment">* `src = (src_len - src_len_min + 1) // (max_pad_len+1)`</span>
+<span class="hljs-comment">    * 왜+1을 했나?, +1의 의미는?</span>
+<span class="hljs-comment">    * `//`의 연산의 의미는 몫</span>
+<span class="hljs-comment">    * padding의 길이가 5를 넘지 말아라 -&gt; 최소와 최대값이 5이상 차이 나지 않도록 묶기</span>
+
+<span class="hljs-comment">* `batched_samples = sorted(batched_samples, key=lambda x: len(x[0]), reverse=True)`</span>
+<span class="hljs-comment">    * key 가 없어도 돌아간다.</span>
+<span class="hljs-comment">    * 데이터 자체가 길이를 확인해야하지만 데이터가 1234같은 순서로 길이를 파악할 수 있어서 문제없이 돌아갔다.</span>
+<span class="hljs-comment">* collated_fn</span>
+<span class="hljs-comment">* batch_first = True</span>
+<span class="hljs-comment">    * True는 Transpose와 같음</span>
+<span class="hljs-comment">    * False가 더빠르다고 한다.</span>
+</code></pre><h2 id="-">오늘 수업/실습/과제</h2>

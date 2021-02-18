@@ -1,0 +1,97 @@
+<h1 id="-4-02-18-">피어세션기록(4주차, 02.18 목)</h1>
+<h2 id="-">어제 수업/실습/과제</h2>
+<h3 id="-">과제 공유</h3>
+<ul>
+<li>(준호) 코드 공유<ul>
+<li>clip-norm 0.01</li>
+<li>lr대신 batch-size를 키웠음(2배)<ul>
+<li><a href="https://github.com/pytorch/fairseq/issues/165">https://github.com/pytorch/fairseq/issues/165</a></li>
+</ul>
+</li>
+<li>max-epoch 5</li>
+</ul>
+</li>
+<li>(지원) 코드공유<ul>
+<li>lr-rate 1e-3 으로 통과</li>
+<li>dropout도 사용</li>
+</ul>
+</li>
+<li>(준배) 코드공유<ul>
+<li>max-epoch 5</li>
+</ul>
+</li>
+<li>(성익) 코드 공유<ul>
+<li>label-smoothing 0.1<ul>
+<li>(준호) <a href="https://paperswithcode.com/method/label-smoothing">label smoothing</a></li>
+<li>(지원) 4개 분류시에 [1,0,0,0] 만드는게 아니라 [0.7, 0.25, 0.25, 0.25] 만드는 그런 느낌</li>
+<li>정답의 과잉확신을 방지</li>
+<li>(성익)<a href="https://www.stand-firm-peter.me/2020/09/06/inception_v2_v3/">https://www.stand-firm-peter.me/2020/09/06/inception_v2_v3/</a></li>
+<li>(지원)<a href="https://ratsgo.github.io/insight-notes/docs/interpretable/smoothing">https://ratsgo.github.io/insight-notes/docs/interpretable/smoothing</a></li>
+</ul>
+</li>
+<li>criterion - label-smoothed-cross-entropy-with-alignment</li>
+</ul>
+</li>
+</ul>
+<h2 id="-">오늘 수업/실습/과제</h2>
+<h3 id="-">질문</h3>
+<ul>
+<li><p>(준배) Postional Encoding의 개념 - 갑자기 주기함수가 왜 나오는건가요?</p>
+<ul>
+<li>(성익) 주기함수들을 합쳐서 position에 따라서 특정 unique 값을 얻을 수 있음. 여러개의 주기함수를 겹쳐서 사용해야함.</li>
+<li>(준호) <a href="https://nlpinkorean.github.io/illustrated-transformer/">공유</a></li>
+</ul>
+</li>
+<li><p>(지원) Feed Forward layer가 왜 있나요?</p>
+<ul>
+<li>(성익) attention은 단어의 관계를 정의하는거고, 관계의 순서를 보장하지는 않는다.</li>
+<li>(준호) rnn의 가장 큰 문제는 병렬 연산이 안되니까 그걸 해결하려고 attention이 나옴. 근데 attention은 순서를 모르니까 positional encoding.</li>
+<li>(성익) <a href="https://blog.naver.com/laonple/221027194402">링크</a></li>
+<li>(성익) <a href="https://lovit.github.io/machine%20learning/2019/03/17/attention_in_nlp/">링크2</a></li>
+<li>(준호) 그래서 dropout이 두개였구나.</li>
+</ul>
+</li>
+<li><p>(지원) CNN에서 Dense Layer가 왜 있나요?</p>
+<ul>
+<li>(성익) <a href="https://underflow101.tistory.com/44#:~:text=Dense%20Layer%EB%8A%94%20Fully%20Connected,%EC%9D%84%20%EB%AA%A8%EB%91%90%20%EC%97%B0%EA%B2%B0%ED%95%B4%EC%A3%BC%EB%8A%94%20%EA%B2%83%EC%9D%B4%EB%8B%A4.">링크공유</a></li>
+<li>(성익) Fully connected layer의 비효율성 때문에, 합성곱 레이어로 feature map을 추려낸 뒤에 학습한다.</li>
+<li>(준호) 바로 출력할수도 있는데, 합성곱 레이어는 모든 input을 종합하는게 아니라 input의 subset들에 대한 추론이므로, 이를 fully connected layer로 종합시켜주어야한다.</li>
+<li>(준호) <a href="https://stackoverflow.com/questions/42317238/why-do-we-use-fully-connected-layer-at-the-end-of-cnn">스택오버플로우</a></li>
+</ul>
+</li>
+<li><p>(성익) 차원이 커지면 왜 분산도 커지나요?</p>
+<ul>
+<li>(준호) 차원수가 늘어나면, 축이 많아지므로, 데이터가 sparse해진다. x,y축 거리만 고려하다가 z까지 고려하니까..</li>
+<li>그러면 아무리 작아봐야 작은 차원과 같은 거리이고, 일반적으로는 거리가 커지니까 분산이 커진다.</li>
+</ul>
+</li>
+<li><p>(성익) Complexity per Layer 공간복잡도</p>
+<ul>
+<li>GPU가 1개면 시간복잡도로 생각할 수 있고(연산횟수 = 시간이니까), GPU가 N개면 공간복잡도로도 생각 가능</li>
+</ul>
+</li>
+</ul>
+<h3 id="further-question">further question</h3>
+<ul>
+<li>Attention은 이름 그대로 어떤 단어의 정보를 얼마나 가져올 지 알려주는 직관적인 방법처럼 보입니다. Attention을 모델의 Output을 설명하는 데에 활용할 수 있을까요?<ul>
+<li>Attention은 화이트박스가 될 수 있는가?</li>
+<li>(준배) Attention 내부 정보들이 나와있으니까 가능하지 않을까?</li>
+<li>논문 읽어보고 다시 리뷰할것!</li>
+</ul>
+</li>
+</ul>
+<h2 id="-">정보공유</h2>
+<h2 id="-">기록할것</h2>
+<ul>
+<li><p>오늘 세션에서 질문</p>
+<ul>
+<li>label-smoothed-cross-entropy-with-alignment가 왜 성능향상이 있나요?</li>
+</ul>
+</li>
+<li><p>(준호) 우리가 이해하는 거랑 성능이 잘 나오는 거랑은 별개의 문제인거같다.</p>
+<ul>
+<li>인공 신경망이 아니라 뇌신경망을 연구하는 부분도 핫한것같다.</li>
+<li>근데 요새는 그 두 영역이 교류가 많이 없다고 하더라..</li>
+</ul>
+</li>
+</ul>
