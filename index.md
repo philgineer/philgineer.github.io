@@ -35,6 +35,9 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day17-orange?style=flat)](https://philgineer.github.io/boostcamp-017)
     [![Daily Report](https://img.shields.io/badge/Day18-yellow?style=flat)](https://philgineer.github.io/boostcamp-018)
     [![Daily Report](https://img.shields.io/badge/Day19-green?style=flat)](https://philgineer.github.io/boostcamp-019)
+    [![Daily Report](https://img.shields.io/badge/Day20-blue?style=flat)](https://philgineer.github.io/boostcamp-020)
+
+* Week5: Graphical Model & Recommendation System
 
 <br><br>
 
