@@ -39,7 +39,7 @@ author_profile: true
 
 * [Week 5] Graphical Model & Recommendation System
     * [![Daily Report](https://img.shields.io/badge/Day21-red?style=flat)](https://philgineer.github.io/boostcamp-021)
-    [![Daily Report](https://img.shields.io/badge/Day21-orange?style=flat)](https://philgineer.github.io/boostcamp-022)
+    [![Daily Report](https://img.shields.io/badge/Day22-orange?style=flat)](https://philgineer.github.io/boostcamp-022)
 
 <br><br>
 
