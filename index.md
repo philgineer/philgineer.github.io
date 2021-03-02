@@ -9,7 +9,7 @@ author_profile: true
 
 2021.01.18 ~
 
-* [Week 1] Python and data handling
+* [Week 1] Python & data handling
     * [![Daily Report](https://img.shields.io/badge/Day1-red?style=flat)](https://philgineer.github.io/boostcamp-001)
     [![Daily Report](https://img.shields.io/badge/Day2-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
     [![Daily Report](https://img.shields.io/badge/Day3-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
@@ -43,6 +43,9 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day23-yellow?style=flat)](https://philgineer.github.io/boostcamp-023)
     [![Daily Report](https://img.shields.io/badge/Day24-green?style=flat)](https://philgineer.github.io/boostcamp-024)
     [![Daily Report](https://img.shields.io/badge/Day25-blue?style=flat)](https://philgineer.github.io/boostcamp-025)
+
+* [Week 6] 특강
+    * [![Daily Report](https://img.shields.io/badge/Day26-red?style=flat)](https://philgineer.github.io/boostcamp-026)
 
 <br><br>
 
