@@ -46,6 +46,7 @@ author_profile: true
 
 * [Week 6] 특강
     * [![Daily Report](https://img.shields.io/badge/Day26-red?style=flat)](https://philgineer.github.io/boostcamp-026)
+    [![Daily Report](https://img.shields.io/badge/Day27-orange?style=flat)](https://philgineer.github.io/boostcamp-027)
 
 <br><br>
 
