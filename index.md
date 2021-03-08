@@ -52,5 +52,8 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day28-yellow?style=flat)](https://philgineer.github.io/boostcamp-028)
     [![Daily Report](https://img.shields.io/badge/Day29-green?style=flat)](https://philgineer.github.io/boostcamp-029)
 
+* [Week 7] *Computer Vision*
+    * [![Daily Report](https://img.shields.io/badge/Day31-red?style=flat)](https://philgineer.github.io/boostcamp-031)
+
 <br><br>
 
