@@ -51,9 +51,11 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day27-orange?style=flat)](https://philgineer.github.io/boostcamp-027)
     [![Daily Report](https://img.shields.io/badge/Day28-yellow?style=flat)](https://philgineer.github.io/boostcamp-028)
     [![Daily Report](https://img.shields.io/badge/Day29-green?style=flat)](https://philgineer.github.io/boostcamp-029)
+    ![Daily Report](https://img.shields.io/badge/공휴일-grey?style=flat)
 
 * [Week 7] *Computer Vision*
     * [![Daily Report](https://img.shields.io/badge/Day31-red?style=flat)](https://philgineer.github.io/boostcamp-031)
+    [![Daily Report](https://img.shields.io/badge/Day32-orange?style=flat)](https://philgineer.github.io/boostcamp-032)
 
 <br><br>
 
