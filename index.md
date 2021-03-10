@@ -12,17 +12,17 @@ author_profile: true
  [![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
 
 * [Week 1] *Python & data handling*
-    * [![Daily Report](https://img.shields.io/badge/Day1-red?style=flat)](https://philgineer.github.io/boostcamp-001)
-    [![Daily Report](https://img.shields.io/badge/Day2-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
-    [![Daily Report](https://img.shields.io/badge/Day3-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
-    [![Daily Report](https://img.shields.io/badge/Day4-green?style=flat)](https://philgineer.github.io/boostcamp-004)
-    [![Daily Report](https://img.shields.io/badge/Day5-blue?style=flat)](https://philgineer.github.io/boostcamp-005)
+    * [![Daily Report](https://img.shields.io/badge/Day01-red?style=flat)](https://philgineer.github.io/boostcamp-001)
+    [![Daily Report](https://img.shields.io/badge/Day02-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
+    [![Daily Report](https://img.shields.io/badge/Day03-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
+    [![Daily Report](https://img.shields.io/badge/Day04-green?style=flat)](https://philgineer.github.io/boostcamp-004)
+    [![Daily Report](https://img.shields.io/badge/Day05-blue?style=flat)](https://philgineer.github.io/boostcamp-005)
 
 * [Week 2] *AI mathematics*
-    * [![Daily Report](https://img.shields.io/badge/Day6-red?style=flat)](https://philgineer.github.io/boostcamp-006)
-    [![Daily Report](https://img.shields.io/badge/Day7-orange?style=flat)](https://philgineer.github.io/boostcamp-007)
-    [![Daily Report](https://img.shields.io/badge/Day8-yellow?style=flat)](https://philgineer.github.io/boostcamp-008)
-    [![Daily Report](https://img.shields.io/badge/Day9-green?style=flat)](https://philgineer.github.io/boostcamp-009)
+    * [![Daily Report](https://img.shields.io/badge/Day06-red?style=flat)](https://philgineer.github.io/boostcamp-006)
+    [![Daily Report](https://img.shields.io/badge/Day07-orange?style=flat)](https://philgineer.github.io/boostcamp-007)
+    [![Daily Report](https://img.shields.io/badge/Day08-yellow?style=flat)](https://philgineer.github.io/boostcamp-008)
+    [![Daily Report](https://img.shields.io/badge/Day09-green?style=flat)](https://philgineer.github.io/boostcamp-009)
     [![Daily Report](https://img.shields.io/badge/Day10-blue?style=flat)](https://philgineer.github.io/boostcamp-010)
 
 * [Week 3] *Deep learning basics (MLP to GAN)*
