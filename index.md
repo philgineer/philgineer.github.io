@@ -58,6 +58,11 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day32-orange?style=flat)](https://philgineer.github.io/boostcamp-032)
     [![Daily Report](https://img.shields.io/badge/Day33-yellow?style=flat)](https://philgineer.github.io/boostcamp-033)
     [![Daily Report](https://img.shields.io/badge/Day34-green?style=flat)](https://philgineer.github.io/boostcamp-034)
+    [![Daily Report](https://img.shields.io/badge/Day35-blue?style=flat)](https://philgineer.github.io/boostcamp-035)
+
+* [Week 8] *Lightweight deep learning*
+    * [![Daily Report](https://img.shields.io/badge/Day36-red?style=flat)](https://philgineer.github.io/boostcamp-036)
+
 
 <br><br>
 
