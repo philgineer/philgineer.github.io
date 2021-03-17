@@ -62,6 +62,8 @@ author_profile: true
 
 * [Week 8] *Lightweight deep learning*
     * [![Daily Report](https://img.shields.io/badge/Day36-red?style=flat)](https://philgineer.github.io/boostcamp-036)
+    [![Daily Report](https://img.shields.io/badge/Day37-orange?style=flat)](https://philgineer.github.io/boostcamp-037)
+    [![Daily Report](https://img.shields.io/badge/Day38-yellow?style=flat)](https://philgineer.github.io/boostcamp-038)
 
 
 <br><br>
