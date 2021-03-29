@@ -11,6 +11,8 @@ author_profile: true
 
  [![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
 
+### U Stage
+
 * [Week 1] *Python & data handling*
     * [![Daily Report](https://img.shields.io/badge/Day01-red?style=flat)](https://philgineer.github.io/boostcamp-001)
     [![Daily Report](https://img.shields.io/badge/Day02-orange?style=flat)](https://philgineer.github.io/boostcamp-002)
@@ -64,6 +66,11 @@ author_profile: true
     * [![Daily Report](https://img.shields.io/badge/Day36-red?style=flat)](https://philgineer.github.io/boostcamp-036)
     [![Daily Report](https://img.shields.io/badge/Day37-orange?style=flat)](https://philgineer.github.io/boostcamp-037)
     [![Daily Report](https://img.shields.io/badge/Day38-yellow?style=flat)](https://philgineer.github.io/boostcamp-038)
+
+### P Stage
+
+* [Project 1] *Image classification* - 마스크 착용 이미지 분류
+    * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
 
 
 <br><br>
