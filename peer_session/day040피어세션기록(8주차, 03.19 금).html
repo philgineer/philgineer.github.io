@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        피어세션기록(8주차, 03.19 금) - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@hackmd/emojify.js@2.1.0/dist/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i|Source+Code+Pro:300,400,500|Source+Sans+Pro:300,300i,400,400i,600,600i|Source+Serif+Pro&subset=latin-ext);.hljs{display:block;background:#fff;padding:.5em;color:#333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-emphasis,.hljs-quote,.hljs-string,.hljs-strong,.hljs-template-variable,.hljs-variable{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-attribute,.hljs-bullet,.hljs-literal,.hljs-number,.hljs-symbol{color:#0086b3}.hljs-built_in,.hljs-builtin-name{color:#005cc5}.hljs-name,.hljs-section{color:#63a35c}.hljs-tag{color:#333}.hljs-attr,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-selector-pseudo,.hljs-title{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}.markdown-body{font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{font-size:16px;padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body kbd,.popover kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{padding-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\00a0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important;position:relative}.markdown-body .emoji{vertical-align:top}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram,.markdown-body pre.vega{text-align:center;background-color:inherit;border-radius:0;white-space:inherit;overflow:visible}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code,.markdown-body pre.vega>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg,.markdown-body pre.vega>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.markdown-body summary{display:list-item}.markdown-body summary:focus{outline:none}.markdown-body details summary{cursor:pointer}.markdown-body details:not([open])>:not(summary){display:none}.markdown-body figure{margin:1em 40px}.markdown-body .mark,.markdown-body mark{background-color:#fff1a7}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}#MathJax_Message{z-index:1000!important}.ui-infobar{position:relative;z-index:2;max-width:760px;margin:25px auto -25px;color:#777}.toc .invisable-node{list-style-type:none}.ui-toc{position:fixed;bottom:20px;z-index:998}.ui-toc.both-mode{margin-left:8px}.ui-toc.both-mode .ui-toc-label{height:40px;padding:10px 4px;border-top-left-radius:0;border-bottom-left-radius:0}.ui-toc-label{background-color:#e6e6e6;border:none;color:#868686;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:20px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif}html[lang^=ja] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html .markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html .markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html .markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}html[lang^=ja] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html[lang=zh-tw] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html[lang=zh-cn] .ui-toc-dropdown{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}html .ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,ＭＳ\ Ｐゴシック,sans-serif}html .ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,微軟正黑UI,sans-serif}html .ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,微软雅黑UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:50%;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:cover}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.ui-more-info{color:#888;cursor:pointer;vertical-align:middle}.ui-more-info .fa{font-size:16px}.ui-connectedGithub,.ui-published-note{color:#888}.ui-connectedGithub{line-height:23px;white-space:nowrap}.ui-connectedGithub a.file-path{color:#888;text-decoration:none;padding-left:22px}.ui-connectedGithub a.file-path:active,.ui-connectedGithub a.file-path:hover{color:#888;text-decoration:underline}.ui-connectedGithub .fa{font-size:20px}.ui-published-note .fa{font-size:20px;vertical-align:top}.unselectable{-webkit-user-select:none;-o-user-select:none;user-select:none}.selectable{-webkit-user-select:text;-o-user-select:text;user-select:text}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}.site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] .site-ui-font{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;letter-spacing:.025em;font-family:Source Sans Pro,Helvetica,Arial,sans-serif}html[lang^=ja] body{font-family:Source Sans Pro,Helvetica,Arial,Hiragino Kaku Gothic Pro,ヒラギノ角ゴ Pro W3,Osaka,Meiryo,メイリオ,MS Gothic,ＭＳ\ ゴシック,sans-serif}html[lang=zh-tw] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang TC,Microsoft JhengHei,微軟正黑,sans-serif}html[lang=zh-cn] body{font-family:Source Sans Pro,Helvetica,Arial,PingFang SC,Microsoft YaHei,微软雅黑,sans-serif}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}abbr[data-original-title],abbr[title]{cursor:help}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid comment-enabled comment-inner" data-hard-breaks="true"><h1 id="피어세션기록8주차-0319-금" data-id="피어세션기록8주차-0319-금"><a class="anchor hidden-xs" href="#피어세션기록8주차-0319-금" title="피어세션기록8주차-0319-금"><span class="octicon octicon-link"></span></a><span>피어세션기록(8주차, 03.19 금)</span></h1><h2 id="조교님-질의응답" data-id="조교님-질의응답"><a class="anchor hidden-xs" href="#조교님-질의응답" title="조교님-질의응답"><span class="octicon octicon-link"></span></a><span>조교님 질의응답</span></h2><ul>
+<li>
+<p><span>(현우) 카이스트 들어가려면 다 논문 써야한다는데 정말인가요…?</span></p>
+<ul>
+<li><span>ㅋㅋㅋㅋ 아니 해외 탑스쿨도 아니고… 아닙니다…</span></li>
+<li><span>석사입학이 논문을 써야 들어올수 있느냐… 그건 너무 소문이 과장된 것같고…</span></li>
+<li><span>AI쪽에 입학하신 분들이 논문 쓰신 분들은 다른과에 비해서 좀 더 많은 편이거같긴해요.</span></li>
+<li><span>워낙 이쪽 분야는 논문이 많이 나오기도 하고, 너무 인기가 많아서 최소 몇달-몇년정도는 기다렸다 들어오시는 분들이라…</span></li>
+</ul>
+</li>
+<li>
+<p><span>(준배) 개인적인 질문일 수 있는데, 졸업하시면 어디에 취업을 하실 생각이신지…?</span></p>
+<ul>
+<li><span>딱히 그런게 있진 않구요, 대부분은 스스로 취업준비를 하는 편인데…</span>
+<ul>
+<li><span>지인 스타트업에 가거나 직접 창업하는 경우도 꽤 많은 것 같아요.</span></li>
+</ul>
+</li>
+<li><span>저는 그렇지 않은 것 같고 어느정도 성장한 스타트업이나 대기업을 쓸 것 같아요.</span></li>
+<li><span>(질문) 그럼 지금 연구하고 계신 주제(그래프)쪽으로…?</span>
+<ul>
+<li><span>그러면 좋긴 한데, 사실 그래프를 메인으로 쓰는 회사가 국내에 이렇다하게 있진 않아서…</span></li>
+<li><span>보통 회사에 있는 머신러닝 부서에 지원을 많이 해서 그래프 쪽 분야를 노려보야할것 같아요.</span></li>
+<li><s><span>교수님이 홍보하실땐 수요가 많다고 하셨는데…</span></s>
+<ul>
+<li><span>그래프가 유망하긴 한데 자체가 메인인 기업은 잘 없긴해요 ㅋㅋ</span></li>
+<li><span>하이퍼커넥트는 소셜네트워크라 그래프가 메인입니다.</span></li>
+<li><span>소셜네트워크 서비스에서는 그래프가 메인이라고 생각하시면 될거같아요.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span>(지원) 개인적인 질문이긴 한데 대학원 진학하실때부터 박사는 생각 안하셨나요?</span></p>
+<ul>
+<li><span>박사를 해야지 말아야지 하는 생각을 처음부터 했던건 아니구…</span></li>
+<li><span>석사를 하다가 결정했습니다.</span></li>
+<li><span>개인적으로 힘들었던 부분도 있고, 너무 학교에 오래 있었던 것 같아서 시야가 좁아지는 기분이 들어서요.</span></li>
+<li><span>일단은 업계에 나가서 일을 하다가 혹시 나중에 박사가 하고싶어지면 그때 해도 되니까. 그 생각으로 취업을 하고 있습니다.</span></li>
+</ul>
+</li>
+<li>
+<p><span>(준호) 논문이야기, 유니스트 최신논문 오픈소스 구현하여 공개해서 Open AI에서 데려갔다는 이야기를 듣고 궁금해진게, 논문 구현능력만 가지고 데려가신거잖아요. 박사까지 해보면 모르겠는데, 석사는 구현과 배워가는 분들의 비율도 반반이라고 생각해서… 혹시 포지션별로 요구하는 능력이 다른건가요?</span></p>
+<ul>
+<li><span>네 그렇죠. 크게 보시면 연구포지션과 개발포지션을 나누어서 뽑는데, 말씀하신 분 같은 경우에는 개발 포지션이겠죠. 연구포지션은 아마 못들어가실거같아요.</span></li>
+<li><span>근데 그분은 논문을 굉장히 많이 구현하고 star도 많이 받으신거잖아요. 그렇게 빠르게 구현하고 튜닝하는 능력이 검증이 되어있어서 개발포지션으로 채용이 되었다고 보시면 될것 같아요.</span></li>
+<li><span>리서치쪽은 탑컨퍼런스에 논문을 많이 썼고, 얼마나 좋은 연구를 했고, 박사학위는 땄나 이런거라서… 리서쳐를 하실거라면 박사까지는 따는게 맞지 않나하는 생각이 들어요.</span></li>
+</ul>
+</li>
+<li>
+<p><span>(준호 - 추가) 연구쪽으로는 생각이 없고 개발적 (논문 구현, 실력, 취업 시장에서 매리트)으로 석사진학하는 것에 대해 어떻게 생각하시나요? (vs 당장 만족스럽지 못한 포지션으로 개발자 커리어 시작 후 이직)</span></p>
+<ul>
+<li><span>사실 이건 제가 확답을 못드리겠네요.</span></li>
+<li><span>사실 자기개발만 해서 하는게 더 효율적일수도 있고…</span></li>
+<li><span>근데 대학원에 오면 선배들이 있잖아요.</span></li>
+<li><span>어떤 task에서는 dropout을 하면 잘되는데, 어떤 task는 비슷하거나 오히려 더 잘안되더라. 이런 경험적인 부분을 대학원에 있으면 자기가 맡은 task에 따라서 확실히 알게 되어요.</span></li>
+<li><span>사실 전 (그리고 다른사람들이 얘기하기로도) 개발자로서의 역량을 검증받고싶을 때 제일 중요한 것은 github repo에서 star 많이 받는거랑, kaggle 하이랭크되는게 더 중요하다고 생각하는데…</span></li>
+</ul>
+</li>
+<li>
+<p><span>(성익) 국내에서 AI 기술력/경쟁력이 높다고 판단하시는/또는 주위에서 들리는 기업들이 있는지, 어떤 기업인지 궁금합니다.</span></p>
+<ul>
+<li><span>의학영상 스타트업 뷰노/루닛 -&gt; 기술력이 좋고, 데이터가 좋아요.</span>
+<ul>
+<li><span>서울에 있는 5대 병원 서/연/카/울/성에 데이터를 받아요.</span></li>
+<li><span>논문 잘쓰시는 분도 되게 스카웃을 많이 했구요.</span></li>
+</ul>
+</li>
+<li><span>NLP는 네이버가 잘 안다고 알고있습니다.</span></li>
+<li><span>개인적으로 비젼이 있을 거라고 생각하는건 쿠팡도 포함이긴합니다.</span></li>
+</ul>
+</li>
+<li>
+<p><span>(성익) 저에게 AI에서는 논문 수식의 이해가, CS에서는 자료구조/OS 등이 해야하기때문에 꾸역꾸역 할당량을 채우려고 하는 약같은 공부였고, 그래서 잘 하지 않았습니다. 그에 비해 결과가 바로 눈에 보이고 재미있는 몇몇 테크닉과 힙한 기술의 공부는 당장 필요하지 않으면서도 즐거워서 찾아보는 밥같은 공부였습니다. 이처럼 탄탄한 기본기를 쌓기 위해 필요하다고 하는 공부는 소량이라도 선뜻 손이 가지 않고, 오히려 매번 하고 싶은 재미있는 공부만 하다보니, 시간이 갈수록 취업/커리어 개발에 있어서 어떤 직군을 선택하더라도 스스로 기초가 부족한 게 아닐까하는 막연한 불안감이 생깁니다. 그 부분을 몰라서 당장 내 토이프로젝트 등에 문제가 생기는 게 아니라, 다른 이들은 다들 하기 싫은 마음을 꾹 참고 공부하고 있을텐데 나만 안하고 있어서 어떡하지 하는 조바심이 생기는 것 같습니다.</span></p>
+<ul>
+<li><span>공부는 탑다운으로 하는게 제일 효율적이라는 말은 있어요.</span>
+<ul>
+<li><span>이거 하다가 이게 필요해서 그때 공부한다.</span></li>
+<li><span>탑다운은 꼭 최신을 의미한다기보다는… 일단 뭔가를 하다가 모르는게 나올때 그것의 출처를 찾아보는 방법.</span></li>
+<li><span>바텀업은 베이스부터 하는것…</span></li>
+</ul>
+</li>
+<li><span>근데 탑다운도 어느정도의 베이스는 갖춰져있어야 가능한거잖아요. NLP도 모르는데 최신논문 읽으면서 NLP 논문을 찾아읽는건 어려운 거잖아요.</span></li>
+<li><span>개인적으로는 OS/자료구조 정도는…</span>
+<ul>
+<li><span>OS는 AI 엔지니어로서는 굳이…?</span></li>
+<li><span>자료구조 알고리즘/ 확통은 사실 어딜가도 중요한거고, 다다익선인거같아요.</span>
+<ul>
+<li><span>또 확통은 연구할때는 중요한데 개발할 땐 꼭 그렇지 않을수도 있거든요.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>일단 이런경우는 피하시면 좋을것같아요.</span>
+<ul>
+<li><span>전체적인 프로세스를 이해하는데, 뛰어넘는 게 너무 잦다.</span></li>
+<li><span>계속 넘기는 부분이 특정 부분(수학의 확률 같은 부분…)이고 이게 너무 잦다?</span>
+<ul>
+<li><span>이렇게 반복적으로 나타나는건 되게 중요하다는 거잖아요. 그건 공부해보시고 가는게 좋을것같아요.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span>(성익) 다른 조와 비교해봤을때 저희 조가 다른점이나 부족한점으로 느껴지는건?</span></p>
+<ul>
+<li><span>부족한점 같은건 딱히 없는거같고…ㅋㅋㅋ</span></li>
+<li><span>다른점은 (33조분들은) 전반적으로 질문하실 때에는 대학원생으로서의 질문에 대해 경험을 많이 해주셨어요.</span>
+<ul>
+<li><span>조교님 랩 관련 질문도 해주시고, 대학원생으로서 학부생으로 돌아간다면 어떤 걸 공부하실거같나?? 이런 질문들.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h3 id="조교님의-한마디" data-id="조교님의-한마디"><a class="anchor hidden-xs" href="#조교님의-한마디" title="조교님의-한마디"><span class="octicon octicon-link"></span></a><span>조교님의 한마디</span></h3><p><span>시원섭섭하네요. 일은 진작에 끝났지만…</span><br>
+<span>한학기동안 하시면서 빡셌을 수도 있는데, 열심히하신거같아 감사하고, 저도 캠퍼분들을 보면서 자극을 많이 받았어요. 대학원생활 하다보면 좀 무뎌지는 감이 있었는데… 저도 에너지를 많이 받았습니다. 열정 쭉 가지시고 열심히 하시면 다들 좋으실거같아요.</span></p><h2 id="오늘-강의세션과제-질문" data-id="오늘-강의세션과제-질문"><a class="anchor hidden-xs" href="#오늘-강의세션과제-질문" title="오늘-강의세션과제-질문"><span class="octicon octicon-link"></span></a><span>오늘 강의/세션/과제 질문</span></h2><ul>
+<li>
+<p><span>선형대수를 모르면 뒷부분은… 이해하기 어려운것같아요.</span></p>
+</li>
+<li>
+<p><span>커널 이야기가 되게 좋았어요.</span></p>
+<ul>
+<li><span>여러 커널의 용어를 말씀해주시면서 공통점과 차이점이 뭔지 말씀해주시는것…</span></li>
+<li><span>에센스라는 의미라는 걸 알려주셔서 좋았어요.</span></li>
+<li><span>(성익) 커널이랑 필터라는 용어가 같은 줄 알았는데 다르더라구요.</span>
+<ul>
+<li><a href="https://data-science-hi.tistory.com/128#:~:text=kernel%20%EA%B3%BC%20filter%EC%9D%98%20%EC%B0%A8%EC%9D%B4,%EC%98%81%EC%97%AD%EC%97%90%EC%84%9C%EC%9D%98%20%ED%81%AC%EA%B8%B0%EC%9D%B4%EB%8B%A4.&amp;text=filter%EB%9D%BC%EB%8A%94%20%EA%B2%83%EC%9D%80%20%EC%8B%A4%EC%A0%9C%EB%A1%9C%20kernel,4x4x3%EC%9D%B4%EB%9D%BC%EA%B3%A0%20%ED%95%A0%20%EC%88%98%20%EC%9E%88%EB%8B%A4." target="_blank" rel="noopener"><span>블로그 글</span></a></li>
+<li><a href="https://www.google.com/search?q=difference+of+kernel+and+filter&amp;ei=11VUYNbbI5v6wQPZ7LSICQ&amp;oq=difference+of+kernel+and+filter&amp;gs_lcp=Cgdnd3Mtd2l6EAMyBggAEBYQHjoHCAAQRxCwAzoFCAAQkQI6AggAOggILhDHARCjAjoECAAQQzoFCAAQyQM6CAgAEBYQChAeOgYIABANEB46CAgAEA0QChAeOgUIIRCgAVCBlwJYz8QCYPLFAmgBcAJ4AIABlQGIAagdkgEEMC4zMpgBAKABAaoBB2d3cy13aXrIAQjAAQE&amp;sclient=gws-wiz&amp;ved=0ahUKEwiWo-PW7bvvAhUbfXAKHVk2DZEQ4dUDCA0&amp;uact=5" target="_blank" rel="noopener"><span>블로그 글 2</span></a></li>
+<li><span>커널은 2D 영역이고, 필터는 3D 영역(channel까지 포함)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><span>어제 과제 질문</span></p>
+<ul>
+<li><span>왜 KL 자리에 CrossEntropy를 안쓰셨나요? 다른 레퍼런스나 PDF들은 다 Cross Entropy로 되어있던데…</span>
+<ul>
+<li><a href="https://light-tree.tistory.com/196" target="_blank" rel="noopener"><span>다른레퍼런스</span></a></li>
+<li><a href="https://wikidocs.net/60572" target="_blank" rel="noopener"><span>cross_entropy 안에 softmax함수가 이미 들어가있어요.</span></a></li>
+<li><span>이건 좀 더 찾아봐야할듯…</span></li>
+</ul>
+</li>
+<li><span>왜 하나는 KL Divergence 사용하고 하나는 CE 사용하는지?</span>
+<ul>
+<li><span>KL Divergence는 teacher의 분포를 학습하기 위해서, CE는 정답레이블이니까 그냥 학습하는 방식으로.</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul><h2 id="회고" data-id="회고"><a class="anchor hidden-xs" href="#회고" title="회고"><span class="octicon octicon-link"></span></a><span>회고</span></h2><ul>
+<li>
+<p><span>(준호) 피어세션이 가장 핵심적인 가치라고 느꼈고, 피어세션이 없었으면 중간에 42seoul로 빠졌을 것 같았어요. 서로 자극받고 열심히하게 되는 것을 넘어서서, 사소한 궁금증을 자유롭게 물어볼 수 있고, 같이 해결할 수 있다는게 좋았어요. 마스터님께 DM으로 물어봐서 해결되는거랑 다른 차원이잖아요. 구성원의 역할이 잘 분배된 것 같고, 좋은 토론이 있었던 것 같아서 유익했습니다.</span></p>
+</li>
+<li>
+<p><span>(지원) 이번주는 정말 많은것을 던져주시고 간 것 같아요. 추상적이긴 하지만 어느정도 큰 그림이 그려진 것 같고 그걸 좀 더 메워나가야겠죠? 지금 생각하는건 강의 순서가 거꾸로 되었어도 좋을것같아요. 직업훈련에는 맞지 않았지만… 질문 하는 법에 대해서는 많이 배웠습니다. 그리고 피어세션이 없었으면 생각도 못했던 게 많았을 것 같아요. 어려운 점도 공유하고, 동기부여도 받고… 좋은 분들 만나서 공부할 수 있어서 좋았습니다. 계속 같이했으면 좋겠어요!</span></p>
+</li>
+<li>
+<p><span>(준배) 이번주 강의가 좀 넓게 던져두고 알아서 공부하는거라, 제대로 배우지는 못한 것 같아요. 자세히 들어가려니까 너무 전문적이라 시도조차 못한 내용들이 많았던 한 주였고… U스테이지에 대해서는 정말 좋았지만, 아쉬운건 오프라인이었으면 피어세션을 좀 더 활용할 수 있었을 것 같아요. 그자리에서 듣고, 논의하고 정리했으면… 또 초반에는 너무 피어세션 시간이 일찍이었어서 질문 거리를 못 찾았을수도 있고요. 제가 자극을 주는 사람이기보다는 다른 분들께 자극을 많이 받았었거든요. 자극을 크게 받고 가는 시간이 되었습니다. 좋았습니다!</span></p>
+</li>
+<li>
+<p><span>(성익) 저번주부터 힘들고 공부의 집착을 버렸다. 이번주는 큰그림보고 간단하게 훑어보는식으로 진행했습니다. 공부하면서 다시 돌아봤을때 큰 도움을 줄거라 생각했습니다. 강의 스타일도 달라서 괜찮았다. 확신이 없고 불안한 상태였지만, 들어와서 느끼는것은 지금 아니면 못하는 경험이라고 느꼈다. 자기 나름에 최선을 다했다. 피어세션엔 모르는게 많아서 질문을 했고, 피어를 대하는게 어렵다고 느끼지 않고 중요한 시간이라 느꼈다. 기존의 부스트캠프와 피어세션의 의미가 달랐다. 피어세션의 가이드가 더 있었으면 하는 아쉬움. 또 다시 만났으면 합니다! 많이 배웠습니다 감사합니다!</span></p>
+</li>
+<li>
+<p><span>(현우) 이번주 강의는 대부분을 제대로 이해하지 못해서 아쉬운 부분이 있어요. 공부하다가 라즈베리 파이 등에 넣어보고 마스터님 강의의 의미를 느끼는 날이 있었으면 좋겠어요! 저는 사실 부캠을 큰 생각 없이 지원했는데, 취업과정인지도 모르고 지원했어요. 그래서 준비가 조금 안되었던 것 같아요. 들었던 강의는 sung kim님 강의 뿐이고… softmax함수나, 델타 수식도 몰랐어서. 그래서 피어세션에서 정말 많이 배웠어요. 서슴없이 질문했고 답변을 주셔서 감사했습니다. P스테이지에서도 이게 뭐냐고 물어보면 대답 부탁드릴게요 ㅋㅋㅋ. 자주 뵈어요.</span></p>
+</li>
+</ul></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav">
+<li class=""><a href="#피어세션기록8주차-0319-금" title="피어세션기록(8주차, 03.19 금)">피어세션기록(8주차, 03.19 금)</a><ul class="nav">
+<li class=""><a href="#조교님-질의응답" title="조교님 질의응답">조교님 질의응답</a><ul class="nav">
+<li><a href="#조교님의-한마디" title="조교님의 한마디">조교님의 한마디</a></li>
+</ul>
+</li>
+<li><a href="#오늘-강의세션과제-질문" title="오늘 강의/세션/과제 질문">오늘 강의/세션/과제 질문</a></li>
+<li><a href="#회고" title="회고">회고</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
+        <div class="toc"><ul class="nav">
+<li class=""><a href="#피어세션기록8주차-0319-금" title="피어세션기록(8주차, 03.19 금)">피어세션기록(8주차, 03.19 금)</a><ul class="nav">
+<li class=""><a href="#조교님-질의응답" title="조교님 질의응답">조교님 질의응답</a><ul class="nav">
+<li><a href="#조교님의-한마디" title="조교님의 한마디">조교님의 한마디</a></li>
+</ul>
+</li>
+<li><a href="#오늘-강의세션과제-질문" title="오늘 강의/세션/과제 질문">오늘 강의/세션/과제 질문</a></li>
+<li><a href="#회고" title="회고">회고</a></li>
+</ul>
+</li>
+</ul>
+</div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
