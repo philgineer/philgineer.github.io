@@ -73,7 +73,7 @@ author_profile: true
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
     [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
-
+    [![Daily Report](https://img.shields.io/badge/Day04-purple?style=flat)](https://philgineer.github.io/boostcamp-104)
 
 <br><br>
 
