@@ -66,6 +66,8 @@ author_profile: true
     * [![Daily Report](https://img.shields.io/badge/Day36-red?style=flat)](https://philgineer.github.io/boostcamp-036)
     [![Daily Report](https://img.shields.io/badge/Day37-orange?style=flat)](https://philgineer.github.io/boostcamp-037)
     [![Daily Report](https://img.shields.io/badge/Day38-yellow?style=flat)](https://philgineer.github.io/boostcamp-038)
+    [![Daily Report](https://img.shields.io/badge/Day39-green?style=flat)](https://philgineer.github.io/boostcamp-039)
+    [![Daily Report](https://img.shields.io/badge/Day40-blue?style=flat)](https://philgineer.github.io/boostcamp-040)
 
 ### P Stage
 
