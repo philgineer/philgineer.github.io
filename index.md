@@ -71,7 +71,7 @@ author_profile: true
 
 ### P Stage
 
-* [Project 1] *Image classification* - 마스크 착용 이미지 분류
+* [[Project 1] *Image classification* - 마스크 착용 이미지 분류](./reports/project1.html)
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
     [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
@@ -80,6 +80,7 @@ author_profile: true
     * [![Daily Report](https://img.shields.io/badge/Day06-purple?style=flat)](https://philgineer.github.io/boostcamp-106)
     [![Daily Report](https://img.shields.io/badge/Day07-purple?style=flat)](https://philgineer.github.io/boostcamp-107)
     [![Daily Report](https://img.shields.io/badge/Day08-purple?style=flat)](https://philgineer.github.io/boostcamp-108)
+    [![Daily Report](https://img.shields.io/badge/Day09-purple?style=flat)](https://philgineer.github.io/boostcamp-109)
 
 <br><br>
 
