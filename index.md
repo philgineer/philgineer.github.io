@@ -5,8 +5,7 @@ author_profile: true
 
 [![Boostcamp Badge](https://img.shields.io/badge/Boostcamp-AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html)
 [![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
-
-## **Daily reports**
+## **Boostcamp Daily Reports**
 <br>
 
 ### P Stage
@@ -23,7 +22,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day08-purple?style=flat)](https://philgineer.github.io/boostcamp-108)
     [![Daily Report](https://img.shields.io/badge/Day09-purple?style=flat)](https://philgineer.github.io/boostcamp-109)
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
-<br>
+<br><br>
 
 * [Project 2] *Tabular classification*
     * [![Daily Report](https://img.shields.io/badge/예정-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
@@ -38,7 +37,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day03-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
     [![Daily Report](https://img.shields.io/badge/Day04-green?style=flat)](https://philgineer.github.io/boostcamp-004)
     [![Daily Report](https://img.shields.io/badge/Day05-blue?style=flat)](https://philgineer.github.io/boostcamp-005)
-<br>
+<br><br>
 
 * [Week 2] *AI mathematics*
     * [![Daily Report](https://img.shields.io/badge/Day06-red?style=flat)](https://philgineer.github.io/boostcamp-006)
@@ -46,7 +45,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day08-yellow?style=flat)](https://philgineer.github.io/boostcamp-008)
     [![Daily Report](https://img.shields.io/badge/Day09-green?style=flat)](https://philgineer.github.io/boostcamp-009)
     [![Daily Report](https://img.shields.io/badge/Day10-blue?style=flat)](https://philgineer.github.io/boostcamp-010)
-<br>
+<br><br>
 
 * [Week 3] *Deep learning basics (MLP to GAN)*
     * [![Daily Report](https://img.shields.io/badge/Day11-red?style=flat)](https://philgineer.github.io/boostcamp-011)
