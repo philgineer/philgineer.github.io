@@ -3,15 +3,32 @@ layout: home
 author_profile: true
 ---
 
-[![Boostcamp Badge](https://img.shields.io/badge/Naver-Boostcamp-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html) #**AI Tech**
+[![Boostcamp Badge](https://img.shields.io/badge/Boostcamp-AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html)
+[![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
 
 ## **Daily reports**
+<br>
 
-<span style="color:grey">2021.01.18 ~ 2021.06.25</span>
+### P Stage
+<span style="color:grey">2021.03.29 ~ 2021.06.25</span>
 
- [![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
+* [[Project 1] *Image classification* - 마스크 착용 이미지 분류](./reports/project1.html)
+    * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
+    [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
+    [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
+    [![Daily Report](https://img.shields.io/badge/Day04-purple?style=flat)](https://philgineer.github.io/boostcamp-104)
+    [![Daily Report](https://img.shields.io/badge/Day05-purple?style=flat)](https://philgineer.github.io/boostcamp-105)
+    * [![Daily Report](https://img.shields.io/badge/Day06-purple?style=flat)](https://philgineer.github.io/boostcamp-106)
+    [![Daily Report](https://img.shields.io/badge/Day07-purple?style=flat)](https://philgineer.github.io/boostcamp-107)
+    [![Daily Report](https://img.shields.io/badge/Day08-purple?style=flat)](https://philgineer.github.io/boostcamp-108)
+    [![Daily Report](https://img.shields.io/badge/Day09-purple?style=flat)](https://philgineer.github.io/boostcamp-109)
+    [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
+
+* [Project 2] *Tabular classification*
+    * [![Daily Report](https://img.shields.io/badge/예정-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
 
 ### U Stage
+<span style="color:grey">2021.01.18 ~ 2021.03.22</span>
 
 * [Week 1] *Python & data handling*
     * [![Daily Report](https://img.shields.io/badge/Day01-red?style=flat)](https://philgineer.github.io/boostcamp-001)
@@ -68,19 +85,5 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day38-yellow?style=flat)](https://philgineer.github.io/boostcamp-038)
     [![Daily Report](https://img.shields.io/badge/Day39-green?style=flat)](https://philgineer.github.io/boostcamp-039)
     [![Daily Report](https://img.shields.io/badge/Day40-blue?style=flat)](https://philgineer.github.io/boostcamp-040)
-
-### P Stage
-
-* [[Project 1] *Image classification* - 마스크 착용 이미지 분류](./reports/project1.html)
-    * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
-    [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
-    [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
-    [![Daily Report](https://img.shields.io/badge/Day04-purple?style=flat)](https://philgineer.github.io/boostcamp-104)
-    [![Daily Report](https://img.shields.io/badge/Day05-purple?style=flat)](https://philgineer.github.io/boostcamp-105)
-    * [![Daily Report](https://img.shields.io/badge/Day06-purple?style=flat)](https://philgineer.github.io/boostcamp-106)
-    [![Daily Report](https://img.shields.io/badge/Day07-purple?style=flat)](https://philgineer.github.io/boostcamp-107)
-    [![Daily Report](https://img.shields.io/badge/Day08-purple?style=flat)](https://philgineer.github.io/boostcamp-108)
-    [![Daily Report](https://img.shields.io/badge/Day09-purple?style=flat)](https://philgineer.github.io/boostcamp-109)
-
 <br><br>
 
