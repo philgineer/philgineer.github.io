@@ -23,9 +23,11 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day08-purple?style=flat)](https://philgineer.github.io/boostcamp-108)
     [![Daily Report](https://img.shields.io/badge/Day09-purple?style=flat)](https://philgineer.github.io/boostcamp-109)
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
+<br>
 
 * [Project 2] *Tabular classification*
     * [![Daily Report](https://img.shields.io/badge/예정-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
+<br><br>
 
 ### U Stage
 <span style="color:grey">2021.01.18 ~ 2021.03.22</span>
@@ -36,6 +38,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day03-yellow?style=flat)](https://philgineer.github.io/boostcamp-003)
     [![Daily Report](https://img.shields.io/badge/Day04-green?style=flat)](https://philgineer.github.io/boostcamp-004)
     [![Daily Report](https://img.shields.io/badge/Day05-blue?style=flat)](https://philgineer.github.io/boostcamp-005)
+<br>
 
 * [Week 2] *AI mathematics*
     * [![Daily Report](https://img.shields.io/badge/Day06-red?style=flat)](https://philgineer.github.io/boostcamp-006)
@@ -43,6 +46,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day08-yellow?style=flat)](https://philgineer.github.io/boostcamp-008)
     [![Daily Report](https://img.shields.io/badge/Day09-green?style=flat)](https://philgineer.github.io/boostcamp-009)
     [![Daily Report](https://img.shields.io/badge/Day10-blue?style=flat)](https://philgineer.github.io/boostcamp-010)
+<br>
 
 * [Week 3] *Deep learning basics (MLP to GAN)*
     * [![Daily Report](https://img.shields.io/badge/Day11-red?style=flat)](https://philgineer.github.io/boostcamp-011)
@@ -50,6 +54,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day13-yellow?style=flat)](https://philgineer.github.io/boostcamp-013)
     [![Daily Report](https://img.shields.io/badge/Day14-green?style=flat)](https://philgineer.github.io/boostcamp-014)
     [![Daily Report](https://img.shields.io/badge/Day15-blue?style=flat)](https://philgineer.github.io/boostcamp-015)
+<br>
 
 * [Week 4] *Natural Language Processing*
     * [![Daily Report](https://img.shields.io/badge/Day16-red?style=flat)](https://philgineer.github.io/boostcamp-016)
@@ -64,6 +69,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day23-yellow?style=flat)](https://philgineer.github.io/boostcamp-023)
     [![Daily Report](https://img.shields.io/badge/Day24-green?style=flat)](https://philgineer.github.io/boostcamp-024)
     [![Daily Report](https://img.shields.io/badge/Day25-blue?style=flat)](https://philgineer.github.io/boostcamp-025)
+<br>
 
 * [Week 6] *특강*
     * [![Daily Report](https://img.shields.io/badge/Day26-red?style=flat)](https://philgineer.github.io/boostcamp-026)
@@ -71,6 +77,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day28-yellow?style=flat)](https://philgineer.github.io/boostcamp-028)
     [![Daily Report](https://img.shields.io/badge/Day29-green?style=flat)](https://philgineer.github.io/boostcamp-029)
     ![Daily Report](https://img.shields.io/badge/공휴일-grey?style=flat)
+<br>
 
 * [Week 7] *Computer Vision*
     * [![Daily Report](https://img.shields.io/badge/Day31-red?style=flat)](https://philgineer.github.io/boostcamp-031)
