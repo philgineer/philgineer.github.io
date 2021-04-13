@@ -187,12 +187,51 @@
 <li><span>Hyperparameters를 공개한 규진님의 토론 게시물을 봤는데, transform을 전혀 사용하지 않은 것을 보고 충격 받고 insight를 얻어서 실험 후 발견함</span></li>
 </ul>
 </li>
-</ul><h3 id="Untried-Ideas" data-id="Untried-Ideas"><a class="anchor hidden-xs" href="#Untried-Ideas" title="Untried-Ideas"><span class="octicon octicon-link"></span></a><em><span>Untried Ideas</span></em></h3><ul>
-<li><span>1 backbone + 3 branches model</span></li>
-<li><span>외부 데이터셋 활용 or 새로운 데이터셋 생성</span></li>
-<li><span>Soft-f1 loss</span></li>
+</ul><h3 id="Ideas-might-have-been-helpful" data-id="Ideas-might-have-been-helpful"><a class="anchor hidden-xs" href="#Ideas-might-have-been-helpful" title="Ideas-might-have-been-helpful"><span class="octicon octicon-link"></span></a><em><span>Ideas might have been helpful</span></em></h3><ul>
+<li><span>Resize 적당히</span>
+<ul>
+<li><span>batchsize를 높이는 것에 초점을 맞춰서 resize를 (200, 200)까지 줬는데, 오히려 정보 손실로 오는 성능 하락이 더 컸던 것 같다.</span></li>
+</ul>
+</li>
+<li><span>Stratified split</span>
+<ul>
+<li><span>층화추출을 사용해 validation set과 train set에 클래스별 비율을 어느 정도 맞췄더라면 더 성능이 향상되었을 것 같다.</span></li>
+</ul>
+</li>
+<li><span>더 무거운 모델 혹은 multi branch 모델 사용</span>
+<ul>
+<li><span>일반화에 너무 치중해서 EfficientNet b0 부터 시작해 b4에서 모델 상향화를 멈췄는데, b8로 하신 분이 score가 잘 나온 걸 보니 실험을 더 진행해서 더 무거운 모델을 사용해봤으면 좋았을 것 같다.</span></li>
+<li><span>1 backbone + 3 branches model 모델을 사용해 3 가지 기준의 레이블을 각각 loss로 계산해 학습시켰다면 성능 향상에 도움이 되었을 것 같다.</span></li>
+</ul>
+</li>
+<li><span>Loss에 대한 다양한 실험</span>
+<ul>
+<li><span>CrossEntropy 대신 data imbalance 문제에 도움이 될 수 있는 Focal loss를 사용해 성능향상을 보았지만, 막상 상위권 분들의 시도를 보니 여러 가지 loss를 더해서 새로 만들거나, (1 - f1 score) 등의 텀을 추가한다거나 등의 색다른 것들이 많았다.</span></li>
+</ul>
+</li>
+<li><span>Cutmix</span>
+<ul>
+<li><span>마스크 정보를 잃어버리지 않도록 윗부분과 아랫부분을 잘라 붙이지 않고, 좌우로만 이미지를 갈라서 사용. 수가 매우 부족한 노인 데이터를 oversampling하는 효과를 동시에 낼 수 있도록 한쪽은 60세 이상 데이터만 삽입. 가장 인상적이었던 것은, 좌(사람1의 왼쪽 얼굴) + 우(사람2의 오른쪽 얼굴) 시 성능 향상이 별로 없었고, 좌(사람1의 왼쪽 얼굴) + 우(사람2의 왼쪽 얼굴) 시 성능 향상이 컸다는 사실. 역시 실험을 해보기 전에 판단하면 안 된다.</span></li>
+</ul>
+</li>
+<li><span>Ensemble</span>
+<ul>
+<li><span>시간이 부족해서 시도하지 못했는데, 성능향상이 보장되는 방법. 각 모델의 확률벡터들을 가중합하는 Weighted ensemble도 있다는 것을 기억할 것.</span></li>
+</ul>
+</li>
+<li><span>Terminal 환경에서 실험-friendly 한 설계</span>
+<ul>
+<li><span>하이퍼파라미터 값을 바꾸기 간편하고, 실험을 빠르고 한눈에 확인하기 쉽게 구성할 수 있음.</span></li>
+</ul>
+</li>
+<li><span>Learning rate를 backbone 부분과 classifier (final FC layer) 부분을 다르게 설정</span>
+<ul>
+<li><span>backbone은 pretrained 사용 시 learning rate를 더 적게 (0.1배 등) 설정하면 freeze 효과를 부분적으로 볼 수 있음.</span></li>
+</ul>
+</li>
+<li><span>외부 데이터셋 활용 + 새로운 데이터셋 생성</span></li>
 </ul><h3 id="Thoughts" data-id="Thoughts"><a class="anchor hidden-xs" href="#Thoughts" title="Thoughts"><span class="octicon octicon-link"></span></a><em><span>Thoughts</span></em></h3><blockquote>
-<p><span>무엇보다도 Dataset class와 Data loader를 온전히 내 힘으로 task에 알맞게 구현해내고, 계획한 아이디어에 맞게 아키텍처를 구성해 end-to-end 모델을 완성했다는 것이 정말 뿌듯하다.</span><br>
+<p><span>무엇보다도 Dataset class, Data loader 등의 모듈과 파이프라인을 온전히 내 힘으로 task에 알맞게 구현해내고, 계획한 아이디어에 맞게 아키텍처를 구성해 end-to-end 모델을 완성했다는 것이 정말 뿌듯하다.</span><br>
 <br><span>직접 밑바닥부터 코딩을 해보면서 왜 딥러닝 framework들이 그렇게 OOP를 중요하게 생각하는지 몸소 체험할 수 있었고, 새로운 아이디어를 적용할 때 내 custom class들에 맞게끔 내부 로직을 수정하는 요령도 생겼다.</span><br>
 <br><span>다양한 아이디어를 적용하고 실험해보면서, "대개 이런 경우에 이런 방법이 있다"고 하는 ML/DL 지식이 생각보다 그대로 적용되는 경우가 잘 없다는 것을 느꼈다. 앞으로는 실험을 할 때 조금 더 체계적인 tool과 logging을 사용하면서, 정확히 하나의 변수만 변화시켜가면서 진행해야겠다. 또한, 크게 성능 향상에 기여할 것 같지 않다고 생각되는 아이디어들도 그냥 지나쳐버리지 않고, 작게나마 실험을 구성해 직접 검증한 뒤에 판단해야겠다.</span></p>
 </blockquote></div>
@@ -212,10 +251,10 @@
 </ul>
 </li>
 <li><a href="#Model-amp-Hyperparameters" title="Model &amp; Hyperparameters">Model &amp; Hyperparameters</a></li>
-<li><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
+<li class=""><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
 <li><a href="#Failures" title="Failures">Failures</a></li>
-<li><a href="#Untried-Ideas" title="Untried Ideas">Untried Ideas</a></li>
-<li><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
+<li class=""><a href="#Ideas-might-have-been-helpful" title="Ideas might have been helpful">Ideas might have been helpful</a></li>
+<li class=""><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
 </ul>
 </li>
 </ul>
@@ -236,10 +275,10 @@
 </ul>
 </li>
 <li><a href="#Model-amp-Hyperparameters" title="Model &amp; Hyperparameters">Model &amp; Hyperparameters</a></li>
-<li><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
+<li class=""><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
 <li><a href="#Failures" title="Failures">Failures</a></li>
-<li><a href="#Untried-Ideas" title="Untried Ideas">Untried Ideas</a></li>
-<li><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
+<li class=""><a href="#Ideas-might-have-been-helpful" title="Ideas might have been helpful">Ideas might have been helpful</a></li>
+<li class=""><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
 </ul>
 </li>
 </ul>

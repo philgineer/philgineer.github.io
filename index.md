@@ -25,7 +25,8 @@ author_profile: true
 <br><br>
 
 * [Project 2] *Tabular classification*
-    * [![Daily Report](https://img.shields.io/badge/예정-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
+    * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
+    [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
 <br><br>
 
 ### U Stage
@@ -47,7 +48,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-blue?style=flat)](https://philgineer.github.io/boostcamp-010)
 <br><br>
 
-* [Week 3] *Deep learning basics (MLP to GAN)*
+* [Week 3] *Deep learning basics*
     * [![Daily Report](https://img.shields.io/badge/Day11-red?style=flat)](https://philgineer.github.io/boostcamp-011)
     [![Daily Report](https://img.shields.io/badge/Day12-orange?style=flat)](https://philgineer.github.io/boostcamp-012)
     [![Daily Report](https://img.shields.io/badge/Day13-yellow?style=flat)](https://philgineer.github.io/boostcamp-013)
