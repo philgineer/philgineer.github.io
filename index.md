@@ -27,6 +27,7 @@ author_profile: true
 * [Project 2] *Tabular classification*
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
     [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
+    [![Daily Report](https://img.shields.io/badge/Day03-brown?style=flat)](https://philgineer.github.io/boostcamp-203)
 <br><br>
 
 ### U Stage
