@@ -31,6 +31,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day04-brown?style=flat)](https://philgineer.github.io/boostcamp-204)
     [![Daily Report](https://img.shields.io/badge/Day05-brown?style=flat)](https://philgineer.github.io/boostcamp-205)
     [![Daily Report](https://img.shields.io/badge/Day06-brown?style=flat)](https://philgineer.github.io/boostcamp-206)
+    [![Daily Report](https://img.shields.io/badge/Day07-brown?style=flat)](https://philgineer.github.io/boostcamp-207)
 <br><br>
 
 ### U Stage
