@@ -24,7 +24,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
 <br><br>
 
-* [Project 2] *Tabular classification*
+* [[Project 2] *Tabular classification* - 온라인 쇼핑몰 고객 구매 예측](./reports/project2.html)
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
     [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
     [![Daily Report](https://img.shields.io/badge/Day03-brown?style=flat)](https://philgineer.github.io/boostcamp-203)
@@ -33,6 +33,8 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day06-brown?style=flat)](https://philgineer.github.io/boostcamp-206)
     [![Daily Report](https://img.shields.io/badge/Day07-brown?style=flat)](https://philgineer.github.io/boostcamp-207)
     [![Daily Report](https://img.shields.io/badge/Day08-brown?style=flat)](https://philgineer.github.io/boostcamp-208)
+    [![Daily Report](https://img.shields.io/badge/Day09-brown?style=flat)](https://philgineer.github.io/boostcamp-209)
+    [![Daily Report](https://img.shields.io/badge/Day10-brown?style=flat)](https://philgineer.github.io/boostcamp-210)
 <br><br>
 
 ### U Stage

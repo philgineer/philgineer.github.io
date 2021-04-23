@@ -10,7 +10,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="mobile-web-app-capable" content="yes">
     <title>
-        Project1 Wrap up Report - HackMD
+        Project2 Wrap up Report - HackMD
     </title>
     <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
     <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Project1-Wrap-up-Report" data-id="Project1-Wrap-up-Report"><a class="anchor hidden-xs" href="#Project1-Wrap-up-Report" title="Project1-Wrap-up-Report"><span class="octicon octicon-link"></span></a><span>Project1 Wrap up Report</span></h1><table>
+    <div id="doc" class="markdown-body container-fluid comment-enabled" data-hard-breaks="true"><h1 id="Project2-Wrap-up-Report" data-id="Project2-Wrap-up-Report"><a class="anchor hidden-xs" href="#Project2-Wrap-up-Report" title="Project2-Wrap-up-Report"><span class="octicon octicon-link"></span></a><span>Project2 Wrap up Report</span></h1><table>
 <thead>
 <tr>
 <th><span>Title</span></th>
@@ -45,195 +45,144 @@
 </thead>
 <tbody>
 <tr>
-<td><span>마스크 착용 이미지 분류</span></td>
+<td><span>온라인 상점 고객 구매 예측</span></td>
 <td><span>개인 프로젝트</span></td>
-<td><span>2021.03.29 ~ 2021.04.08</span></td>
+<td><span>2021.04.12 ~ 2021.04.22</span></td>
 <td><span>T1138 윤준호</span></td>
 </tr>
 </tbody>
 </table><h2 id="Result" data-id="Result"><a class="anchor hidden-xs" href="#Result" title="Result"><span class="octicon octicon-link"></span></a><span>Result</span></h2><ul>
 <li><span>Leaderboard</span>
 <ul>
-<li><span>F1 score: </span><strong><span>0.7235</span></strong></li>
-<li><span>Rank: </span><strong><span>109</span></strong><span>/224</span></li>
+<li><span>AUC: </span><strong><span>0.8552</span></strong></li>
+<li><span>Rank: </span><strong><span>44</span></strong><span>/99</span></li>
 </ul>
 </li>
 </ul><h2 id="Task" data-id="Task"><a class="anchor hidden-xs" href="#Task" title="Task"><span class="octicon octicon-link"></span></a><span>Task</span></h2><ul>
-<li><span>4500명 x 7장 image data</span></li>
-<li><span>18 classes multi-label classification</span>
+<li><span>Data</span>
 <ul>
-<li><span>마스크 착용 여부(3), 성별(2), 나이(3) 기준</span></li>
+<li><span>온라인 상점의 거래 log 데이터 (2009.12 ~ 2011.11)</span></li>
 </ul>
 </li>
-<li>
-<h3 id="Main-Issues" data-id="Main-Issues"><a class="anchor hidden-xs" href="#Main-Issues" title="Main-Issues"><span class="octicon octicon-link"></span></a><span>Main Issues</span></h3>
-<ul>
-<li><span>Data imbalance</span>
-<ul>
-<li><span>클래스 조건별 imbalance 존재, 특히 '나이’에서 ‘60세 이상’ class에 해당하는 데이터가 7% 정도로 매우 적음</span></li>
-</ul>
-</li>
-<li><span>Noisy label</span>
-<ul>
-<li><span>잘못 labelling된 데이터 존재 (최소 10장 이상)</span></li>
-</ul>
-</li>
-<li><span>Dependent classes</span>
-<ul>
-<li><span>독립된 18개의 class가 아니라, 세 가지 기준에 의해 경우의 수로 나뉜 class들이기 때문에 독립분포 가정 위배</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><h2 id="Approaches" data-id="Approaches"><a class="anchor hidden-xs" href="#Approaches" title="Approaches"><span class="octicon octicon-link"></span></a><span>Approaches</span></h2><h3 id="Dealing-with-Data-Imbalance" data-id="Dealing-with-Data-Imbalance"><a class="anchor hidden-xs" href="#Dealing-with-Data-Imbalance" title="Dealing-with-Data-Imbalance"><span class="octicon octicon-link"></span></a><em><span>Dealing with Data Imbalance</span></em></h3><ol>
-<li><span>Age class의 imbalance를 완화하기 위해 Age class 기준점을 변경</span>
-<ul>
-<li><span>변경 전: 30 미만 ,30-59, 60 이상</span></li>
-<li><span>변경 후: 30 미만, 30-57, 58 이상</span></li>
-</ul>
-</li>
-<li><span>예측 확률이 낮은 class에 대해 더 높은 loss를 부여하는 Focal loss 사용</span>
-<ul>
-<li><span>Default 값이 2인 gamma를 0.8 까지 낮춰, loss 가중치를 너무 과하지 않게 부여함 (gamma=0일 때 CrossEntropy와 동일함)</span></li>
-</ul>
-</li>
-</ol><h3 id="Generalization" data-id="Generalization"><a class="anchor hidden-xs" href="#Generalization" title="Generalization"><span class="octicon octicon-link"></span></a><em><span>Generalization</span></em></h3><ol>
-<li><span>Train-validation set을 사람을 단위로 split</span>
-<ul>
-<li><span>같은 사람의 데이터가 train, validation set에 각각 들어가 validation accuracy가 과대평가되는 것을 방지</span></li>
-</ul>
-</li>
-<li><span>Light한 모델 사용</span>
-<ul>
-<li><span>Overfitting 되는 것을 방지하기 위해, 매우 가벼운 EfficientNet b0로 시작해 한 단계씩 높여가며 실험 진행 (최종적으로는 가볍다고 하기 애매한 b4까지 가긴 함)</span></li>
-</ul>
-</li>
-<li><span>Early stopping</span>
-<ul>
-<li><span>Train loss와 validation loss를 텐서보드를 이용해 그래프로 비교해가며, train loss는 계속해서 감소하는데 validation loss가 다시 증가하는 구간에서 학습 중단</span></li>
-</ul>
-</li>
-<li><span>Data augmentation</span>
-<ul>
-<li><span>여러가지 transformation을 활용해 데이터의 state, case를 다양화</span></li>
-<li><span>여러 실험을 거쳐서 성능 향상에 도움이 되는 transformation만 남김 (centercrop, resize, normalize)</span></li>
-</ul>
-</li>
-<li><span>Batchsize 최대화</span>
-<ul>
-<li><span>Batch normalization 단계에서 최대한 일반화된 분포를 기준으로 normalization할 수 있도록, GPU 용량과 성능이 감당하는 한에서 최대화 (batchsize=128)</span></li>
-<li><span>Resize를 많이 주어 batchsize를 더 올릴 수 있게 함</span></li>
-</ul>
-</li>
-<li><span>AdamW optimizer 사용</span>
-<ul>
-<li><span>수렴이 빠르고 대체적으로 다양한 task에서 높은 성능을 보이는 Adam의 단점으로, SGD에 비해 낮은 일반화 성능이 언급됨 (L2 regularization이 Adaptive optimizer에서 일반화 효과가 적어짐)</span></li>
-<li><span>Adam의 일반화 성능을 높이기 위한 방법으로, weight update 시 weight decay를 적용하는 AdamW를 사용함</span></li>
-</ul>
-</li>
-<li><span>Pseudo Cross-validation</span>
-<ul>
-<li><span>마지막 제출 시 validation set 없이 train set 100%로 학습 진행</span></li>
-<li><span>최적의 epoch를 max epoch로 지정 후 최종 모델을 활용해 제출</span></li>
-</ul>
-</li>
-</ol><h2 id="Model-amp-Hyperparameters" data-id="Model-amp-Hyperparameters"><a class="anchor hidden-xs" href="#Model-amp-Hyperparameters" title="Model-amp-Hyperparameters"><span class="octicon octicon-link"></span></a><span>Model &amp; Hyperparameters</span></h2><ul>
+<li><span>고객별 구매액 300 초과 여부 예측 (2011.12)</span></li>
+</ul><h2 id="Model-amp-Hyperparameters" data-id="Model-amp-Hyperparameters"><a class="anchor hidden-xs" href="#Model-amp-Hyperparameters" title="Model-amp-Hyperparameters"><span class="octicon octicon-link"></span></a><span>Model &amp; Hyperparameters</span></h2><ul>
 <li><span>Model</span>
 <ul>
-<li><span>EfficientNet b4</span></li>
+<li><span>Light Gradient Boosting Machine</span></li>
 </ul>
 </li>
 <li><span>Hyperparameters</span>
 <ul>
-<li><span>Optimizer: AdamW</span></li>
-<li><span>Loss: Focal loss</span>
+<li><span>metric: AUC</span></li>
+<li><span>feature fraction: 0.8</span></li>
+<li><span>bagging fraction: 0.8</span></li>
+<li><span>bagging frequency: 1</span></li>
+<li><span>n estimators: 10000</span></li>
+<li><span>early stopping rounds: 100</span></li>
+<li><span>train-validation set split: stratified 10-fold</span></li>
+</ul>
+</li>
+</ul><h2 id="Approaches" data-id="Approaches"><a class="anchor hidden-xs" href="#Approaches" title="Approaches"><span class="octicon octicon-link"></span></a><span>Approaches</span></h2><h3 id="Model-selection-amp-ensemble" data-id="Model-selection-amp-ensemble"><a class="anchor hidden-xs" href="#Model-selection-amp-ensemble" title="Model-selection-amp-ensemble"><span class="octicon octicon-link"></span></a><strong><span>Model selection &amp; ensemble</span></strong></h3><ul>
+<li><span>Random Forest</span>
+<ol>
+<li><span>Validation AUC가 test AUC보다 높았고, 클래스 분포가 치우쳐 있었기 때문에 overfit 문제를 해결하는 것이 중요하다고 판단함. 예측이 틀린 데이터를 이용해 다음 트리를 생성하는 gradient boosting machine과는 다르게, 매번 랜덤 샘플링을 통해 트리를 생성하는 random forest 방식이 일반화 성능이 우월해 overfit 문제를 다루는데 적합하다고 판단해 모델 변경을 시도</span></li>
+<li><span>내가 사용한 sklearn RandomForest의 경우, 결과값 형태가 기존 방식과 같은 probability가 아닌 decision (0 또는 1)이었음. 따라서 fold별 예측을 반영하지 못하고 극단적으로 이진 판단만 고려했기 때문에 성능 감소. (0.7289 cf. baseline 0.8100)</span></li>
+<li><span>predict()가 아닌 predict_proba() 함수를 사용해 결과값을 확률값 형태로 바꿔주고, 하이퍼 파라미터 탐색을 통해 성능 향상 (0.8177)</span>
 <ul>
-<li><span>gamma: 0.8</span></li>
+<li><span>n_estimator: 1000 (200~5000 실험)</span></li>
+<li><span>max_depth: 16 (10~30 실험)</span></li>
+<li><span>max_features: sqrt (sqrt/0.1/0.2/log2 실험)</span></li>
 </ul>
 </li>
-<li><span>Learning rate: 3e-4</span></li>
-<li><span>LR scheduler: StepLR</span>
+<li><span>하지만 feature engineering을 통해 새로운 특성 생성 후 기존 모델과 비교했을 때 성능이 더 낮았고, ensemble 결과도 기존 모델보다 낮았기 때문에 최종 제출은 기존 모델로 함</span>
 <ul>
-<li><span>stepsize=2</span></li>
-<li><span>gamma=0.2</span></li>
+<li><span>lgbm: 0.8552</span></li>
+<li><span>random forest: 0.8430</span></li>
+<li><span>ensemble (two above): 8515 (soft-voting)</span></li>
 </ul>
 </li>
-<li><span>Epoch: 4</span></li>
-<li><span>Batchsize: 128</span></li>
-<li><span>Transform</span>
+</ol>
+</li>
+</ul><h3 id="EDA-amp-Feature-engineering" data-id="EDA-amp-Feature-engineering"><a class="anchor hidden-xs" href="#EDA-amp-Feature-engineering" title="EDA-amp-Feature-engineering"><span class="octicon octicon-link"></span></a><strong><span>EDA &amp; Feature engineering</span></strong></h3><ul>
+<li><span>Aggregation functions</span>
 <ul>
-<li><span>RandomRotation(10) (train only)</span></li>
-<li><span>CenterCrop((450, 360)) (train only)</span></li>
-<li><span>Resize(200, 200)</span></li>
-<li><span>Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])</span></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul><h2 id="Lessons" data-id="Lessons"><a class="anchor hidden-xs" href="#Lessons" title="Lessons"><span class="octicon octicon-link"></span></a><span>Lessons</span></h2><h3 id="Failures" data-id="Failures"><a class="anchor hidden-xs" href="#Failures" title="Failures"><span class="octicon octicon-link"></span></a><em><span>Failures</span></em></h3><ul>
-<li><span>Oversampling</span>
+<li><span>customer를 기준으로 aggregation 시, 단순 월별 총 구매액뿐만 아니라 다양한 feature 변화 함수들을 적용 후 성능 향상</span>
 <ul>
-<li><span>weighted ramdom sampler를 사용해 시도했지만, 오히려 f1 score가 떨어짐</span></li>
-<li><span>class 별로 적절하게 중복 sampling할 비율을 지정하는 방식이 아니라, class 별 비중을 계산한 뒤 모든 데이터에 대해서 weight를 계산한 후 거기 맞춰서 random sampling하는 방식</span></li>
-<li><span>이번 task에서는 data가 지나치게 imbalance 되어 있었기 때문에, 강제로 1 : 1 : 1 : … 비율로 맞추면 오히려 역효과가 나는 것 같음</span></li>
-<li><span>실패 후에 비슷한 목적으로 이용 가능한 focal loss를 시도해 성능 향상을 보았음</span></li>
-<li><span>class 별로 지정한 비율로 sampling할 수 있도록 구현한다면 성능 향상에 도움이 될 수도 있을 것 같음</span></li>
+<li><span>mean, max, min, sum, count, std, skew</span></li>
 </ul>
 </li>
-<li><span>Grayscale, horizontal flip</span>
+<li><span>몇몇 feature에 대해서는 특수한 함수를 적용하기 위해 aggregation dict를 생성 후 key-value 지정</span>
 <ul>
-<li><span>너무 단순하게도 “다양한 색의 마스크를 헷갈리지 않게 잘 분류하도록” grayscale을 전부 적용했지만, 오히려 transforms에서 제외했을 때 성능이 더 좋았음</span></li>
-<li><span>validation, test set의 transfroms에 포함할 때와 하지 않을 때 모두 마찬가지였음</span></li>
-<li><span>Hyperparameters를 공개한 규진님의 토론 게시물을 봤는데, transform을 전혀 사용하지 않은 것을 보고 충격 받고 insight를 얻어서 실험 후 발견함</span></li>
+<li><span>‘month’: mode_func + agg_func (month 특성의 경우, mean, max, … 등의 agg 함수말고도 최빈값 mode 함수도 적용해 총 8개 feature 생성)</span></li>
 </ul>
 </li>
-</ul><h3 id="Ideas-might-have-been-helpful" data-id="Ideas-might-have-been-helpful"><a class="anchor hidden-xs" href="#Ideas-might-have-been-helpful" title="Ideas-might-have-been-helpful"><span class="octicon octicon-link"></span></a><em><span>Ideas might have been helpful</span></em></h3><ul>
-<li><span>Resize 적당히</span>
+</ul>
+</li>
+<li><span>Accumulation features</span>
 <ul>
-<li><span>batchsize를 높이는 것에 초점을 맞춰서 resize를 (200, 200)까지 줬는데, 오히려 정보 손실로 오는 성능 하락이 더 컸던 것 같다.</span></li>
-</ul>
-</li>
-<li><span>Stratified split</span>
+<li><span>단순 월별 총 구매액이 아니라, 시간이 지남에 따라 누적되는 정보를 담을 수 있는 accumulation feature를 생성해 성능 향상</span>
 <ul>
-<li><span>층화추출을 사용해 validation set과 train set에 클래스별 비율을 어느 정도 맞췄더라면 더 성능이 향상되었을 것 같다.</span></li>
-</ul>
-</li>
-<li><span>더 무거운 모델 혹은 multi branch 모델 사용</span>
+<li><span>customer id, product id, order id를 각각 기준으로 groupby 후 세 항목을 cumsum한 feature 생성</span>
 <ul>
-<li><span>일반화에 너무 치중해서 EfficientNet b0 부터 시작해 b4에서 모델 상향화를 멈췄는데, b8로 하신 분이 score가 잘 나온 걸 보니 실험을 더 진행해서 더 무거운 모델을 사용해봤으면 좋았을 것 같다.</span></li>
-<li><span>1 backbone + 3 branches model 모델을 사용해 3 가지 기준의 레이블을 각각 loss로 계산해 학습시켰다면 성능 향상에 도움이 되었을 것 같다.</span></li>
+<li><span>total, quantity, price</span></li>
 </ul>
 </li>
-<li><span>Loss에 대한 다양한 실험</span>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>nunique</span>
 <ul>
-<li><span>CrossEntropy 대신 data imbalance 문제에 도움이 될 수 있는 Focal loss를 사용해 성능향상을 보았지만, 막상 상위권 분들의 시도를 보니 여러 가지 loss를 더해서 새로 만들거나, (1 - f1 score) 등의 텀을 추가한다거나 등의 색다른 것들이 많았다.</span></li>
+<li><span>order_id, product_id 각각의 unique 값 수를 feature로 생성 후 성능 향상</span></li>
 </ul>
 </li>
-<li><span>Cutmix</span>
+<li><span>Time series features</span>
 <ul>
-<li><span>마스크 정보를 잃어버리지 않도록 윗부분과 아랫부분을 잘라 붙이지 않고, 좌우로만 이미지를 갈라서 사용. 수가 매우 부족한 노인 데이터를 oversampling하는 효과를 동시에 낼 수 있도록 한쪽은 60세 이상 데이터만 삽입. 가장 인상적이었던 것은, 좌(사람1의 왼쪽 얼굴) + 우(사람2의 오른쪽 얼굴) 시 성능 향상이 별로 없었고, 좌(사람1의 왼쪽 얼굴) + 우(사람2의 왼쪽 얼굴) 시 성능 향상이 컸다는 사실. 역시 실험을 해보기 전에 판단하면 안 된다.</span></li>
+<li><span>customer별 최대 구매한 year, month, 그리고 해당 month의 총 구매 가격을 feature로 생성 후 성능 향상</span></li>
+<li><span>diff() 함수를 이용해 고객별 총 구매 가격, product price, quantity, 구매한 month 각각의 (직전 기록과의) 차이를 feature로 생성 후 성능 향상</span></li>
 </ul>
 </li>
-<li><span>Ensemble</span>
+<li><span>Description Word2Vec</span>
 <ul>
-<li><span>시간이 부족해서 시도하지 못했는데, 성능향상이 보장되는 방법. 각 모델의 확률벡터들을 가중합하는 Weighted ensemble도 있다는 것을 기억할 것.</span></li>
+<li><span>상품 상세 설명 text를 word2vec으로 수치화하여 feature로 생성해봤지만, 생성되는 feature 수를 줄이는 등의 실험에도 성능이 모두 하락해 제외함</span></li>
 </ul>
 </li>
-<li><span>Terminal 환경에서 실험-friendly 한 설계</span>
+<li><span>Average spend</span>
 <ul>
-<li><span>하이퍼파라미터 값을 바꾸기 간편하고, 실험을 빠르고 한눈에 확인하기 쉽게 구성할 수 있음.</span></li>
+<li><span>최초 구매 이후 매월 평균 사용 금액을 feature로 생성해봤지만 성능이 하락해 제외함</span></li>
 </ul>
 </li>
-<li><span>Learning rate를 backbone 부분과 classifier (final FC layer) 부분을 다르게 설정</span>
+<li><span>Over 300 count</span>
 <ul>
-<li><span>backbone은 pretrained 사용 시 learning rate를 더 적게 (0.1배 등) 설정하면 freeze 효과를 부분적으로 볼 수 있음.</span></li>
+<li><span>클래스 1에 해당하는 month 수를 count해 feature로 생성해봤지만 성능이 하락해 제외함</span></li>
 </ul>
 </li>
-<li><span>외부 데이터셋 활용 + 새로운 데이터셋 생성</span></li>
+</ul><h3 id="ETC" data-id="ETC"><a class="anchor hidden-xs" href="#ETC" title="ETC"><span class="octicon octicon-link"></span></a><strong><span>ETC</span></strong></h3><ul>
+<li><span>Threshold selection</span>
+<ul>
+<li><span>클래스 0 (300 미만)에 비해 클래스 1(300 이상)의 비율이 매우 적었기 때문에, 클래스 0에 학습이 overfit 되는 경향을 보일 수 있다고 의심해 학습과 예측에 대한 threshold를 300에서 290으로 낮춰 성능 향상</span>
+<ul>
+<li><span>threshold: 290 (280/290/300 실험)</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span>Refund match drop</span>
+<ul>
+<li><span>구매한 month와 환불한 month가 서로 다른 경우에, 월별 학습과 예측에 있어 적지 않은 데이터 왜곡을 가져올 수 있다고 판단해, 같은 customer_id의 같은 product_id가 다른 month에서 구매되고 환불된 경우를 모두 찾아 둘 다 제거하려고 시도</span></li>
+<li><span>구매보다 환불이 먼저 발생한 경우 등 상식적으로 이해할 수 없는 케이스들이 존재해 더 알아보니, 구매 내역 log가 매일 24시간 모두 제공되는 것이 아니라 일부 시간에만 (7:30 AM ~ 17:30 AM) 잘려진 데이터였음. 따라서 데이터에 나타나지 않은 기록들이 존재할 수 있고, 1:1 매칭이 원천적으로 불가능하다고 판단해 포기함</span></li>
+</ul>
+</li>
+</ul><h2 id="Lessons" data-id="Lessons"><a class="anchor hidden-xs" href="#Lessons" title="Lessons"><span class="octicon octicon-link"></span></a><span>Lessons</span></h2><h3 id="Ideas-might-have-been-helpful" data-id="Ideas-might-have-been-helpful"><a class="anchor hidden-xs" href="#Ideas-might-have-been-helpful" title="Ideas-might-have-been-helpful"><span class="octicon octicon-link"></span></a><em><span>Ideas might have been helpful</span></em></h3><ul>
+<li><span>n개월 연속 구매 총합 0인 고객 제외, 최근 구매 날짜 feature</span></li>
+<li><span>생필품 많이 사는 고객은 주기적으로 구매 확률 높음</span></li>
+<li><span>feature scaling: MinMaxScaler, StandardScaler</span></li>
+<li><span>distribution transformer: Quantile Transformer</span></li>
+<li><span>feature들을 PCA로 차원축소한 결과를 새로운 feature로 활용</span></li>
+<li><span>Time Series Nested Cross-Validation</span></li>
+<li><span>TEST001, TEST002 등의 의미 없는 값 제거</span></li>
 </ul><h3 id="Thoughts" data-id="Thoughts"><a class="anchor hidden-xs" href="#Thoughts" title="Thoughts"><span class="octicon octicon-link"></span></a><em><span>Thoughts</span></em></h3><blockquote>
-<p><span>무엇보다도 Dataset class, Data loader 등의 모듈과 파이프라인을 온전히 내 힘으로 task에 알맞게 구현해내고, 계획한 아이디어에 맞게 아키텍처를 구성해 end-to-end 모델을 완성했다는 것이 정말 뿌듯하다.</span><br>
-<br><span>직접 밑바닥부터 코딩을 해보면서 왜 딥러닝 framework들이 그렇게 OOP를 중요하게 생각하는지 몸소 체험할 수 있었고, 새로운 아이디어를 적용할 때 내 custom class들에 맞게끔 내부 로직을 수정하는 요령도 생겼다.</span><br>
-<br><span>다양한 아이디어를 적용하고 실험해보면서, "대개 이런 경우에 이런 방법이 있다"고 하는 ML/DL 지식이 생각보다 그대로 적용되는 경우가 잘 없다는 것을 느꼈다. 앞으로는 실험을 할 때 조금 더 체계적인 tool과 logging을 사용하면서, 정확히 하나의 변수만 변화시켜가면서 진행해야겠다. 또한, 크게 성능 향상에 기여할 것 같지 않다고 생각되는 아이디어들도 그냥 지나쳐버리지 않고, 작게나마 실험을 구성해 직접 검증한 뒤에 판단해야겠다.</span></p>
+<p><span>가장 아쉬운 점과 가장 뿌듯한 점이 동일한 프로젝트였다. 새로운 모델 (random forest)로 변경해 시도해본 것, 환불-구매 1:1 매칭을 찾아 제거하려고 시도해본 것 - 이 두 시도 모두 내가 스스로 밑바닥부터 가설을 세우고 구현해 검증까지 마쳤지만, 결과적으로 성능 향상을 이뤄낼 수 없었기 때문이다. </span><br><br><span>주 관심 분야는 Vision이지만, 역시 AI의 본토는 데이터분석이며 여전히 데이터를 이해하는 것이 얼마나 중요한 것인지 새삼 몸소 느껴볼 수 있는 경험이었다. 다양한 방식의 EDA와 Feature engineering을 실험으로 구성하고 결과를 확인하는 과정을 통해, 그동안 내가 데이터 자체보다 모델 구성에 너무 가중치를 두어 학습을 진행해왔다는 걸 알 수 있었다. 모델 학습을 잠시 멈추고, 나 자신의 학습에 대한 weight update가 필요한 시점인 것 같다.</span></p>
 </blockquote></div>
     <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
         <div class="pull-right dropdown">
@@ -242,19 +191,19 @@
             </a>
             <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
                 <div class="toc"><ul class="nav">
-<li class=""><a href="#Project1-Wrap-up-Report" title="Project1 Wrap up Report">Project1 Wrap up Report</a><ul class="nav">
-<li class=""><a href="#Result" title="Result">Result</a></li>
-<li class=""><a href="#Task" title="Task">Task</a></li>
-<li class=""><a href="#Approaches" title="Approaches">Approaches</a><ul class="nav">
-<li class=""><a href="#Dealing-with-Data-Imbalance" title="Dealing with Data Imbalance">Dealing with Data Imbalance</a></li>
-<li class=""><a href="#Generalization" title="Generalization">Generalization</a></li>
+<li class=""><a href="#Project2-Wrap-up-Report" title="Project2 Wrap up Report">Project2 Wrap up Report</a><ul class="nav">
+<li><a href="#Result" title="Result">Result</a></li>
+<li><a href="#Task" title="Task">Task</a></li>
+<li><a href="#Model-amp-Hyperparameters" title="Model &amp; Hyperparameters">Model &amp; Hyperparameters</a></li>
+<li><a href="#Approaches" title="Approaches">Approaches</a><ul class="nav">
+<li><a href="#Model-selection-amp-ensemble" title="Model selection &amp; ensemble">Model selection &amp; ensemble</a></li>
+<li><a href="#EDA-amp-Feature-engineering" title="EDA &amp; Feature engineering">EDA &amp; Feature engineering</a></li>
+<li><a href="#ETC" title="ETC">ETC</a></li>
 </ul>
 </li>
-<li><a href="#Model-amp-Hyperparameters" title="Model &amp; Hyperparameters">Model &amp; Hyperparameters</a></li>
-<li class=""><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
-<li><a href="#Failures" title="Failures">Failures</a></li>
+<li><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
 <li><a href="#Ideas-might-have-been-helpful" title="Ideas might have been helpful">Ideas might have been helpful</a></li>
-<li class=""><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
+<li><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
 </ul>
 </li>
 </ul>
@@ -266,19 +215,19 @@
     </div>
     <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;" null null>
         <div class="toc"><ul class="nav">
-<li class=""><a href="#Project1-Wrap-up-Report" title="Project1 Wrap up Report">Project1 Wrap up Report</a><ul class="nav">
-<li class=""><a href="#Result" title="Result">Result</a></li>
-<li class=""><a href="#Task" title="Task">Task</a></li>
-<li class=""><a href="#Approaches" title="Approaches">Approaches</a><ul class="nav">
-<li class=""><a href="#Dealing-with-Data-Imbalance" title="Dealing with Data Imbalance">Dealing with Data Imbalance</a></li>
-<li class=""><a href="#Generalization" title="Generalization">Generalization</a></li>
+<li class=""><a href="#Project2-Wrap-up-Report" title="Project2 Wrap up Report">Project2 Wrap up Report</a><ul class="nav">
+<li><a href="#Result" title="Result">Result</a></li>
+<li><a href="#Task" title="Task">Task</a></li>
+<li><a href="#Model-amp-Hyperparameters" title="Model &amp; Hyperparameters">Model &amp; Hyperparameters</a></li>
+<li><a href="#Approaches" title="Approaches">Approaches</a><ul class="nav">
+<li><a href="#Model-selection-amp-ensemble" title="Model selection &amp; ensemble">Model selection &amp; ensemble</a></li>
+<li><a href="#EDA-amp-Feature-engineering" title="EDA &amp; Feature engineering">EDA &amp; Feature engineering</a></li>
+<li><a href="#ETC" title="ETC">ETC</a></li>
 </ul>
 </li>
-<li><a href="#Model-amp-Hyperparameters" title="Model &amp; Hyperparameters">Model &amp; Hyperparameters</a></li>
-<li class=""><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
-<li><a href="#Failures" title="Failures">Failures</a></li>
+<li><a href="#Lessons" title="Lessons">Lessons</a><ul class="nav">
 <li><a href="#Ideas-might-have-been-helpful" title="Ideas might have been helpful">Ideas might have been helpful</a></li>
-<li class=""><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
+<li><a href="#Thoughts" title="Thoughts">Thoughts</a></li>
 </ul>
 </li>
 </ul>
