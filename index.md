@@ -37,11 +37,14 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-brown?style=flat)](https://philgineer.github.io/boostcamp-210)
 <br><br>
 
-* [Project 3] *Image segmentation & detection* - 재활용 쓰레기 이미지 객체 영역 구분 & 객체 검출
-    * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
-    [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
-    [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
-    [![Daily Report](https://img.shields.io/badge/Day04-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-304)
+* [Project 3] *Image segmentation & detection*
+    * [Task 1] 재활용 쓰레기 이미지 객체 영역 구분
+        * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
+        [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
+        [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
+        [![Daily Report](https://img.shields.io/badge/Day04-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-304)
+        [![Daily Report](https://img.shields.io/badge/Day05-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-305)
+    * [Task 2] 재활용 쓰레기 이미지 객체 검출
 <br><br>
 
 ### U Stage
