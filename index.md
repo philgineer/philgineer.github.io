@@ -11,7 +11,7 @@ author_profile: true
 ### P Stage
 <span style="color:grey">2021.03.29 ~ 2021.06.25</span>
 
-* [[Project 1] *Image classification* - 마스크 착용 이미지 분류](./reports/project1.html)
+* **[[Project 1] *Image classification* - 마스크 착용 이미지 분류](./reports/project1.html)**
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
     [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
@@ -24,7 +24,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
 <br><br>
 
-* [[Project 2] *Tabular classification* - 온라인 쇼핑몰 고객 구매 예측](./reports/project2.html)
+* **[[Project 2] *Tabular classification* - 온라인 쇼핑몰 고객 구매 예측](./reports/project2.html)**
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
     [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
     [![Daily Report](https://img.shields.io/badge/Day03-brown?style=flat)](https://philgineer.github.io/boostcamp-203)
@@ -37,7 +37,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-brown?style=flat)](https://philgineer.github.io/boostcamp-210)
 <br><br>
 
-* [Project 3] *Image segmentation & detection*
+* **[Project 3] *Image segmentation & detection***
 
     * [Task 1] 재활용 쓰레기 이미지 객체 영역 구분
         * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
@@ -45,7 +45,7 @@ author_profile: true
         [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
         [![Daily Report](https://img.shields.io/badge/Day04-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-304)
         [![Daily Report](https://img.shields.io/badge/Day05-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-305)
-
+    <br><br>
     * [Task 2] 재활용 쓰레기 이미지 객체 검출
 <br><br>
 
