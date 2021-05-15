@@ -39,7 +39,7 @@ author_profile: true
 
 * **[Project 3] 재활용 쓰레기 이미지 객체 영역 구분 & 객체 검출**
 
-    * [Task 1] *Image segmentation*
+    * Task 1 - *Image segmentation*
         * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
         [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
         [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
@@ -51,7 +51,7 @@ author_profile: true
         [![Daily Report](https://img.shields.io/badge/Day09-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-309)
         [![Daily Report](https://img.shields.io/badge/Day10-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-310)
 
-    * [Task 2] *Image detection*
+    * Task 2 - *Image detection*
         * [![Daily Report](https://img.shields.io/badge/Day11-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-311)
         [![Daily Report](https://img.shields.io/badge/Day12-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-312)
         [![Daily Report](https://img.shields.io/badge/Day13-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-313)
