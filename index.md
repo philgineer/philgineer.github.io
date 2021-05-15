@@ -45,8 +45,23 @@ author_profile: true
         [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
         [![Daily Report](https://img.shields.io/badge/Day04-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-304)
         [![Daily Report](https://img.shields.io/badge/Day05-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-305)
+        [![Daily Report](https://img.shields.io/badge/Day06-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-306)
+        [![Daily Report](https://img.shields.io/badge/Day07-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-307)
+        [![Daily Report](https://img.shields.io/badge/Day08-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-308)
+        [![Daily Report](https://img.shields.io/badge/Day09-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-309)
+        [![Daily Report](https://img.shields.io/badge/Day10-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-310)
     <br><br>
     * [Task 2] 재활용 쓰레기 이미지 객체 검출
+        * [![Daily Report](https://img.shields.io/badge/Day11-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-311)
+        [![Daily Report](https://img.shields.io/badge/Day12-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-312)
+        [![Daily Report](https://img.shields.io/badge/Day13-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-313)
+        [![Daily Report](https://img.shields.io/badge/Day14-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-314)
+        [![Daily Report](https://img.shields.io/badge/Day15-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-315)
+        [![Daily Report](https://img.shields.io/badge/Day16-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-316)
+        [![Daily Report](https://img.shields.io/badge/Day17-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-317)
+        [![Daily Report](https://img.shields.io/badge/Day18-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-318)
+        [![Daily Report](https://img.shields.io/badge/Day19-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-319)
+        [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320)
 <br><br>
 
 ### U Stage
