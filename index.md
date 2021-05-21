@@ -38,8 +38,6 @@ author_profile: true
 <br><br>
 
 * **[Project 3] 재활용 쓰레기 이미지 객체 영역 구분 & 객체 검출**
-    
-    <img src="img/object.png" width="10%">
 
     * Task 1 - *Semantic segmentation*
         * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
