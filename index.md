@@ -3,7 +3,7 @@ layout: home
 author_profile: true
 ---
 
-[![Boostcamp Badge](https://img.shields.io/badge/Boostcamp-AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html)
+[![Boostcamp Badge](https://img.shields.io/badge/Boostcamp-AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program_ai.html)
 [![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
 # **Projects & Daily Reports**
 <br>
@@ -62,9 +62,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day08-brown?style=flat)](https://philgineer.github.io/boostcamp-208)
     [![Daily Report](https://img.shields.io/badge/Day09-brown?style=flat)](https://philgineer.github.io/boostcamp-209)
     [![Daily Report](https://img.shields.io/badge/Day10-brown?style=flat)](https://philgineer.github.io/boostcamp-210)
-<br><br>
-
-
+<br><br><br>
 
 ### **U Stage**
 <span style="color:grey">2021.01.18 ~ 2021.03.22</span>
