@@ -5,13 +5,43 @@ author_profile: true
 
 [![Boostcamp Badge](https://img.shields.io/badge/Boostcamp-AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program.html)
 [![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
-## **Boostcamp Daily Reports**
+# **Projects & Daily Reports**
 <br>
 
-### P Stage
+### **P Stage** - My Projects
 <span style="color:grey">2021.03.29 ~ 2021.06.25</span>
 
-* **[[Project 1] *Image classification* - 마스크 착용 이미지 분류](./reports/project1.html)**
+* **<span style="color:lightgreen">✭ [Team Project] 재활용 쓰레기 이미지 Segmentation & Object Detection ✭</span>**
+
+    [![Report Badge](https://img.shields.io/badge/Wrap--up%20Report-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](https://www.notion.so/Wrap-up-Report-41bca8c9ca5645bf8d15e6c395b2cd6b)
+    [![Github Badge](https://img.shields.io/badge/Repository-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/philgineer)
+
+    * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
+    [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
+    [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
+    [![Daily Report](https://img.shields.io/badge/Day04-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-304)
+    [![Daily Report](https://img.shields.io/badge/Day05-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-305)
+    [![Daily Report](https://img.shields.io/badge/Day06-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-306)
+    [![Daily Report](https://img.shields.io/badge/Day07-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-307)
+    [![Daily Report](https://img.shields.io/badge/Day08-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-308)
+    [![Daily Report](https://img.shields.io/badge/Day09-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-309)
+    [![Daily Report](https://img.shields.io/badge/Day10-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-310)
+    * [![Daily Report](https://img.shields.io/badge/Day11-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-311)
+    [![Daily Report](https://img.shields.io/badge/Day12-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-312)
+    [![Daily Report](https://img.shields.io/badge/Day13-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-313)
+    [![Daily Report](https://img.shields.io/badge/Day14-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-314)
+    [![Daily Report](https://img.shields.io/badge/Day15-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-315)
+    <!-- [![Daily Report](https://img.shields.io/badge/Day16-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-316)
+    [![Daily Report](https://img.shields.io/badge/Day17-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-317)
+    [![Daily Report](https://img.shields.io/badge/Day18-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-318)
+    [![Daily Report](https://img.shields.io/badge/Day19-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-319)
+    [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320) -->
+<br><br>
+
+* [Project] **마스크 착용 이미지 Classification**
+
+    [![Report Badge](https://img.shields.io/badge/Wrap--up%20Report-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project1.html)
+
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
     [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
@@ -24,7 +54,10 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
 <br><br>
 
-* **[[Project 2] *Tabular classification* - 온라인 쇼핑몰 고객 구매 예측](./reports/project2.html)**
+* [Project] **온라인 쇼핑몰 고객별 소비 금액 예측**
+
+    [![Report Badge](https://img.shields.io/badge/Wrap--up%20Report-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project2.html)
+
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
     [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
     [![Daily Report](https://img.shields.io/badge/Day03-brown?style=flat)](https://philgineer.github.io/boostcamp-203)
@@ -37,34 +70,9 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-brown?style=flat)](https://philgineer.github.io/boostcamp-210)
 <br><br>
 
-* **[Project 3] 재활용 쓰레기 이미지 객체 영역 구분 & 객체 검출**
 
-    * Task 1 - *Semantic segmentation*
-        * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
-        [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
-        [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
-        [![Daily Report](https://img.shields.io/badge/Day04-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-304)
-        [![Daily Report](https://img.shields.io/badge/Day05-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-305)
-        [![Daily Report](https://img.shields.io/badge/Day06-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-306)
-        [![Daily Report](https://img.shields.io/badge/Day07-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-307)
-        [![Daily Report](https://img.shields.io/badge/Day08-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-308)
-        [![Daily Report](https://img.shields.io/badge/Day09-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-309)
-        [![Daily Report](https://img.shields.io/badge/Day10-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-310)
 
-    * Task 2 - *Object detection*
-        * [![Daily Report](https://img.shields.io/badge/Day11-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-311)
-        [![Daily Report](https://img.shields.io/badge/Day12-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-312)
-        [![Daily Report](https://img.shields.io/badge/Day13-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-313)
-        [![Daily Report](https://img.shields.io/badge/Day14-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-314)
-        [![Daily Report](https://img.shields.io/badge/Day15-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-315)
-        [![Daily Report](https://img.shields.io/badge/Day16-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-316)
-        [![Daily Report](https://img.shields.io/badge/Day17-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-317)
-        [![Daily Report](https://img.shields.io/badge/Day18-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-318)
-        [![Daily Report](https://img.shields.io/badge/Day19-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-319)
-        [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320)
-<br><br>
-
-### U Stage
+### **U Stage**
 <span style="color:grey">2021.01.18 ~ 2021.03.22</span>
 
 * [Week 1] *Python & data handling*
