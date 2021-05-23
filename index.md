@@ -13,7 +13,6 @@ author_profile: true
 
 1. <span style="color:lightgreen">✭ 재활용 쓰레기 이미지 Segmentation & Object detection (팀 프로젝트)</span>
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project3.html)
-    (https://www.notion.so/Wrap-up-Report-41bca8c9ca5645bf8d15e6c395b2cd6b)
     [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/bcaitech1/p3-ims-obd-connectnet)
     * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
     [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
@@ -37,7 +36,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320) -->
 <br><br>
 
-2. 마스크 착용 이미지 Classification (개인 프로젝트)
+1. 마스크 착용 이미지 Classification (개인 프로젝트)
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project1.html)
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
