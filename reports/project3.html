@@ -1,0 +1,824 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Wrap-up Report</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="41bca8c9-ca56-45bf-8d15-e6c395b2cd6b" class="page sans"><header><h1 class="page-title">Wrap-up Report</h1></header><div class="page-body"><h3 id="5b57b74b-eb65-4a6e-816d-9766d38fe39d" class=""><mark class="highlight-teal">Naver Boostcamp AI Tech</mark></h3><p id="cfed588c-6913-4ad9-85f6-274069015d4f" class=""><mark class="highlight-gray"><strong>P stage 3</strong></mark></p><p id="1a410381-0ff4-4b33-884a-b060f1cf7460" class="">
+</p><div id="fdd863c1-bca5-435a-8aa3-4fdbe6c4d80f" class="collection-content"><h4 class="collection-title">윤준호 (T1138)</h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Index</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Title</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>Task</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.4);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesDate"><path d="M10.8889,5.5 L3.11111,5.5 L3.11111,7.05556 L10.8889,7.05556 L10.8889,5.5 Z M12.4444,1.05556 L11.6667,1.05556 L11.6667,0 L10.1111,0 L10.1111,1.05556 L3.88889,1.05556 L3.88889,0 L2.33333,0 L2.33333,1.05556 L1.55556,1.05556 C0.692222,1.05556 0.00777777,1.75556 0.00777777,2.61111 L0,12.5 C0,13.3556 0.692222,14 1.55556,14 L12.4444,14 C13.3,14 14,13.3556 14,12.5 L14,2.61111 C14,1.75556 13.3,1.05556 12.4444,1.05556 Z M12.4444,12.5 L1.55556,12.5 L1.55556,3.94444 L12.4444,3.94444 L12.4444,12.5 Z M8.55556,8.61111 L3.11111,8.61111 L3.11111,10.1667 L8.55556,10.1667 L8.55556,8.61111 Z"></path></svg></span>Date</th></tr></thead><tbody><tr id="28993f4f-19b4-44fd-b54d-cc539791da12"><td class="cell-title"><a href="https://www.notion.so/1-28993f4f19b444fdb54dcc539791da12">1</a></td><td class="cell-LHAk">재활용 쓰레기 이미지 객체 탐지</td><td class="cell-RqGD">Object Detection</td><td class="cell-SkEH"><time>@2021/05/10 → 2021/05/21</time></td></tr><tr id="09254299-45fc-4a2e-9e97-6ad5cf67223b"><td class="cell-title"><a href="https://www.notion.so/2-0925429945fc4a2e9e976ad5cf67223b">2</a></td><td class="cell-LHAk">재활용 쓰레기 이미지 객체 영역 구분</td><td class="cell-RqGD">Semantic Segmentation</td><td class="cell-SkEH"><time>@2021/04/26 → 2021/05/07</time></td></tr></tbody></table></div><ul id="75d79e56-f462-4989-86f3-2c3dfec1de29" class="bulleted-list"><li><strong>Source code</strong>: <a href="https://github.com/bcaitech1/p3-ims-obd-connectnet">Github repository</a></li></ul><p id="f406e296-3f04-4669-b9c9-ad5b9c148434" class="">
+</p><h3 id="b00b1a06-1392-4042-b715-0aa04ea54e05" class="">TEAM</h3><ul id="7bb72091-28dc-45fa-96be-c2f2fb296556" class="bulleted-list"><li>팀명: <strong>ConnectNet</strong></li></ul><ul id="8b9b6154-ad16-4e56-bd3f-6f52a9fe508b" class="bulleted-list"><li>팀원:<p id="18e1092b-9473-4e5b-9c8e-7e57882b359d" class="">김종호(T1034), 김현우(T1045), 김현우(T1046)
+배철환(T1086), 서준배(T1097), 윤준호(T1138)</p></li></ul><p id="e18b14c9-8f9e-4b72-9e5b-384fe223da84" class="">
+</p><p id="5afc4bff-f14a-4050-861f-80a0c1f516ad" class="">
+</p><h1 id="3d3a94c7-cd29-4ae9-bb98-982b295d8299" class=""><mark class="highlight-teal_background"> Object detection </mark></h1><p id="6aee6928-28e4-4342-a7a5-f9d9e43ce637" class="">
+</p><h3 id="fc45d8a8-3615-43e8-b137-c60722e6d52d" class="">최종 결과</h3><ul id="d7d19b7d-e00b-42fc-8c14-e0af1160af99" class="bulleted-list"><li>LB: <strong>0.4789</strong><mark class="highlight-red"> </mark>(mAP)</li></ul><ul id="1ef0d751-a924-484a-89a9-7bbdee71ffcc" class="bulleted-list"><li>Team rank: <mark class="highlight-red"><strong>5위</strong></mark> / 21</li></ul><p id="e8092ff2-9981-4c67-b1da-5a375e46569d" class="">
+</p><h2 id="40380634-4b4f-4f91-af3c-c6a82aa23ec2" class="">1 . 문제 탐색과 해결 전략 </h2><ul id="1503f488-ef2c-4e48-b6e1-fe62fa81e0d8" class="bulleted-list"><li>Task 탐색 과정<ul id="76c568bd-24b8-4919-b33b-b2c748f27cdf" class="bulleted-list"><li>대회 data와 함께, 관련 Kaggle reference 대회 분석을 병행하며 사전적으로 실험의 방향성을 수립 → Object detection SOTA 모델 중 task에 적합한 후보들 실험 → augmentation &amp; loss 조합 실험 → Multi Scale 등 장시간이 걸리는 본격 모델 학습 → TTA → 앙상블(WBF) → Pseudo Labeling 시도 → 앙상블 Threshold 튜닝</li></ul><ul id="5c9a324b-2129-47f2-b8f8-75ba3047a18b" class="bulleted-list"><li>🔍 <a href="https://docs.google.com/spreadsheets/d/1JiopsJGh2aBIpnw7WPP2OvHHAEYdR9s0kT86OwruvAk/edit#gid=346165051">실험 기록 노트 </a>에 기록하면서 진행</li></ul></li></ul><ul id="eb7ab7a3-1ef7-4c3c-8b0c-6ac9ac0be57e" class="bulleted-list"><li>Data<ul id="2b056de6-a3bb-499a-97de-49ca52f0e89d" class="bulleted-list"><li>Augmentation<ul id="dee980ae-4c71-4438-8921-fb00d5c1cc00" class="bulleted-list"><li>Mosaic<ul id="a85d8cac-2954-443b-8fd1-8c7fadd68803" class="bulleted-list"><li>이미지 4장을 각각 무작위로 잘라서 하나의 사진으로 만드는 augmentation. cutmix와의 차이점은 cutmix는 자른 사진이 다른 사진을 가리는 구조에 반해, 4장의 랜덤하게 자른 사진은 서로 겹치지 않는다는 점이다<figure id="d61323dd-1f1e-478b-928e-0bae3a5156be" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled.png"><img style="width:374px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled.png"/></a></figure></li></ul></li></ul><ul id="e74cce22-67b5-44ee-b2ae-ca648d45300c" class="bulleted-list"><li>Mixup<ul id="59b52fc7-1b58-49b6-9107-bf56f736230b" class="bulleted-list"><li>배치에 있는 두 이미지를 섞는다고 할 때, 그렇지 않을때보다 무조건 object의 갯수는 크기 때문에 데이터를 여러번 보는 효과가 있다<ul id="a2858308-4c83-4bf5-a62f-6669526bbb5c" class="toggle"><li><details open=""><summary>CODE</summary><pre id="d575dc62-ee54-4b79-89c7-89d69705a41b" class="code"><code>class Mixup(BufferTransform):
+    def __init__(self, min_buffer_size=2, p=0.5, pad_val=0):
+        
+        assert min_buffer_size &gt;= 2, &quot;Buffer size for mosaic should be at least 2!&quot;
+        super(Mixup, self).__init__(min_buffer_size=min_buffer_size, p=p)
+        self.pad_val = pad_val
+
+    def apply(self, results):
+        # take four images
+        a = self.buffer.pop()
+        b = self.buffer.pop()
+
+        # get min shape
+        max_h = max(a[&quot;img&quot;].shape[0], b[&quot;img&quot;].shape[0])
+        max_w = max(a[&quot;img&quot;].shape[1], b[&quot;img&quot;].shape[1])
+
+        # cropping pipe
+        padder = Pad(size=(max_h, max_w), pad_val=self.pad_val)
+
+        # crop
+        a, b = padder(a), padder(b)
+
+        # check if cropping returns None =&gt; see above in the definition of RandomCrop
+        if not a or not b:
+            return results
+
+        # collect all the data into result
+        results[&quot;img&quot;] = ((a[&quot;img&quot;].astype(np.float32) + b[&quot;img&quot;].astype(np.float32)) / 2).astype(a[&quot;img&quot;].dtype)
+        results[&quot;img_shape&quot;] = (max_h, max_w)
+
+        for key in [&quot;gt_labels&quot;, &quot;gt_bboxes&quot;, &quot;gt_labels_ignore&quot;, &quot;gt_bboxes_ignore&quot;]:
+            if key in results:
+                results[key] = np.concatenate([a[key], b[key]], axis=0)
+        return results</code></pre></details></li></ul><p id="7b7b09e5-269a-4a2e-b08d-27cfa9d29d4a" class="">
+</p></li></ul></li></ul><ul id="a7fa6faa-3696-4b18-8901-51263dc9c099" class="bulleted-list"><li>Augmentation with Albumentations<ol id="26dd2997-8a72-489b-8102-77bac7435aaf" class="numbered-list" start="1"><li>RandomCrop<figure id="99452c99-34cb-472c-a367-76c316d122a8" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%201.png"><img style="width:384px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%201.png"/></a></figure></li></ol><ol id="69aaedba-75c0-4420-95b3-8522d2cb7bcf" class="numbered-list" start="2"><li>HorizontalFlip, VerticalFlip<figure id="a1e4f972-5904-48d5-abf8-da2cc95f1c9a" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%202.png"><img style="width:432px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%202.png"/></a></figure></li></ol><ol id="696f7b33-bb91-4b18-b1b5-4b9943a80024" class="numbered-list" start="3"><li>IAA-AdditiveGaussianNoise, GaussNoise<figure id="2f178384-ef99-4171-8a2a-b8b4bc6ccec7" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%203.png"><img style="width:480px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%203.png"/></a></figure></li></ol><ol id="365b8f7c-f876-4482-9a15-2f9dc9b4dc8a" class="numbered-list" start="4"><li>MotionBlur, MedianBlur, Blur<figure id="8dd9b655-d2df-4c68-bcfc-6d0bd0aaac51" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%204.png"><img style="width:480px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%204.png"/></a></figure></li></ol><ol id="e6ebb375-e083-42c8-aafe-64f791139372" class="numbered-list" start="5"><li>CLAHE, Sharpen, Emboss<figure id="8e5dc8c4-7e0a-4546-8e01-af3bd94138a5" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%205.png"><img style="width:940px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%205.png"/></a></figure></li></ol><ol id="be589e97-a139-4ca1-a8fd-6fa3d561c87d" class="numbered-list" start="6"><li>RandomBrightnessContrast, HueSaturationValue<figure id="5c38a4b5-371b-4c82-b227-6881ce425970" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%206.png"><img style="width:528px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%206.png"/></a></figure></li></ol></li></ul><ul id="d143449e-446a-4e06-b6df-d9db66aa2d2d" class="bulleted-list"><li>Add Data (Internal)<ul id="ef8e7855-3339-4589-b094-9bfd2bf4f0ac" class="bulleted-list"><li>외부 데이터 이용은 대회 규칙 상 금지</li></ul><ul id="8a0bad5a-509e-49e2-b033-e56bc870909f" class="bulleted-list"><li>마스크와 BBOX를 이용해서 원하는 오브젝트를 분리해서 다른 이미지에 붙일수 있을것이라고 생각.</li></ul><ul id="5814d368-febb-41fc-a027-7c3eae072910" class="bulleted-list"><li>데이터상에서 Battery, Clothes, Metal, PaperPack, Glass 오브젝트가 부족한것으로 바악해서 해당 오브젝트를 기존 이미지에 추가하는 방식으로 데이터를 증강.</li></ul><ul id="52eeffcb-5054-451e-8c8c-f407f9f5ef6d" class="bulleted-list"><li>부족하다고 판단된 오브젝트를 각 500개씩 증가시킴.</li></ul><ul id="e597fe69-d345-47df-aecb-34180312b962" class="bulleted-list"><li>데이터 추가 후 기본 베이스 라인 코드로 테스트 결과 0.05정도 점수 상승해서 폴드별로 데이터 추가</li></ul><ul id="ed61c1dc-2c15-4146-a105-1bbec0034ec8" class="bulleted-list"><li> 하지만 SWIN_T에서는 마스크 부분이 새로 생성된 이미지에 존재하지 않아 적용하지 못함.</li></ul></li></ul></li></ul></li></ul><ul id="feed297e-9dec-4388-b35b-83320fa5171a" class="bulleted-list"><li>Model<p id="373832d9-47d0-4117-9c28-e75ed019c1f8" class=""> <a href="https://paperswithcode.com/sota/object-detection-on-coco">Paperswithcode</a> 사이트를 참고해 Object Dectection의 SOTA 모델들을 선택해 테스트 진행</p><ul id="5983d221-0543-4931-91b9-91dabc9a7bdc" class="toggle"><li><details open=""><summary>Screenshot</summary><figure id="4ac538f5-f076-48f1-8642-cf25cc1f0b3b" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%207.png"><img style="width:576px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%207.png"/></a></figure></details></li></ul><p id="ed34a1d6-7d12-48cd-977c-f5740cda623c" class="">
+</p><ul id="0e3df35e-32df-406a-b6cc-ed11d216e36e" class="bulleted-list"><li>WBF (Weighted Box Fusion) 방식으로 앙상블<ul id="d00c9f95-5eb5-45f0-b0de-4a24237872dc" class="toggle"><li><details open=""><summary>WBF란?</summary><ul id="0bb4993c-ba66-4dfb-bfe2-663d3d88cfc0" class="bulleted-list"><li>여러개의 bounding box를 각각의 확률을 가중평균으로 하여 하나의 bounding box로 나타내는 방식</li></ul><ul id="4d8bec64-d834-4078-8677-10485c32467e" class="bulleted-list"><li>Algorithms<ol id="4f7c5bd8-7805-4631-91de-9d8169318059" class="numbered-list" start="1"><li>각 박스를 어떤 배열 B에 확률 기준 내림차순으로 정렬한다<figure id="c122ddd2-fdb6-416f-b0af-05a80fe06f94" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%208.png"><img style="width:252px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%208.png"/></a></figure></li></ol><ol id="43eaf014-cb01-4188-a65a-160196b7188c" class="numbered-list" start="2"><li>빈 배열 L과 F를 선언한다<figure id="26e8a6ab-83e3-4a97-a88e-fd4333747c07" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%209.png"><img style="width:253px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%209.png"/></a></figure></li></ol><ol id="d3cff3d8-159c-4da6-b58b-27e9c83b6ed9" class="numbered-list" start="3"><li>B의 모든 원소를 순회한다<ol id="81ecbe4e-404a-49a3-b1b8-e4e3fc530a0b" class="numbered-list" start="1"><li>만일 F가 비었다면 지금 보는 원소를 F와 L에 추가한다<figure id="dc80dcb5-e6cb-42a1-a148-98764f96d95f" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2010.png"><img style="width:297px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2010.png"/></a></figure></li></ol><ol id="3d3ba04d-49b5-4646-87b9-b050da406d64" class="numbered-list" start="2"><li>만일 F가 비지 않았다면 지금 보는 원소와 F의 원소 중 IOU가 특정값 (ex. 0.5)를 넘는다면 L에 지금 보는 원소를 넣고 F의 원소 순회를 중단한다<figure id="c2c1750d-ca8c-48f1-9008-b5b9b7a0ab10" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2011.png"><img style="width:295px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2011.png"/></a></figure></li></ol><ol id="75806d96-e180-4351-a9fd-80ff1863e190" class="numbered-list" start="3"><li>반복<figure id="b25990cd-2b6d-4a82-8235-e46004b47abf" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2012.png"><img style="width:296px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2012.png"/></a></figure></li></ol></li></ol><ol id="c81dd1bd-9058-4ab7-ab41-c49102d8719c" class="numbered-list" start="4"><li>3번에 따라서 L과 F의 사이즈는 항상 같음이 보장되므로, 대응되는 위치에서의 L의 원소들로 F의 값을 갱신한다<figure id="294d2635-5551-4d44-b5d9-0cf5b0187aab" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2013.png"><img style="width:664px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2013.png"/></a></figure></li></ol><ol id="4ab375f8-0bbc-450f-882c-08298f42c3bd" class="numbered-list" start="5"><li>모든 F의 값이 갱신된 후, 전체 모델 갯수에 대한 Rescale 진행<ul id="ee9c62ac-af5b-4ab7-a7b9-5a30da823b55" class="bulleted-list"><li>Rescale 식<p id="107b3275-1054-4d85-8db5-f7f198c4550b" class=""> <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo fence="true">{</mo><mtable rowspacing="0.1600em" columnalign="center" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>C</mi><mo>=</mo><mi>C</mi><mo>∗</mo><mfrac><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mo stretchy="false">(</mo><mi>T</mi><mo separator="true">,</mo><mi>N</mi><mo stretchy="false">)</mo></mrow><mi>N</mi></mfrac></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>C</mi><mo>=</mo><mi>C</mi><mo>∗</mo><mfrac><mi>T</mi><mi>N</mi></mfrac></mrow></mstyle></mtd></mtr></mtable></mrow><mtext> </mtext></mrow><annotation encoding="application/x-tex">\left\{\begin{matrix}C = C * \frac{min(T, N)}{N} \\\\C = C * \frac{T}{N}\end{matrix}\right.\ </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.802331em;vertical-align:-1.6511655000000003em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.05002em;"><span style="top:-2.49999em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎩</span></span></span><span style="top:-2.49199em;"><span class="pstrut" style="height:3.15em;"></span><span style="height:0.016em;width:0.889em;"><svg width='0.889em' height='0.016em' style='width:0.889em' viewBox='0 0 889 16' preserveAspectRatio='xMinYMin'><path d='M384 0 H504 V16 H384z M384 0 H504 V16 H384z'/></svg></span></span><span style="top:-3.15001em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎨</span></span></span><span style="top:-4.292009999999999em;"><span class="pstrut" style="height:3.15em;"></span><span style="height:0.016em;width:0.889em;"><svg width='0.889em' height='0.016em' style='width:0.889em' viewBox='0 0 889 16' preserveAspectRatio='xMinYMin'><path d='M384 0 H504 V16 H384z M384 0 H504 V16 H384z'/></svg></span></span><span style="top:-4.30002em;"><span class="pstrut" style="height:3.15em;"></span><span class="delimsizinginner delim-size4"><span>⎧</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.55002em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.1511655em;"><span style="top:-4.151165499999999em;"><span class="pstrut" style="height:3.01em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.01em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.485em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">min</span><span class="mopen mtight">(</span><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span><span class="mpunct mtight">,</span><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-2.951165499999999em;"><span class="pstrut" style="height:3.01em;"></span><span class="mord"></span></span><span style="top:-1.7188344999999996em;"><span class="pstrut" style="height:3.01em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.872331em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.13889em;">T</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.6511655000000003em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"> </span></span></span></span></span><span>﻿</span></span></p><p id="aae743d2-c040-41bc-b27f-06770cbf71df" class=""><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.13.2/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mi>h</mi><mi>e</mi><mi>r</mi><mi>e</mi><mtext> </mtext><mi>T</mi><mo>=</mo><mi>l</mi><mi>e</mi><mi>n</mi><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">[</mo><mi>p</mi><mi>o</mi><mi>s</mi><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mo separator="true">,</mo><mi>N</mi><mo>=</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mi>s</mi><mtext> </mtext><mi>o</mi><mi>f</mi><mtext> </mtext><mi>E</mi><mi>n</mi><mi>s</mi><mi>e</mi><mi>m</mi><mi>b</mi><mi>l</mi><mi>e</mi><mi>d</mi><mtext> </mtext><mi>M</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi>l</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">Where\ T = len(L[pos]), N = numbers \ of \ Ensembled \ Models</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathnormal">Wh</span><span class="mord mathnormal">ere</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">L</span><span class="mopen">[</span><span class="mord mathnormal">p</span><span class="mord mathnormal">os</span><span class="mclose">])</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal">mb</span><span class="mord mathnormal">ers</span><span class="mspace"> </span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal">n</span><span class="mord mathnormal">se</span><span class="mord mathnormal">mb</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">d</span><span class="mspace"> </span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mord mathnormal">o</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">s</span></span></span></span></span><span>﻿</span></span></p></li></ul><figure id="584f9c69-4e2a-4f59-8eb5-486e39dfae74" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2014.png"><img style="width:582px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2014.png"/></a></figure></li></ol></li></ul></details></li></ul><ul id="d320ed1b-a13e-4d3a-a3df-3b2bc581a5d7" class="toggle"><li><details open=""><summary>CODE</summary><pre id="7c19dd15-ed4d-45e0-9604-4332476401ae" class="code"><code>prediction_strings = []
+file_names = []
+coco = COCO(cfg.data.test.ann_file)
+imag_ids = coco.getImgIds()
+img_size = 512.
+
+weights = [2, 1] # ensemble weights for model 1 and model 2
+iou_thr = 0.6
+skip_box_thr = 0.0001
+
+for idx in tqdm(range(len(output1))):
+    
+    boxes_list1, boxes_list2, boxes_list = [], [], []
+    scores_list1, scores_list2, scores_list = [], [], []
+    labels_list1, labels_list2, labels_list = [], [], []
+    
+    # model 1
+    for label, boxes_in_label in enumerate(output1[idx]):
+        for box_and_score in boxes_in_label:
+            scores_list1.append(box_and_score[4])
+            boxes_list1.append(box_and_score[:4] / img_size)
+            labels_list1.append(label)
+    
+    # model 2
+    for label, boxes_in_label in enumerate(output2[idx]):
+        for box_and_score in boxes_in_label:
+            scores_list2.append(box_and_score[4])
+            boxes_list2.append(box_and_score[:4] / img_size)
+            labels_list2.append(label)
+    
+    boxes_list = [boxes_list1, boxes_list2]
+    scores_list = [scores_list1, scores_list2]
+    labels_list = [labels_list1, labels_list2]
+    
+    boxes, scores, labels = weighted_boxes_fusion(boxes_list, scores_list, labels_list, weights=weights, iou_thr=iou_thr, skip_box_thr=skip_box_thr)
+    
+    prediction_string = &#x27;&#x27;
+    image_info = coco.loadImgs(coco.getImgIds(imgIds=idx))[0]
+    
+    for i, box in enumerate(boxes):
+        prediction_string += str(int(labels[i])) + &#x27; &#x27; + str(scores[i])[:11] + &#x27; &#x27; + str(box[0]*img_size)[:9] + &#x27; &#x27;  + str(box[1]*img_size)[:9] + &#x27; &#x27;  + str(box[2]*img_size)[:9] + &#x27; &#x27;  + str(box[3]*img_size)[:9] + &#x27; &#x27;
+    prediction_strings.append(prediction_string)
+    file_names.append(image_info[&#x27;file_name&#x27;])</code></pre></details></li></ul></li></ul><ul id="650fdc75-b130-4b9a-8f6d-0f401d15fb08" class="bulleted-list"><li>Pseudo-Labeling<ul id="e7f382fb-be42-4470-92ee-acee34ab52eb" class="bulleted-list"><li>기본모델 : Fold = 2 / size = 640 / EfficientDetD6</li></ul><ol id="c234ad75-b339-45d7-a51a-b65e2f9e9f31" class="numbered-list" start="1"><li>기본모델을 10 에폭동안 학습<p id="5260eea3-aa92-4051-b4aa-c622b2f2101c" class="">→ 이 때 학습 데이터는 기본 train data과 앙상블 모델이 test data에 대해 예측한 라벨링이 되어 있는 데이터를 mixup한 데이터</p></li></ol><ol id="c17ace16-b472-4749-97f6-876b6c83b4a1" class="numbered-list" start="2"><li>1에서 학습한 모델을 다시 6에폭동안 학습<p id="e2e7bcd7-b40e-42db-80e0-4463da5db615" class="">→ 이 때 학습 데이터는 기본 train data과 1단계 모델이 test data에 대해 예측한 라벨링이 되어 있는 데이터를 mixup한 데이터</p><figure id="f31cbf35-25a2-4566-ae09-7501e71d40ad" class="image"><a href="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2015.png"><img style="width:669px" src="Wrap-up%20Report%20d61323dd1f1e478b928e0bae3a5156be/Untitled%2015.png"/></a></figure></li></ol></li></ul></li></ul><ul id="3145b1d6-4ddf-4f92-8574-5332d199b167" class="bulleted-list"><li>TTA<ul id="299d594e-3c70-4be4-ad25-f0d6d0a87e80" class="toggle"><li><details open=""><summary>CODE</summary><pre id="e0d33cb7-804d-4bea-bdf9-3711a7f97d80" class="code"><code>Swin Transformer, DectectoRS
+
+test_pipeline = [
+    dict(type=&quot;LoadImageFromFile&quot;),
+    dict(
+        type =&quot;MultiScaleFlipAug&quot;,
+        img_scale=[(512, 512), (768, 768)],
+        flip=True,
+        flip_direction=[&quot;horizontal&quot;, &quot;vertical&quot;],
+        transforms=[
+            dict(type=&quot;Resize&quot;, keep_ratio=True),
+            dict(type=&quot;RandomFlip&quot;),
+            dict(type=&quot;Normalize&quot;, **img_norm_cfg),
+            dict(type=&quot;Pad&quot;, size_divisor=32),
+            dict(type=&quot;ImageToTensor&quot;, keys=[&quot;img&quot;]),
+            dict(type=&quot;Collect&quot;, keys=[&quot;img&quot;]),
+        ],
+    ),
+]
+
+YOLO_V5
+
+s = [1.33, 1.17, 1, 0.83, 0.67]  # scales
+f = [No-Flip, LR-Flip, No-Flip, LR-Flip, No-Flip]
+y = []
+
+for si, fi in zip(s, f):
+    xi = scaled_img of test_image
+    yi = output of scaled_img of test_image
+    yi = descale_pred(yi, fi, si, img_size)
+    y.append(yi)
+return torch.cat(y, 1)  # augmented inference</code></pre></details></li></ul></li></ul><ul id="ce3cb396-61b7-42fc-961a-c4f460bf4455" class="bulleted-list"><li>Threshold<ul id="fafbcd2a-a2db-42b5-a2d2-78a9e7efde50" class="bulleted-list"><li>WBF에서의 hyperparameter <ol id="bf4815de-a460-4736-a557-16bd79658cef" class="numbered-list" start="1"><li>IOU threshold : 현재 Bbox와 얼마나 유사하면 통합할 것인가를 결정하는 threshold</li></ol><ol id="503d20b0-71e7-4b90-8167-49ac10b38d13" class="numbered-list" start="2"><li>Skip box threshold : 모든 Bbox의 score 중 threshold 미만의 박스는 무시</li></ol><p id="b5c4777c-9a2f-429e-bd91-91e6f6cd6d0b" class="">→ IOU threshold는 낮출수록 좋았으나 특정 임계값 이하로 내리면 오히려 성능이 하락</p><p id="a39c4401-092d-47aa-b82d-9117fdd25f70" class="">→ Skip box threshold는 낮출수록 좋았으나 파일크기가 커지는 단점이 있으며, visualization 시 지나치게 많은 박스가 존재하여 직관적으로는 납득하기 힘들었음</p><p id="f12031ba-a888-49af-9644-985dc2757209" class="">→ 최종적으로 IOU threshold : 0.4, Skip box threshold : 0.01로 public LB 0.5880, private LB : 0.4789 달성</p><p id="1c112bff-52d9-43b4-9395-6f11c31aadb1" class="">
+</p><p id="7f6b599b-2b35-45dd-8d38-96f145162ba3" class="">
+</p></li></ul></li></ul><h2 id="7f5a0091-6274-41df-98d1-689c894c8bd8" class="">2. 최종 사용 모델 및 하이퍼파라미터</h2><p id="69cb2f7e-5e97-436e-8d74-ef52b54521e6" class="">
+</p><h3 id="c8cfc16e-8713-4499-8f83-8951be0ac6f7" class=""><strong>Models</strong> <mark class="highlight-gray">(backbone / neck / detector)</mark></h3><p id="ce2b9611-1605-494d-9daa-cc3d3f7c758c" class="">
+</p><ol id="92d0d118-005f-4ed8-bbc1-ad80df8fd3c5" class="numbered-list" start="1"><li>Cascade R-CNN 계열<ul id="d5cc769c-5305-4826-a182-1606a8a0dd74" class="bulleted-list"><li>ResNext101 / FPN / Cascade R-CNN<ul id="b063ec0f-87f6-4a21-b430-83498f51e258" class="bulleted-list"><li>LB: 0.4781</li></ul><ul id="57981016-1e4c-4f9c-b995-e661c512a108" class="bulleted-list"><li>optimizer : SGD (learning_rate = 0.02)</li></ul><ul id="e189afc4-25c0-4895-aa0c-8fcce748b367" class="bulleted-list"><li>loss:  CrossEntropyLoss (Class loss),  SmoothL1Loss (Bbox loss)</li></ul><ul id="60ba182f-60d5-4ef7-9c1f-3f71fe662245" class="bulleted-list"><li>hyperparameters : batch : 16, epochs : 50</li></ul></li></ul><ul id="10870f32-00c3-46d9-8121-b8a3bf312b4a" class="bulleted-list"><li>ResNet50 / RFN + SAC / Cascade R-CNN (DetectoRS)  <ul id="d4c164da-3519-4030-8d72-689fdaf3217f" class="bulleted-list"><li>LB : 0.5121</li></ul><ul id="ca3b2a9a-2f33-40a2-8b3c-432605732fe2" class="bulleted-list"><li>optimizer : SGD (learning_rate = 0.01)</li></ul><ul id="d7cde265-595b-4b84-9cbf-fca47b6a5c3a" class="bulleted-list"><li>loss:  SoftCrossEntropyLoss (Class loss),  SmoothL1Loss (Bbox loss)</li></ul><ul id="e44d5561-ba62-4bb3-872b-076552c1c795" class="bulleted-list"><li>hyperparameters : batch : 4, epochs : 48 or 60</li></ul><ul id="e8a85544-14e7-42c0-8796-7fcb2c112f61" class="bulleted-list"><li>5 fold cross-validation</li></ul><ul id="396ebf8f-fe56-4019-87f8-d9ea21443fb9" class="bulleted-list"><li>TTA 적용시 : 0.05 상승</li></ul></li></ul><ul id="1c95185f-38b1-4d61-8494-0f385d78e819" class="bulleted-list"><li>ResNext101 / RFN + SAC / Cascade R-CNN (DetectoRS) <ul id="e2ea7e4f-2119-45f5-bc9a-c414cd45f334" class="bulleted-list"><li>LB: 0.5247</li></ul><ul id="e5c497e9-9e80-4bf2-8ea3-8732120d60f5" class="bulleted-list"><li>optimizer : SGD (learning_rate = 0.01)</li></ul><ul id="8418a5d6-00a1-48b3-8900-a7b8ebad3663" class="bulleted-list"><li>loss:  SoftCrossEntropyLoss (Class loss),  SmoothL1Loss (Bbox loss)</li></ul><ul id="b80d16eb-695c-4e3c-b230-e36cb2869b34" class="bulleted-list"><li>hyperparameters : batch : 4, epochs : 48 or 60</li></ul><ul id="1b99a052-9d88-456b-93f6-ba54c9b1b6b2" class="bulleted-list"><li>TTA : vertical, horizontal flip, 512,  768 resize </li></ul><p id="068d6c20-cf4b-4f86-ac74-5afb288fafcc" class="">
+</p></li></ul></li></ol><ol id="bfd9199f-69a4-46a1-b074-be048c1379cd" class="numbered-list" start="2"><li>YOLO 계열<ul id="308918d7-ef87-4cfa-80ca-e8b77fb82818" class="bulleted-list"><li>DarkNet / SPP / YOLO v5<ul id="eddb213c-eadd-4cdf-a77f-4ea9eb7b074c" class="bulleted-list"><li>LB : 0.4916</li></ul><ul id="b17a8c94-e33e-428b-87c1-fb91c339757d" class="bulleted-list"><li>loss : CrossEntropy (150 epoch models), Focal Loss (240 epoch models)</li></ul><ul id="f2d1f0a6-2e49-4d12-9d48-ac98604c5d45" class="bulleted-list"><li>optimizer : SGD (learning_rate = 0.01)</li></ul><ul id="b20e5d03-b277-4ab7-8b0f-08966a45997f" class="bulleted-list"><li>hyperparameters : batch : 32, epochs : 150 or 240</li></ul><ul id="8f15ab31-9f54-4a61-b3ba-a0da876d1813" class="bulleted-list"><li>추가로 시도한 것<ul id="daca55cf-751c-447b-b7cc-971bae8778cd" class="bulleted-list"><li>TTA → 적용시 0.01 상승</li></ul><ul id="724d3d8f-7d58-49a1-9c30-86a947c602d7" class="bulleted-list"><li>원본 사이즈의 절반으로 Multi-scale train 진행 → 대비 모델보다는 점수 하락했으나, 앙상블 시 추가하는 것이 좋은 결과로 이끔</li></ul><ul id="9d8c617d-1e3f-4a3e-81f7-143d2b933e5f" class="bulleted-list"><li>WBF → TTA와 함께 적용시 0.16 상승</li></ul><p id="2ed4be36-a56c-48c7-a6f2-df0ca05c6594" class="">
+</p></li></ul></li></ul></li></ol><ol id="da0954db-6bec-4e16-9059-c1d117e9629f" class="numbered-list" start="3"><li>Swin 계열<ul id="becd4e9d-58f4-4710-b20c-2fadf429307c" class="bulleted-list"><li>SwinTransformer / FPN / Mask R-CNN<ul id="c93f911f-2dc0-4d5b-89cd-fac0a43ca3a2" class="bulleted-list"><li>LB: 0.5486</li></ul><ul id="17eec989-baf8-4cd5-b0b1-9c80183290d5" class="bulleted-list"><li>cls_loss: LabelSmooth + CE + Focal (각 box_head 별)</li></ul><ul id="4fb703a7-b8cb-4efd-adbb-acf78cf32d85" class="bulleted-list"><li>bbox_loss: SmoothL1Loss</li></ul><ul id="b82867cf-fdfe-4918-bc36-0b9eb99e69f9" class="bulleted-list"><li>optimizer: AdamW (learning_rate = 0.0001)</li></ul><ul id="6e9cb53d-6a75-4616-837f-199e27c2e57b" class="bulleted-list"><li>추가로 시도한 것<ul id="04b8f6b6-464d-4ef4-a4a1-a319d3a4e3e4" class="bulleted-list"><li>첫 40 epoch은 defalut augmentation, loss를 적용하였으나, 이후 12 epoch를 재학습 시 loss 변경 + augmentation을 진행 → val mAP 0.02상승, public LB 0.06 상승</li></ul></li></ul></li></ul></li></ol><p id="ccc95a92-fc92-4851-8985-2c93cf41f9dd" class="">
+</p><h3 id="de681b00-d85f-4b09-98b9-fcec3f70c3e4" class="">2.2 Augmentations</h3><ul id="5ce57b64-48af-4c15-ab81-5a65f764edc9" class="bulleted-list"><li>Mixup</li></ul><ul id="a95fe2db-079d-46e2-b6a6-68c1a812c466" class="bulleted-list"><li>RandomRotate90</li></ul><ul id="1f01ec30-95f4-440a-b319-4ab369b4f574" class="bulleted-list"><li>HueSaturationValue</li></ul><ul id="57d7c2f9-105e-4770-9303-9490442e39b8" class="bulleted-list"><li>CLAHE</li></ul><ul id="2f8084de-e658-4fa3-af73-874917a997b7" class="bulleted-list"><li>RandomBrightnessContrast</li></ul><ul id="04d74ee4-3052-4e03-a167-cbecf3169015" class="bulleted-list"><li>RGBShift</li></ul><ul id="4fa67906-3e43-4b71-b76c-c7a5caac7f45" class="bulleted-list"><li>Blur</li></ul><ul id="0cce0130-84da-473b-96a4-b1f469eecb25" class="bulleted-list"><li>MotionBlur</li></ul><ul id="8ddcf3d9-f07e-4a8a-a855-fee50a020ae2" class="bulleted-list"><li>GaussNoise</li></ul><ul id="d6517d85-a4d8-4d6a-9935-fcfb9d980ca2" class="bulleted-list"><li>ShiftScaleRotate</li></ul><ul id="5b142fae-7c7a-42f1-9f6b-c94a79275739" class="bulleted-list"><li>Multi-scale</li></ul><p id="6cb17fae-28f1-442f-908b-acadd037a912" class="">
+</p><p id="a865f336-80c6-4afe-8f49-44730ab1eb32" class="">
+</p><h2 id="924191a1-452f-4496-b020-5bc31f2d240e" class="">3. 앙상블 전략</h2><ul id="d553f4cd-1dfc-4c94-8c4a-58d41bd59671" class="bulleted-list"><li>다양한 모델을 이용하여 모델의 다양성을 이용<ul id="891e1a8f-70c0-474c-b062-33d70f85b056" class="bulleted-list"><li>YOLO, Swin T, Cacade R-CNN</li></ul></li></ul><ul id="fc80c18c-bb04-47b7-a1f4-0fb313fa16b8" class="bulleted-list"><li>총 26개 모델을 WBF와 threshold 최적화를 이용하여 앙상블</li></ul><ul id="e857b2f2-edb5-4d8f-b584-aaf86c181351" class="bulleted-list"><li>stratified kfold방식으로 데이터셋을 5개(fold0,fold1,fold2,fold3,fold4)로 나뉘어 학습하여 앙상블</li></ul><ul id="1f9cbb98-b177-4c4c-98de-3b12603a980c" class="bulleted-list"><li>기준(0.5이상)을 넘긴 모델 앙상블 목록<ul id="7189f633-6305-4ea9-9ab5-206e1af366b6" class="bulleted-list"><li>YOLO v5<ul id="71639743-3b44-4eaf-b64f-fe72e43a51a1" class="bulleted-list"><li>fold0, fold1, fold2, fold3, fold4 </li></ul><ul id="4ae34a3a-e975-4193-a32f-e1d0f480467a" class="bulleted-list"><li>augment적용 fold0 ,fold1, fold2, fold3</li></ul><ul id="2a5b15d2-deff-4ec5-a08a-b249eb648cf5" class="bulleted-list"><li>fold4(img size 256)</li></ul></li></ul><ul id="e2aaf6d7-3222-4977-86a9-e6805dae0667" class="bulleted-list"><li>Swin T<ul id="a19488cd-feec-4c67-80df-fa5e777b995b" class="bulleted-list"><li>fold0, fold1, fold2, fold3</li></ul><ul id="1ed43092-de13-44f0-824e-2229af023f3b" class="bulleted-list"><li>fold4(img size 768)</li></ul></li></ul><ul id="38f0f1ef-20b8-45e9-9b73-548769176124" class="bulleted-list"><li>Cascade R-CNN<ul id="8b0d9e7a-1d66-4827-8d44-5daf26184030" class="bulleted-list"><li>ResNet50<ul id="c9cd12c1-05b6-434f-bb02-adb63df4053f" class="bulleted-list"><li>fold0, fold1, fold2, fold3</li></ul><ul id="a7f8a5af-464a-4bb0-a68a-a81eb8933bdc" class="bulleted-list"><li>trainall data </li></ul></li></ul><ul id="e7735a08-dd77-4f7d-88a6-e3bfa1d73062" class="bulleted-list"><li>ResNet101<ul id="628fd3d5-eb1a-4d45-8bb4-dfc4f1853ce6" class="bulleted-list"><li>fold0, fold1, fold2, fold3, fold4</li></ul><ul id="787698ee-c60b-4429-8afc-3dbce86720ed" class="bulleted-list"><li>train all data</li></ul></li></ul></li></ul></li></ul><p id="90acf7bf-2b8a-429d-a4ab-15c5f9adb305" class="">
+</p><p id="6bdd4041-5114-4b65-aab4-a08933ee7243" class="">
+</p><h2 id="6db48f9e-33c9-4b31-8045-aa80428998bb" class="">4. 아쉬움이 남는 시도들</h2><ol id="8a6c0ce9-d668-443e-9e2f-c87ccf38d5ff" class="numbered-list" start="1"><li>Pseudo labeling<ul id="f391c8cb-73e8-49d0-bed4-d6b533921dca" class="bulleted-list"><li>테스트 데이터셋을 inference 하면 csv 파일이 생성된다. LB 성능이 가장 좋은 결과 파일을 csv 파일을 기준으로 pseudo labeling 을 생성한다.</li></ul><ul id="c8c7e180-c52b-4ae7-9d83-ea6478c2e0b9" class="bulleted-list"><li>BBox 성능이 0.75 이상의 값만 읽어 COCO dataset  의 파일인 pseudo.json 파일을 생성한다.</li></ul><ul id="a783c206-edd8-4a50-83c9-5abcf937c3dd" class="bulleted-list"><li>pseudo.json 파일로 모델을 재학습시킨 모델의 성능을 올린다. </li></ul><ul id="45adbb67-9d2b-4bff-8951-c96949963df2" class="toggle"><li><details open=""><summary>CODE</summary><pre id="e4510c1d-dbef-4f8c-9b5b-14c6eb62c434" class="code"><code>#결과 파일 읽기
+df = pd.read_csv(&#x27;final.csv&#x27;)
+pred= df[&#x27;PredictionString&#x27;][i]
+    bbox = pred.split()
+    bbox = map(float, bbox)
+    bbox = list(bbox)
+    bbox = numpy.array(bbox).reshape(-1,6)
+   
+    for d in bbox:
+        if d[1] &gt; 0.75: # 성능: 0.75 이상
+            x_min, y_min, x_max, y_max = tuple(d[2:6])
+            w = x_max-x_min
+            h  = y_max - y_min
+            pseudo_annotations.append(
+                {
+                    &quot;id&quot;: cnt,
+                    &quot;segmentation&quot;: 0,
+                    &quot;area&quot;: w * h,
+                    &quot;image_id&quot;: i,
+                    &quot;category_id&quot;: id,
+                    &quot;bbox&quot;: [x_min, y_min, w, h],
+                    &quot;iscrowd&quot;: 0
+                }
+            )
+
+            cnt +=1
+    
+data[&quot;images&quot;] = pseudo_images
+data[&quot;annotations&quot;] = pseudo_annotations
+...
+#CoCo dataset 파일로 저장
+with open(&#x27;pseudo.json&#x27;, &#x27;w&#x27;, encoding=&quot;utf-8&quot;) as make_file:
+    json.dump(data, make_file, ensure_ascii=False, indent=&quot;\t&quot;)</code></pre></details></li></ul><p id="cd79792d-5aa3-4fbc-9168-56175b035d68" class=""> → 하루 전날 구현을 하고 성능이 좋은 무거운 모델로 테스트를 진행하여, 제 시간내에 검증을 진행하지 못하였습니다.</p></li></ol><ol id="958165c9-ac7b-4778-a42f-259708b6848e" class="numbered-list" start="2"><li>EfficientDet (model)<ul id="dd13c7da-59f4-446b-a036-7f9fd8901558" class="bulleted-list"><li>MMDetection 용으로 구현된 EfficientDet의 소스 코드가 있는 git repo도 있었지만, 부스트캠프에서 제공하는 서버를 사용해 학습을 진행 중이었는데 GPU의 CUDA 버전이 맞지 않아 일부 모듈과 나아가 전체 라이브러리가 동작하지 않았다. CUDA 버전 업데이트 권한을 가질 수 있었거나, 아니면 (나중에 알게 되었듯) 다른 조처럼 구글 코랩 프로를 가입해 그쪽에서 진행했다면 가능했을 텐데 아쉽다. 아니면 대회 시간이라도 좀 더 길었다면 구현해보면서 커스텀으로 맞춰볼 수도 있었을 텐데 역시 아쉽다.</li></ul></li></ol><p id="d2458d8f-3580-4465-b171-708c874fac6f" class="">
+</p><p id="d303abb1-2fef-44ba-b49b-35edceaeea51" class="">
+</p><p id="56e71c37-fbd3-47f8-9d5c-8c802143172c" class="">
+</p><p id="a734ed05-f895-49e6-838b-2389ecd824bc" class="">
+</p><h1 id="2a5d80d6-b33f-4fc5-afb4-6f6922c7ecab" class=""><mark class="highlight-teal_background"> Semantic Segmentation </mark></h1><p id="2635e1af-9e92-4504-99a1-85ea012ef944" class="">
+</p><p id="2705c34b-4918-403d-84f4-7d639cab2e42" class="">
+</p><h2 id="f7a1c5cd-0a86-4099-a287-eccdf756ede8" class="">1. 대회 전략</h2><ul id="af99108c-3f96-46f0-a8bd-bfc47c246918" class="bulleted-list"><li>🔍 <a href="https://docs.google.com/spreadsheets/d/1JiopsJGh2aBIpnw7WPP2OvHHAEYdR9s0kT86OwruvAk/edit#gid=0">실험 기록 노트 </a>에 기록하면서 프로젝트 진행</li></ul><ul id="77c09a03-19d3-41cb-a2c4-a6496e95bed8" class="bulleted-list"><li>Daily Mission 수행</li></ul><ul id="8732c7da-0fad-4a1d-97fb-b43fd80758f2" class="bulleted-list"><li>Augmentation &amp; Loss 조합 실험</li></ul><ul id="d9cb2d4e-e3c8-411d-b4a6-2ca301b44b8c" class="bulleted-list"><li>Model 선정</li></ul><ul id="9f5ad265-6ffe-443a-ba42-87c76564a338" class="bulleted-list"><li>Skill<ul id="c3675467-d10f-4f8a-94ef-69026f345eee" class="bulleted-list"><li>TTA</li></ul><ul id="3f58a68f-5501-40af-940f-dd7f7683491c" class="bulleted-list"><li>SWA</li></ul><ul id="27109b7e-f9ad-4f11-ad57-ab693cf1e3e8" class="bulleted-list"><li>Pseudo Labeling</li></ul><ul id="6ebc3e0f-ea61-4f6c-806a-a74bbfe50ef9" class="bulleted-list"><li>Image 생성 - 김현우T1045 진행</li></ul></li></ul><p id="b24c2d0a-a4f2-4197-a029-d73892a6d77a" class="">
+</p><p id="ed527ec7-3ff5-47c4-aa69-7ad618986728" class="">
+</p><h2 id="a65abdb9-35df-448a-bba4-83c76934f5de" class="">2. 최종 사용 모델 및 하이퍼파라미터</h2><ol id="0229f424-ee06-480c-9740-30dac7a901f0" class="numbered-list" start="1"><li>efficientb3-noisy-student , FPN<ul id="dc73d82a-aa8c-4336-84f3-1b23ed206fd8" class="bulleted-list"><li>LB 점수 : 0.6248</li></ul><ul id="8669b3ce-418b-450d-bce4-ed90604b4989" class="bulleted-list"><li>모델 : decoder : FPN, backbone : efficientb3-noisy-student</li></ul><ul id="ab145470-8570-4df0-9268-2a8a19ff8017" class="bulleted-list"><li>loss : Jaccard + SoftCE</li></ul><ul id="24d048ed-59b4-401c-8de6-0a235833ce23" class="bulleted-list"><li>optimizer : AdamP (learning_rate = 0.0001), LookAhead</li></ul><ul id="4dfb1f4b-3216-4e43-9f1c-d4908aba4124" class="bulleted-list"><li>hyperparameters : Batch size 4, Epochs : 40</li></ul><ul id="52ddb589-3c6e-4938-b30f-302a5d82c909" class="bulleted-list"><li>augmentation<ul id="84249545-6e91-401b-a79e-b6fa394c6a7c" class="bulleted-list"><li>HorizontalFlip</li></ul><ul id="66ee60d3-cf02-4b44-b42d-eac022085813" class="bulleted-list"><li>ShiftScaleRotate</li></ul><ul id="e7f94d71-8d7c-49a3-a8c8-46856b138ace" class="bulleted-list"><li>RandomBrightnessContrast</li></ul><ul id="b7a81520-025e-403d-8e3c-2ddefa3fe793" class="bulleted-list"><li>VerticalFlip</li></ul><ul id="a772fed0-8729-4a4e-9c28-6ffb000b9f08" class="bulleted-list"><li>OneOf<ul id="2749a59a-ea9f-4b53-8972-a1b071aac2de" class="bulleted-list"><li>A.RandomResizedCrop(512,512,scale = (0.5,0.8),p=0.8)</li></ul><ul id="552fe8d9-14fa-4b20-ad9d-66c15a0591d9" class="bulleted-list"><li>A.CropNonEmptyMaskIfExists(height=300, width=300, p=0.2),], p=0.5)</li></ul><ul id="6d990bfd-2471-4784-8489-8fa3fafc08f8" class="bulleted-list"><li>A.Resize(256, 256)</li></ul></li></ul></li></ul></li></ol><ul id="66d98760-16ee-463c-bd7b-63d1c93c55c4" class="bulleted-list"><li>SWA</li></ul><ol id="ebc89ab3-3f36-4455-9357-343e4dbe073a" class="numbered-list" start="1"><li>se_resnext101_32x4d, FPN<ul id="299e8282-0439-4e07-a0e9-3a71056d9835" class="bulleted-list"><li>LB 점수: 0.6228 (public)</li></ul><ul id="149a2288-4e1e-4226-9fe7-7452deeef8c8" class="bulleted-list"><li>모델 : decoder : FPN, backbone : se_resnext101_32x4d</li></ul><ul id="70cfe544-b81c-4bc3-a437-68a014523837" class="bulleted-list"><li>loss : Jacarrd</li></ul><ul id="784fd3af-7e9c-414b-a5d8-9e9afa07a628" class="bulleted-list"><li>optimizer : Adam (learning_rate = 0.00001)</li></ul><ul id="19c49d66-169a-44ae-8b26-14f479c1b4ba" class="bulleted-list"><li>hyperparameters : Batch size 16, Epochs : 15</li></ul><ul id="6142d014-6a5e-487a-bfea-0c654ef87742" class="bulleted-list"><li>augmentation<ul id="44629061-d122-4d21-9f44-2378b0ab11d9" class="bulleted-list"><li>HorizontalFlip</li></ul><ul id="10f5b05d-aded-4fd0-afcc-13b135331cdf" class="bulleted-list"><li>VerticalFlip</li></ul><ul id="85352f29-8496-444d-9e86-e2bb55bdd23f" class="bulleted-list"><li>ShiftScaleRotate</li></ul><ul id="7202e148-40ed-4f77-9f39-b42900186804" class="bulleted-list"><li>RandomBrightnessContrast(brightness_limit=0.15, contrast_limit=0.2, p=0.5)</li></ul><ul id="22d2fdcc-72ef-4c6e-ba87-53c030f75c3e" class="bulleted-list"><li>RandomResizedCrop(512,512,scale = (0.5,0.8))</li></ul></li></ul></li></ol><ol id="8c15545f-7b68-40f2-895d-d0142be65fc6" class="numbered-list" start="2"><li>efficient-b3 , FPN<ul id="cf94052f-f475-49a6-9d78-15fff75536b5" class="bulleted-list"><li>LB 점수: 0.5897 (public)</li></ul><ul id="7ba5998a-939e-48be-b2d7-7a9db025a4ad" class="bulleted-list"><li>모델 : decoder : FPN, backbone : efficient-b3</li></ul><ul id="15ef734b-f704-484f-b863-4eefe11d2c74" class="bulleted-list"><li>loss : Cross Entropy</li></ul><ul id="cd26bfe8-8dc2-44b3-9a61-4fe3f138f5fe" class="bulleted-list"><li>optimizer : AdamW (learning_rate = 0.00001)</li></ul><ul id="dbe74a3a-ad2b-4001-91c6-1dcb4734f463" class="bulleted-list"><li>augmentation<ul id="d04fe4f1-e072-402b-b86f-21f12ccbb8fe" class="bulleted-list"><li>HorizontalFlip</li></ul><ul id="1963d423-91b3-4ab0-9267-1370fff8f85c" class="bulleted-list"><li>ShiftScaleRotate</li></ul><ul id="21684b35-337e-4b77-9ab6-993cac92ab0a" class="bulleted-list"><li>RandomBrightnessContrast</li></ul><ul id="5ae414d3-71a0-4d5f-8688-67919d67a31d" class="bulleted-list"><li>RandomResizedCrop</li></ul><ul id="99132656-3896-41ee-83c5-37aa6fbedb63" class="bulleted-list"><li>OpticalDistortion</li></ul><ul id="0cf2ba53-e735-40c4-973c-bdc71e7ef8e2" class="bulleted-list"><li>VerticalFlip</li></ul></li></ul><ul id="6339537a-7b41-442b-a2a6-72d39674f052" class="bulleted-list"><li>pseudo hyperparameters : batch 8, epochs 20</li></ul><ul id="86005f73-8b91-45f2-8c23-cfc65aa53afd" class="bulleted-list"><li>pseudo 학습: Fold로 나뉜 모델, 각각 psudo labeling 학습 진행</li></ul><p id="1d7523f1-7b04-48b4-b711-466ae82af8e6" class="">
+</p><p id="a92c017c-6b7f-4a14-8547-fb23c12cd111" class="">
+</p></li></ol><h2 id="7b0c3906-a624-4aa9-9470-55424ae13b46" class="">3. Loss 실험</h2><p id="9a61b22d-c9a6-43c4-859c-fbaf08bd8607" class="">동일한 모델을 사용하여, Loss 값에 따른 Score 실험</p><ul id="c53fae6f-104b-4e6c-b6f1-80c4e1951d9a" class="bulleted-list"><li>Decoder : deeplabV3+</li></ul><ul id="c57a9025-3b97-4e61-ab25-2b20452b661d" class="bulleted-list"><li>Backbone : efficientb3-noisy-student</li></ul><ul id="aecd3dd5-b87f-46ac-aba2-9ed0bd890453" class="bulleted-list"><li>Optimizer : AdamW</li></ul><figure id="a59d7a13-e6fb-4033-bf79-d4b258d8ed50" class="image"><a href="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/master/Team/headbreakz/Image/seg_chart.png?raw=true"><img src="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/master/Team/headbreakz/Image/seg_chart.png?raw=true"/></a></figure><p id="3bb45e3a-951d-42ea-8d02-ae9533dfc680" class="">
+</p><h2 id="0389aacd-ee8d-46c4-8bf2-0737220888a1" class="">4. Augmentation 실험</h2><ul id="7162b666-ac31-40a9-a3b2-20ebc46c5990" class="bulleted-list"><li>데이터에 적용 가능한 Augmentation <a href="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/akorea/akorea/segment/tips/argument.md">자세한 내용</a></li></ul><figure id="115ee3aa-0828-4f3d-8543-773ec1fb9a1b" class="image"><a href="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/akorea/akorea/segment/images/arg0.png?raw=true"><img src="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/akorea/akorea/segment/images/arg0.png?raw=true"/></a></figure><ul id="e365e59d-c788-42b6-8df8-42c8897e9cfd" class="bulleted-list"><li>사진을 어떻게 자를 것인가? <a href="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/akorea/akorea/segment/tips/crop.md">자세한 내용</a></li></ul><figure id="2a97d429-ea7c-4727-b7e0-4b1c68159049" class="image"><a href="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/akorea/akorea/segment/images/crop0.png?raw=true"><img src="https://github.com/bcaitech1/p3-ims-obd-connectnet/blob/akorea/akorea/segment/images/crop0.png?raw=true"/></a></figure><pre id="fc1c3b76-3e62-4b14-9947-791e5b8fc048" class="code code-wrap"><code>Scale58 = RandomResizedCrop(512,512,scale = (0.5,0.8))
+Scale68 =RandomResizedCrop(512,512,scale = (0.6,0.8))
+Scale46 = RandomResizedCrop(512,512,scale = (0.4,0.6))
+Scale24 = RandomResizedCrop(512,512,scale = (0.2,0.4))
+</code></pre><p id="d2376660-ded5-47a9-9b1a-b4dd0a4816e5" class="">
+</p><p id="8527bf82-6506-46e6-8ad0-429e25b3e990" class="">
+</p><h2 id="00db1fbb-c857-4982-9058-0800c511aa70" class="">5. 아쉬움이 남는 시도들</h2><ul id="65281d23-86cd-4d57-b1a0-3a7e51ebc059" class="bulleted-list"><li>Unet, Unet ++, Unet3+을도 학습해 앙상블에 추가하려고 했으나 성능이 나오지 않아 제외함</li></ul><ul id="0e7cede2-b25b-4608-8d06-3b7d0cacb819" class="bulleted-list"><li>pseudo labeling<ul id="b401f47e-56b2-49ec-8f71-ca2db8542049" class="bulleted-list"><li>학습 방법<ul id="628c77f2-9ef4-48db-bf2d-5f8d700f5966" class="bulleted-list"><li>label이 없는 데이터셋(test셋)에 대해 매 배치마다 생성 및 학습</li></ul><ul id="b50fb794-1794-4cfd-a75f-4a52c98f31f7" class="bulleted-list"><li>50batch마다 기존 train셋을 1epoch학습 진행</li></ul></li></ul><pre id="1ed6396e-e1a0-4c25-838b-cec5552db5f5" class="code code-wrap"><code>for each_test_image in test_loader:
+	model.eval()
+	output = output of model with each_test_image
+	oms = output label
+	model.train()
+	unlabled_loss = alpha_wight * CE(output,oms)
+	if batch % 50 == 0:
+		for each_train_image in train_loader:
+			train_output = output of model with each_train_image
+
+</code></pre><p id="d0b1b076-a3a0-4a39-8bbf-ff879efe0aff" class="">→ 그러나,  CE(output, mos)는 사실상 같은 값이기 때문에 값이 0에 수렴하여 의미가 없음. 따라서, 위  pseudo code는 원래의  pseudo-labeling의 의도와는 조금 다른 방식으로 작동함. 그럼에도 불구하고 적용하지 않았을 때 보다 0.06이 상승하는 효과가 있었는데, 이는 단순히 내부 for문에 의해 train이 추가적으로 이루어진 결과에 기인한다고 생각함. 또한, 학습된 모델로 pseudo 레이블을 생성할 때 confidence가 일정 수준 (0.75 등) 이상인 픽셀만 한정하는 threshold를 주는 방법이 더 general한 성능 향상을 보이는 걸로 (대회 종류 후에) 파악함.</p><p id="0d08a45c-4a1c-4c0e-bb2a-b83f586e1667" class="">
+</p><p id="844087c3-210c-429e-b6f0-8ae3fe5d81d8" class="">
+</p></li></ul><h2 id="ccb26e2d-6aaf-439f-b588-066319ed08c8" class="">6. 보완할 점</h2><ul id="34eec7be-943a-41ac-9096-625a9686e948" class="bulleted-list"><li>Library 버전 통일하기</li></ul><ul id="93a1b664-7dba-4f50-a7e1-4a7a6d9a6869" class="bulleted-list"><li>EDA를 통해서 이미지 특성에 따라 실험하기</li></ul><ul id="2c0d1e8c-19ee-4272-bc8a-6bd76abfb768" class="bulleted-list"><li>프로젝트 진행 단계별로 다양한 시각화를 도입하기</li></ul><ul id="425e6a27-7fde-4b02-878d-ab13127ecad4" class="bulleted-list"><li>학습 진행 시 ,다른 작업을 못할 때는 SOTA 모델 TTA나 CRF 같이 테크닉 탐색</li></ul><ul id="c4279012-08f0-40c4-b989-17b20472f300" class="bulleted-list"><li>loss를 조합 시, 특정 모델에서만 좋았던 것일 수도 있으니 참고하기</li></ul><ul id="65e46dfa-0702-4152-9b0d-a4eadb27e0ff" class="bulleted-list"><li>최대한 작은 모델로 실험 하기 -&gt; 기본적 조합 (loss, optim, augmentation, batch_size, lr, epoch)</li></ul><ul id="bec835d3-300c-4b1b-89cb-3c747a2e5cde" class="bulleted-list"><li>기준 점수 (ex. 현재 single SOTA 점수의 +- 15%)를 충족하지 못하면 과감하게 드랍하기</li></ul><ul id="bb5484c8-ef5e-4b82-9c49-079a9bc65c34" class="bulleted-list"><li>csv 파일로 soft voting, hard voting 앙상블 기능을 미리 구현</li></ul><ul id="ae6f783b-758f-4aa5-bf25-88061ccc18a5" class="bulleted-list"><li>개인별 앙상블 미리 LB 점수 체크하면서 실험</li></ul><ul id="be038310-f3b0-4957-9655-84b850d9b0e4" class="bulleted-list"><li>낮에는 작은 모델로 기능 테스트를 진행하고, 밤에는 성능이 좋은 모델로 실험을 진행함 -&gt; 성능이 좋은 모델은 모두 다른 조합으로 진행함</li></ul><ul id="7c48137e-c447-4391-9739-1f31ae4f2a7e" class="bulleted-list"><li>pseudo labeling 다른팀과 비교해서 검증 및 재사용</li></ul><ul id="56b4206e-1123-4ffe-afe6-5b7412d20e07" class="bulleted-list"><li>목표를 세분화해서 각각 데드라인을 지정</li></ul><ul id="3988d870-c744-45d8-8617-b98a702dc383" class="bulleted-list"><li>항상 모델 pt 저장해서 필요할 때 사용하기</li></ul><p id="f9d3cd15-6cf6-42d7-ad01-3923d87a6433" class="">
+</p><p id="e24a6047-90ae-432b-b0c2-acc1507dae0d" class="block-color-red"><mark class="highlight-yellow_background"><strong>→ 이 보완할 점들이 두 번째 프로젝트인 object detection 대회에서는 상당 부분 반영되어, 성과를 올리는 데 큰 도움이 됨</strong></mark></p><p id="2c4e0337-20bf-46dc-aec7-e23abeea9b43" class="">
+</p><p id="3381b9f8-70fe-4fec-8972-5a064cd2dff8" class="">
+</p><p id="080abda2-8f80-496d-a745-c848e3c9d488" class="">
+</p><p id="61c7e056-4ba7-48f5-996f-1a03c67f25f0" class="">
+</p><h1 id="dfc9de25-ef54-45cb-882d-81eef8890df2" class=""><mark class="highlight-teal_background"> 전체 프로젝트 회고 및 느낀점 </mark></h1><p id="b537536a-7cf7-4269-a524-b9ebf10f84ea" class="">
+</p><h2 id="aab39674-7166-4887-8a6c-21c92651ea8d" class="">잘한점</h2><ul id="ba58fc5e-39df-47ae-b1f6-212445e7c09e" class="bulleted-list"><li>Segmentation 대회에서 아쉬웠던 점들을 보완해 object detection 대회에서는 효율적으로 팀을 운영하고 프로젝트를 진행</li></ul><ul id="8887a240-0196-4eae-b196-ad5a39bd9a8a" class="bulleted-list"><li>Task의 문제 상황을 탐색해 인식하고, 그것을 해결하는 데에 집중함<ul id="dbe80bcd-3d73-44f9-a068-4a7932fbbe42" class="bulleted-list"><li>Small object에 대한 detection 점수가 낮게 나오는 (recall 계산에 의해 전체 점수도 낮아지는) 문제를 multi-scale을 활용해 극복</li></ul><ul id="de1fca83-3be3-41b9-9385-466f4e670c42" class="bulleted-list"><li>Imbalanced data를 파악하고, 부족한 클래스의 이미지를 중심적으로 cutmix 등의 아이디어를 활용해 (mask 정보를 이용해 배경을 제외한 물체만 가져와 다른 사진 배경에 추가) 추가적으로 생성하는 것을 구현해 overfit 문제를 해결하고 mAP를 향상시킴</li></ul></li></ul><ul id="07288efb-da85-4430-89d1-a03cc72890b9" class="bulleted-list"><li>대회 종료 직전까지 최적화 등의 새로운 시도를 멈추지 않음</li></ul><p id="ff59206c-ebd1-490c-b5d3-c666fd29fdf5" class="">
+</p><h2 id="33e210d6-efc6-4eae-bf7b-c50c5fc65439" class="">아쉬운 점</h2><ul id="32fe5050-cf9e-4952-83dd-837642fb906e" class="bulleted-list"><li>Segmentation 대회에 성능 향상에 큰 도움이 되었던 pseudo labelling을 object detection에서는 성능 향상에 실패해 앙상블에서 제외됨</li></ul><ul id="12ad87bf-8649-4cfd-8a45-bbe7fd363fe8" class="bulleted-list"><li>대회 1~2일차에 SOTA 구현을 완성하지 못하고 지체되어 다른 실험들의 시기에도 영향을 미친 점</li></ul><ul id="7932262f-8ff8-44c3-a2a4-e380d9333080" class="bulleted-list"><li>Swin 모델 계열에는 새로 생성한 데이터를 활용할 수 없었던 점 (swin 모델이 학습에 추가적으로 이용하는 mask를 json에 새로 추가해줘야하는 것을 늦게 알아차림)</li></ul><ul id="1a764957-cdaf-435f-8d73-10d413cdb380" class="bulleted-list"><li>앙상블 하기 전에 파일형식, 앙상블 방식을 미리 합의해서 진행하면 시간 효율적이었을 것 같음</li></ul><ul id="188f1ce0-cbc5-4dee-9648-5efb4d8312cc" class="bulleted-list"><li>val score와 public LB의 관계를 좀 더 명확히 파악하는 실험을 했으면 좋았을 것 같음</li></ul><p id="cba30d7e-5c8f-4608-807d-b520efa69de7" class="">
+</p><h2 id="a78148b8-5bfe-4dc9-aa2b-9c14efb97607" class="">개선할 점</h2><ul id="0f52a7bb-8f7d-417d-b2fa-f2d14988a083" class="bulleted-list"><li>MMdetection Config, model , neck 다시 확인하고 정리해보기</li></ul><ul id="e05cc113-90e5-4419-a082-45babf08c49d" class="bulleted-list"><li>custom model 구현 시도</li></ul><ul id="ae76406d-da14-488f-bda1-70bf815bf671" class="bulleted-list"><li>학습 모델 결과를 EDA 하여 클래스의 문제인지, Bbox 의 문제인지 확인할 것</li></ul><ul id="e7b39ca3-410e-4d07-a871-7efc8da562dc" class="bulleted-list"><li>모델간 상관관계도 EDA 하여 앙상블에 효과적인지 미리 판단할 것</li></ul><ul id="1579ef47-99bb-4f9b-ab74-6b6d0daa9ea3" class="bulleted-list"><li>논문도 같이 리뷰하면서 대회를 진행할 것</li></ul><ul id="b2652ecf-9b0b-4a5e-bb1d-c4940357c372" class="bulleted-list"><li>Validation 전략을 짜면서 계획하면서 실험할 것</li></ul><ul id="c3768b81-18f6-4246-9cc1-826179b87737" class="bulleted-list"><li>문제를 정의하고 해결하려는 과정에 대해 좀더 정리되고 체계적으로 진행할 것</li></ul><ul id="37f35e28-df2c-4472-aa81-084ed33369f8" class="bulleted-list"><li>실험과정 정리</li></ul><ul id="59b4c50c-f09b-4b6c-a7a1-a923a3344589" class="bulleted-list"><li>custom model을 구현해 본다.</li></ul><p id="42d0731b-5a8b-43e9-aa5e-bce398368a9a" class="">
+</p><h2 id="027b3a1a-4019-4304-a4bd-f812ca10954b" class="">느낀 점</h2><ul id="1f6d661e-e29b-491b-a678-811a817abb59" class="bulleted-list"><li>마지막 리더보드에 너무 신경을쓰다보니 대회의 순위에만 집중한거 같다. 좀더 테스크에 대한 문제점을 체계적으로 파악하고, 해당하는 문제점에 대한 해결책을 찾아내는 방식으로 진행하는 연습이 필요할 것 같다. 그래도 같은 팀으로 두 번 프로젝트를 했는데, 첫 번째보다 두 번째에는 훨씬 체계적으로 프로젝트를 진행해서 결과적으로도 높은 순위를 쟁취했기에 매우 기쁘다.</li></ul><p id="26b3bb80-b7eb-4ff2-a436-fd1753447816" class="">
+</p></div></article></body></html>

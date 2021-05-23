@@ -12,7 +12,8 @@ author_profile: true
 <span style="color:grey">2021.03.29 ~ 2021.06.25</span>
 
 1. <span style="color:lightgreen">✭ 재활용 쓰레기 이미지 Segmentation & Object detection (팀 프로젝트)</span>
-    [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](https://www.notion.so/Wrap-up-Report-41bca8c9ca5645bf8d15e6c395b2cd6b)
+    [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project3.html)
+    (https://www.notion.so/Wrap-up-Report-41bca8c9ca5645bf8d15e6c395b2cd6b)
     [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/bcaitech1/p3-ims-obd-connectnet)
     * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
     [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
