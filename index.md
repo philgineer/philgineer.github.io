@@ -37,13 +37,13 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320)
 <br><br>
 
-1. 수식 인식 OCR (팀 프로젝트)<br>
+1. 수식 인식 OCR<br>
     <span style="color:grey">#Image to LaTeX #Vision & NLP #Team project #진행 중</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-gold?style=flat)](https://philgineer.github.io/boostcamp-401)
     [![Daily Report](https://img.shields.io/badge/Day02-gold?style=flat)](https://philgineer.github.io/boostcamp-402)
 <br><br>
 
-1. 마스크 착용 이미지 분류 (개인 프로젝트)
+1. 마스크 착용 이미지 분류
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project1.html)<br>
     <span style="color:grey">#Image classification #Vision & DL #Personal project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
@@ -58,7 +58,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
 <br><br>
 
-4. 온라인 쇼핑몰 고객별 소비 금액 예측 (개인 프로젝트)
+4. 온라인 쇼핑몰 고객별 소비 금액 예측
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project2.html)<br>
     <span style="color:grey">#Tabular classification #Data science & ML #Personal project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
