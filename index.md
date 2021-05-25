@@ -11,9 +11,10 @@ author_profile: true
 ### **P Stage** - <span style="font-size:12pt">My projects</span>
 <span style="color:grey">2021.03.29 ~ 2021.06.25</span>
 
-1. <span style="color:lightgreen">✭ 재활용 쓰레기 이미지 Segmentation & Object detection (팀 프로젝트)</span>
+1. <span style="color:lightgreen">✭ 재활용 쓰레기 이미지 객체 검출 & 영역 구분</span>
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project3.html)
-    [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/bcaitech1/p3-ims-obd-connectnet)
+    [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/bcaitech1/p3-ims-obd-connectnet)<br>
+    <span style="color:grey">#Image segmentation #Object detection #Team project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-301)
     [![Daily Report](https://img.shields.io/badge/Day02-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-302)
     [![Daily Report](https://img.shields.io/badge/Day03-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-303)
@@ -29,15 +30,22 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day13-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-313)
     [![Daily Report](https://img.shields.io/badge/Day14-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-314)
     [![Daily Report](https://img.shields.io/badge/Day15-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-315)
-    <!-- [![Daily Report](https://img.shields.io/badge/Day16-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-316)
+    [![Daily Report](https://img.shields.io/badge/Day16-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-316)
     [![Daily Report](https://img.shields.io/badge/Day17-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-317)
     [![Daily Report](https://img.shields.io/badge/Day18-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-318)
     [![Daily Report](https://img.shields.io/badge/Day19-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-319)
-    [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320) -->
+    [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320)
 <br><br>
 
-1. 마스크 착용 이미지 Classification (개인 프로젝트)
-    [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project1.html)
+1. 수식 인식 OCR (팀 프로젝트)<br>
+    <span style="color:grey">#Image to LaTeX #Vision & NLP #Team project #진행 중</span>
+    * [![Daily Report](https://img.shields.io/badge/Day01-gold?style=flat)](https://philgineer.github.io/boostcamp-401)
+    [![Daily Report](https://img.shields.io/badge/Day02-gold?style=flat)](https://philgineer.github.io/boostcamp-402)
+<br><br>
+
+1. 마스크 착용 이미지 분류 (개인 프로젝트)
+    [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project1.html)<br>
+    <span style="color:grey">#Image classification #Vision & DL #Personal project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
     [![Daily Report](https://img.shields.io/badge/Day03-purple?style=flat)](https://philgineer.github.io/boostcamp-103)
@@ -50,8 +58,9 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day10-purple?style=flat)](https://philgineer.github.io/boostcamp-110)
 <br><br>
 
-1. 온라인 쇼핑몰 고객별 소비 금액 예측 (개인 프로젝트)
-    [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project2.html)
+4. 온라인 쇼핑몰 고객별 소비 금액 예측 (개인 프로젝트)
+    [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project2.html)<br>
+    <span style="color:grey">#Tabular classification #Data science & ML #Personal project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
     [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
     [![Daily Report](https://img.shields.io/badge/Day03-brown?style=flat)](https://philgineer.github.io/boostcamp-203)
