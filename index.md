@@ -41,6 +41,7 @@ author_profile: true
     <span style="color:grey">#Image to LaTeX #Vision & NLP #Team project #진행 중</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-gold?style=flat)](https://philgineer.github.io/boostcamp-401)
     [![Daily Report](https://img.shields.io/badge/Day02-gold?style=flat)](https://philgineer.github.io/boostcamp-402)
+    [![Daily Report](https://img.shields.io/badge/Day03-gold?style=flat)](https://philgineer.github.io/boostcamp-403)
 <br><br>
 
 1. 마스크 착용 이미지 분류
