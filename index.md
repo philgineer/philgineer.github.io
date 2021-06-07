@@ -47,6 +47,8 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day06-gold?style=flat)](https://philgineer.github.io/boostcamp-406)
     [![Daily Report](https://img.shields.io/badge/Day07-gold?style=flat)](https://philgineer.github.io/boostcamp-407)
     [![Daily Report](https://img.shields.io/badge/Day08-gold?style=flat)](https://philgineer.github.io/boostcamp-408)
+    [![Daily Report](https://img.shields.io/badge/Day09-gold?style=flat)](https://philgineer.github.io/boostcamp-409)
+    [![Daily Report](https://img.shields.io/badge/Day10-gold?style=flat)](https://philgineer.github.io/boostcamp-410)
 <br><br>
 
 1. 마스크 착용 이미지 분류
