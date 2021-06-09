@@ -49,7 +49,7 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day08-gold?style=flat)](https://philgineer.github.io/boostcamp-408)
     [![Daily Report](https://img.shields.io/badge/Day09-gold?style=flat)](https://philgineer.github.io/boostcamp-409)
     [![Daily Report](https://img.shields.io/badge/Day10-gold?style=flat)](https://philgineer.github.io/boostcamp-410)
-    [![Daily Report](https://img.shields.io/badge/Day11-gold?style=flat)](https://philgineer.github.io/boostcamp-411)
+    * [![Daily Report](https://img.shields.io/badge/Day11-gold?style=flat)](https://philgineer.github.io/boostcamp-411)
     [![Daily Report](https://img.shields.io/badge/Day12-gold?style=flat)](https://philgineer.github.io/boostcamp-412)
     [![Daily Report](https://img.shields.io/badge/Day13-gold?style=flat)](https://philgineer.github.io/boostcamp-413)
 <br><br>
