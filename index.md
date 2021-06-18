@@ -11,7 +11,7 @@ author_profile: true
 ### **P Stage** - <span style="font-size:12pt">My projects</span>
 <span style="color:grey">2021.03.29 ~ 2021.06.25</span>
 
-1. <span style="color:lightgreen">✭ 재활용 쓰레기 이미지 객체 검출 & 영역 구분</span>
+1. 재활용 쓰레기 이미지 객체 검출 & 영역 구분
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project3.html)
     [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/bcaitech1/p3-ims-obd-connectnet)<br>
     <span style="color:grey">#Image segmentation #Object detection #Team project</span>
@@ -37,8 +37,9 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day20-45ADA8?style=flat)](https://philgineer.github.io/boostcamp-320)
 <br><br>
 
-1. 수식 인식 OCR<br>
-    <span style="color:grey">#Image to LaTeX #Vision & NLP #Team project #진행 중</span>
+1. 수식 인식 OCR [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project4.html)
+    [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/bcaitech1/p4-fr-connectnet)<br>
+    <span style="color:grey">#Image to LaTeX #Vision & NLP #Team project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-gold?style=flat)](https://philgineer.github.io/boostcamp-401)
     [![Daily Report](https://img.shields.io/badge/Day02-gold?style=flat)](https://philgineer.github.io/boostcamp-402)
     [![Daily Report](https://img.shields.io/badge/Day03-gold?style=flat)](https://philgineer.github.io/boostcamp-403)
@@ -55,6 +56,10 @@ author_profile: true
     [![Daily Report](https://img.shields.io/badge/Day14-gold?style=flat)](https://philgineer.github.io/boostcamp-414)
     [![Daily Report](https://img.shields.io/badge/Day15-gold?style=flat)](https://philgineer.github.io/boostcamp-415)
     [![Daily Report](https://img.shields.io/badge/Day16-gold?style=flat)](https://philgineer.github.io/boostcamp-416)
+    [![Daily Report](https://img.shields.io/badge/Day17-gold?style=flat)](https://philgineer.github.io/boostcamp-417)
+    [![Daily Report](https://img.shields.io/badge/Day18-gold?style=flat)](https://philgineer.github.io/boostcamp-418)
+    [![Daily Report](https://img.shields.io/badge/Day19-gold?style=flat)](https://philgineer.github.io/boostcamp-419)
+    [![Daily Report](https://img.shields.io/badge/Day20-gold?style=flat)](https://philgineer.github.io/boostcamp-420)
 <br><br>
 
 1. 마스크 착용 이미지 분류
