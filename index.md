@@ -3,8 +3,8 @@ layout: home
 author_profile: true
 ---
 
-[![Boostcamp Badge](https://img.shields.io/badge/Boostcamp-AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program_ai.html)
-[![link](https://img.shields.io/badge/Review-합격후기-gold?style=flat)](https://www.philgineer.com/2021/02/ai-tech.html)
+[![Boostcamp Badge](https://img.shields.io/badge/Boostcamp%20AI%20Tech-02c73?style=flat)](https://boostcamp.connect.or.kr/program_ai.html)
+[![link](https://img.shields.io/badge/합격후기-51a9fe?style=flat&logo=blogger&logoColor=white)](https://www.philgineer.com/2021/02/ai-tech.html)
 # **Projects & Daily Reports**
 <br>
 
