@@ -68,7 +68,6 @@ author_profile: true
 3. 마스크 착용 이미지 분류
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project1.html)
     [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/philgineer/p1-img-philgineer)<br>
-
     <span style="color:grey">#Image classification #Vision #Personal project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-purple?style=flat)](https://philgineer.github.io/boostcamp-101)
     [![Daily Report](https://img.shields.io/badge/Day02-purple?style=flat)](https://philgineer.github.io/boostcamp-102)
@@ -85,7 +84,6 @@ author_profile: true
 4. 온라인 쇼핑몰 고객 소비 예측
     [![Report Badge](https://img.shields.io/badge/REPORT-161c22?style=flat&logo=gitbook&link=https://github.com/philgineer/)](./reports/project2.html)
     [![Github Badge](https://img.shields.io/badge/CODE-161c22?style=flat&logo=github&link=https://github.com/philgineer/)](https://github.com/philgineer/p2-tab-philgineer)<br>
-
     <span style="color:grey">#Tabular classification #Data science #Personal project</span>
     * [![Daily Report](https://img.shields.io/badge/Day01-brown?style=flat)](https://philgineer.github.io/boostcamp-201)
     [![Daily Report](https://img.shields.io/badge/Day02-brown?style=flat)](https://philgineer.github.io/boostcamp-202)
